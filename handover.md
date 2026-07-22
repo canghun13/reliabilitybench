@@ -384,3 +384,27 @@ GA 스크립트는 공통 구조에서 누락 없이 전체 공개 페이지에 
 - Remaining LOW risk: SVG favicon rendering can vary slightly between legacy browser favicon implementations; modern browser support is the deployment target.
 - Recommended next step: no logo changes unless a real-browser deployment check shows a browser-specific favicon cache or rendering issue.
 - Logo implementation commit: `dcf21e0` (`Create reliability curve logo system`).
+
+---
+
+## 2026-07-22 — Phase 1 final closure
+
+- Phase 1 completion date: 2026-07-22.
+- Final public pages: 27 HTML pages total; 26 indexable canonical URLs in `sitemap.xml`; one noindex `404.html`.
+- Final calculators: 15.
+- Final guides: 1 public Guides hub containing 4 practical guide records.
+- Final references: 1 public Formula Reference hub/table.
+- Legal / trust pages: 3 (About, Contact, Privacy).
+- Major implementation: static GitHub Pages foundation, shared partial shell, four workstations, 15 calculator workflows, sitewide GA4, SEO metadata and JSON-LD, robots/sitemap/llms, CNAME, 404, responsive workbench UI, and reusable final QA scripts.
+- Design independence: complete. The site uses the light reliability operations console, station rail, tool ledger, horizontal calculator input bank, result band, and control-panel reference treatments; final rendered comparison confirms it does not present as a PlasticsCalc template.
+- Logo / favicon independence: complete. The square monogram was replaced with the shared reliability-curve/baseline/system-node symbol. Final comparison confirms it is distinct from the PlasticsCalc orange PC badge.
+- Final automated QA: `node tools/final-site-qa.mjs`, `node tools/calculator-qa.mjs`, and `node tools/qa-check.mjs` all passed. Checks cover HTML/tag/anchor structure, links, IDs, title/meta/canonical/robots/OG/JSON-LD, sitemap, orphan pages, robots, llms, CNAME, GA4, favicon/partial paths, calculator configuration and outputs, validation guards, content sections, JavaScript syntax, and diff whitespace.
+- Final visual QA: all 27 public pages rendered on desktop and at 390px mobile. Homepage, Tools, all four category hubs, 8 representative calculator types, Guides, Reference, About, Contact, Privacy, and 404 were specifically reviewed. No desktop or final mobile horizontal overflow, text clipping, broken controls, input overflow, table overflow, missing header/footer, or console errors remain. One mobile Privacy heading overflow was found, corrected, and rechecked in the full 27-page mobile pass.
+- Final calculator QA: all 15 calculators initialized in the browser with visible units and interpreted results. Normal sample results were verified for every calculator. Engine tests verified zero, blank-required control, negative, NaN, Infinity, and extreme-value safeguards; reset handler, formula outputs, and content/related-link coverage passed.
+- Remaining HIGH risk: 0.
+- Remaining MEDIUM risk: GA4 still loads immediately; before targeting jurisdictions that require prior analytics consent, implement and validate an appropriate consent-management flow.
+- Remaining LOW risk: display-font fallback and legacy SVG favicon rendering may vary slightly by browser; future traffic and search-console data should guide content prioritization.
+- Is immediate additional work required: No.
+- Phase 1 completion judgment: Approved and officially closed. The current foundation is sufficient; Phase 2 expansion can occur later without blocking public use.
+- Recommended next step: use real traffic/search data to prioritize a small number of standalone deep guides and advanced life-analysis tools, while adding consent management if the target visitor jurisdictions require it.
+- Quality-gate implementation commit: `5b5532c` (`Complete phase one quality gate`).
