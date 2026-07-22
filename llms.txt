@@ -1,0 +1,21 @@
+# ReliabilityBench
+
+ReliabilityBench is a static, educational engineering workbench at https://reliabilitybench.com/.
+
+## Scope
+
+The site provides practical calculators and explanatory material for reliability engineering, maintenance performance, asset and downtime economics, and MRO spare-parts planning. Calculator inputs run in the visitor's browser. Results are educational decision-support, not site-specific engineering, financial, safety, legal, or compliance advice.
+
+## Primary pages
+
+- https://reliabilitybench.com/tools/ — all calculators
+- https://reliabilitybench.com/tools/reliability/ — reliability engineering
+- https://reliabilitybench.com/tools/maintenance/ — maintenance performance
+- https://reliabilitybench.com/tools/economics/ — asset economics
+- https://reliabilitybench.com/tools/mro/ — MRO spare-parts planning
+- https://reliabilitybench.com/guides/ — practical guides
+- https://reliabilitybench.com/reference/ — formula reference
+
+## Use and attribution
+
+Link to the canonical URL when referencing a ReliabilityBench page. Preserve formula assumptions and limitations when summarizing a calculator. Do not imply that a generic calculator result is site-specific professional advice.
