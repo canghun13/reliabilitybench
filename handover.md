@@ -338,3 +338,19 @@ GA 스크립트는 공통 구조에서 누락 없이 전체 공개 페이지에 
 - 니치 확정: Reliability & Maintenance Engineering Tools
 - 초기 구조 준비 단계
 - 다음 작업: GitHub repo 생성 및 1차 구축 시작
+
+---
+
+## 2026-07-22 — Phase 1 implementation
+
+- Public pages created: 27 total (26 indexable pages plus a noindex 404 page).
+- Calculators: 15 distinct calculators across reliability, maintenance performance, asset economics, and MRO planning.
+- Guides / reference: 2 hub pages, containing four practical guide entries and a formula reference table.
+- Implemented: independent industrial-workbench design system; responsive shared header/footer partials; 4 category hubs; complete homepage; About, Contact, Privacy, robots.txt, sitemap.xml, llms.txt, favicon, 404 page; GA4 `G-6Z73P5MMNS` on every public HTML page; SEO metadata, canonical URLs, Open Graph, and JSON-LD where appropriate.
+- CNAME: retained unchanged as `reliabilitybench.com`.
+- QA: `node tools/qa-check.mjs` passed for all 26 indexable pages (links, title/meta, canonical, GA4, duplicate IDs, malformed document/anchor checks, sitemap). JavaScript syntax checks passed. Browser QA passed on desktop representative pages and 390px mobile homepage/calculator with no horizontal overflow; tested MTBF, series reliability, OEE, downtime cost, and reorder point outputs. No browser console errors.
+- Remaining HIGH risk: none identified.
+- Remaining MEDIUM risk: GA4 loads immediately; before serving regions that require opt-in analytics consent, implement and validate a jurisdiction-appropriate consent-management flow. Full lifecycle-cost and probabilistic life-data tools are intentionally deferred.
+- Remaining LOW risk: guides and reference are strong hub content in this phase, but later phases should publish independently addressable long-form guides and cited technical references.
+- Recommended next step: add technical guide pages and expanded reliability/life-analysis tools, then introduce a compliant analytics-consent strategy if required by target visitor jurisdictions.
+- Implementation commit: `202cdf2` (`Build ReliabilityBench engineering workbench`).
