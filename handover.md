@@ -408,3 +408,27 @@ GA 스크립트는 공통 구조에서 누락 없이 전체 공개 페이지에 
 - Phase 1 completion judgment: Approved and officially closed. The current foundation is sufficient; Phase 2 expansion can occur later without blocking public use.
 - Recommended next step: use real traffic/search data to prioritize a small number of standalone deep guides and advanced life-analysis tools, while adding consent management if the target visitor jurisdictions require it.
 - Quality-gate implementation commit: `5b5532c` (`Complete phase one quality gate`).
+
+---
+
+## 2026-07-22 — Phase 2 expansion and quality closure
+
+- Phase 2 completion date: 2026-07-22.
+- Final public pages: 53 HTML pages total; 52 indexable canonical URLs in `sitemap.xml`; one noindex `404.html`.
+- Final calculators: 29 (15 Phase 1 calculators plus 14 distinct Phase 2 calculators).
+- Final guides: 9 public guide pages (one guide hub plus eight independent guides).
+- Final references: 5 public reference pages (one reference hub plus four technical references).
+- New calculator pages: Weibull Reliability, B10 Life, Weibull Hazard Rate, Expected Failures, K-out-of-N Reliability, Operational Availability, Reliability to MTBF, Lost Production, Maintenance Cost per Asset, Maintenance Cost as % of RAV, Lifecycle Maintenance Cost, Lead-Time Demand, Economic Order Quantity, and Inventory Turnover.
+- New guide pages: MTBF vs MTTF vs MTTR, Equipment Availability, Reliability Block Diagrams, Weibull Analysis, OEE Loss Categories, Downtime Cost Framework, Repair vs Replace Framework, and MRO Safety Stock Planning.
+- New reference pages: Maintenance KPI Formulas, Availability Definitions, Weibull Parameter Reference, and MRO Inventory Formulas.
+- Implementation: expanded category hubs and tool ledger; natural calculator-to-guide/reference links; static SEO, canonical URLs, robots, Open Graph metadata, JSON-LD, GA4 `G-6Z73P5MMNS`, and sitemap entries on all new public pages. The Phase 1 industrial reliability operations-console design and reliability-curve favicon/logo system were retained without reverting to the PlasticsCalc/HVAC visual pattern.
+- Final automated QA: `node tools/final-site-qa.mjs`, `node tools/calculator-qa.mjs`, and `node tools/qa-check.mjs` passed. They scanned 53 public HTML pages / 52 indexable URLs and verified links, malformed or mis-nested HTML/anchors, duplicate IDs, static SEO, JSON-LD, sitemap, orphan pages, robots, llms, CNAME, GA4, favicon/partials, calculator initialization, validation, normal/zero/extreme samples, units, reset, formula outputs, content coverage, and JavaScript syntax.
+- Final visual QA: rendered homepage, Tools hub, all major category hubs, seven representative new calculators, three existing calculators, Guides hub, three new guides, Reference hub, two new references, About, Contact, Privacy, and 404 at desktop and 390px mobile. The console/workbench hierarchy, curve logo/favicon system, responsive input/result panels, mobile table treatment, text wrapping, and navigation were visually checked. No blocking clipping, overlap, input overflow, or page-level horizontal overflow was observed.
+- Calculator QA: all 29 calculator configurations passed independent expected-output tests and zero/extreme/invalid guards. Browser rendering confirmed initialized fields, visible units, interpreted result bands, reset controls, and sample outputs for representative reliability, maintenance, economics, and MRO tools.
+- Remaining HIGH risk: 0.
+- Remaining MEDIUM risk: GA4 loads immediately. Before targeting jurisdictions requiring opt-in analytics consent, implement and validate an appropriate consent-management flow.
+- Remaining LOW risk: condensed display font fallback and legacy SVG favicon rendering can vary slightly by browser; use real traffic, Search Console, and on-site behavior data to prioritize future content and UI refinements.
+- Is immediate additional work required: No.
+- Phase 2 completion judgment: Approved. The site now has a substantive 52-URL indexable technical foundation with differentiated calculator intent, independent guide/reference content, and maintained design independence.
+- Recommended next step: monitor search demand and calculator usage, then selectively add advanced life-data topics, cited standards-oriented references, or comparison content. Do not add further pages until those signals justify a distinct search intent.
+- Phase 2 implementation commit: `PENDING`.
