@@ -445,4 +445,4 @@ GA 스크립트는 공통 구조에서 누락 없이 전체 공개 페이지에 
 - Remaining HIGH risk: 0.
 - Remaining MEDIUM risk: unchanged GA4 consent-management decision for applicable jurisdictions.
 - Remaining LOW risk: condensed display font fallback may change exact wordmark width slightly on uncommon systems; the new protected column and non-wrapping rules preserve separation.
-- Header-fix commit: `PENDING`.
+- Header-fix commit: `2b40886` (`Stabilize header brand layout`).
