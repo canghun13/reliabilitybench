@@ -1,1 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#18242d"/><path d="M12 46V18h20c12 0 18 5 18 14 0 6-3 10-9 12l11 10H39L28 44h-5v10H12zm11-18h8c5 0 8-2 8-5s-3-5-8-5h-8z" fill="#e56b32"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Reliability curve symbol">
+  <path d="M6 51H58" fill="none" stroke="#10191e" stroke-width="5" stroke-linecap="square"/>
+  <path d="M8 14C20 14 28 16 35 22C43 29 47 38 51 49" fill="none" stroke="#007d87" stroke-width="7" stroke-linecap="square"/>
+  <circle cx="8" cy="14" r="5" fill="#007d87"/>
+  <circle cx="51" cy="49" r="6" fill="#d4f04a" stroke="#10191e" stroke-width="3"/>
+</svg>
