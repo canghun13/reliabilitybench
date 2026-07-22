@@ -432,3 +432,17 @@ GA 스크립트는 공통 구조에서 누락 없이 전체 공개 페이지에 
 - Phase 2 completion judgment: Approved. The site now has a substantive 52-URL indexable technical foundation with differentiated calculator intent, independent guide/reference content, and maintained design independence.
 - Recommended next step: monitor search demand and calculator usage, then selectively add advanced life-data topics, cited standards-oriented references, or comparison content. Do not add further pages until those signals justify a distinct search intent.
 - Phase 2 implementation commit: `1cf1021` (`Expand ReliabilityBench phase two`).
+
+---
+
+## 2026-07-22 — Header brand-area stability fix
+
+- Issue: desktop screenshots showed the `ReliabilityBench` wordmark area competing with the long `WORKBENCH / RELIABILITY + MAINTENANCE` status context, making the shared header feel compressed.
+- Implementation: increased the desktop brand column to a protected 350–390px range; made the wordmark and subtitle non-wrapping; added a deliberate gap between the curve symbol and wordmark; converted the header to a three-zone grid with a bounded console region and a max-content navigation region.
+- Responsive behavior: the full status context remains at wide desktop widths; it becomes `R+M WORKBENCH` at 1350px and below; at 1199px and below the navigation moves to a dedicated second row; at 700px and below the status console is hidden so the brand block has the full row.
+- Visual QA: rendered the homepage header at 1440px, 1280px, 1024px, and 390px. The logo, subtitle, context/status, and navigation remain separated with no wordmark wrapping, compression, or overlap. Mobile retains the logo and horizontally scrollable navigation without page-level overflow.
+- Automated QA: `node tools/final-site-qa.mjs`, `node tools/qa-check.mjs`, and `git diff --check` passed after the CSS and shared-header update.
+- Remaining HIGH risk: 0.
+- Remaining MEDIUM risk: unchanged GA4 consent-management decision for applicable jurisdictions.
+- Remaining LOW risk: condensed display font fallback may change exact wordmark width slightly on uncommon systems; the new protected column and non-wrapping rules preserve separation.
+- Header-fix commit: `PENDING`.
