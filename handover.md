@@ -369,3 +369,18 @@ GA 스크립트는 공통 구조에서 누락 없이 전체 공개 페이지에 
 - Remaining LOW risk: desktop condensed display fonts rely on local system availability; CSS fallbacks preserve hierarchy but may vary slightly between devices.
 - Recommended next step: establish a small screenshot regression set for the console layout before future content expansion.
 - Design implementation commit: `ae03c6c` (`Redesign as reliability operations console`).
+
+---
+
+## 2026-07-22 — Logo and favicon independence rework
+
+- Reason: the previous square `RB` header mark and square favicon still resembled PlasticsCalc's badge/monogram system despite the page-level design rework.
+- Reworked: removed the letter badge entirely. The shared header and favicon symbol is now a standalone reliability curve: a cyan survival/uptime curve crossing toward a dark engineering baseline and ending at a lime system-state node. It is an engineering signal, not a typographic monogram.
+- Implementation: the header uses the same SVG asset as the favicon; a dedicated `logo-system.css` establishes the symbol and wordmark treatment without changing the workbench layout.
+- QA: rendered the new header on ReliabilityBench and verified the loaded SVG symbol. Opened ReliabilityBench and PlasticsCalc in adjacent visible browser tabs, then compared the rendered headers. ReliabilityBench shows a curve/baseline/node symbol; PlasticsCalc shows an orange `PC` square badge. The silhouette, semantic concept, and color structure are clearly distinct. The curve has deliberately simplified strokes and endpoint dots so it remains legible at favicon scale.
+- Automated QA: `node tools/qa-check.mjs`, JavaScript syntax checks, and `git diff --check` passed. Browser console reported no errors.
+- Remaining HIGH risk: none identified.
+- Remaining MEDIUM risk: none introduced by this logo-only work.
+- Remaining LOW risk: SVG favicon rendering can vary slightly between legacy browser favicon implementations; modern browser support is the deployment target.
+- Recommended next step: no logo changes unless a real-browser deployment check shows a browser-specific favicon cache or rendering issue.
+- Logo implementation commit: `dcf21e0` (`Create reliability curve logo system`).
