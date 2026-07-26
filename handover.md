@@ -446,3 +446,29 @@ GA 스크립트는 공통 구조에서 누락 없이 전체 공개 페이지에 
 - Remaining MEDIUM risk: unchanged GA4 consent-management decision for applicable jurisdictions.
 - Remaining LOW risk: condensed display font fallback may change exact wordmark width slightly on uncommon systems; the new protected column and non-wrapping rules preserve separation.
 - Header-fix commit: `2b40886` (`Stabilize header brand layout`).
+
+---
+
+## 2026-07-26 — Final content audit and Phase 1 closure confirmation
+
+- Audit scope: latest `main`, full `handover.md`, 53 public HTML pages, 29 calculator pages and calculator engine, 9 guide pages, 5 reference pages, shared partials, shared CSS/JS, SEO files, and CNAME.
+- Audited public pages: 53 total HTML pages; 52 indexable canonical URLs; one noindex 404 page.
+- Content inventory: Homepage 1; Tools/category hubs 6; calculators 29; guide pages 9; reference pages 5; legal/trust pages 3; 404 page 1.
+- Content audit result before remediation: sufficient 24; reinforcement needed 29 calculator pages because input definitions, unit boundaries, decision use, and common-mistake guidance were not presented consistently; thin 0.
+- Content audit result after remediation: sufficient 53; reinforcement needed 0; thin 0. Existing calculator-specific formulas, worked examples, interpretations, notes, and related links were retained, while the shared calculator briefing now adds visible per-input unit definitions, decision use, model limits, and invalid-input guidance for all 29 tools.
+- Calculator content audit: all 29 pages now expose purpose, use case, input definitions and units, method/formula, worked example, result interpretation, practical decision use, assumptions/limitations/common mistakes, related calculators, and related guide/reference routes. The briefing is grouped by reliability, maintenance, economics, or MRO context so the operating guidance is not a repeated one-size-fits-all paragraph.
+- Guide audit: 9 guide pages retained as independent method or operating-decision content; each has its own intent and links back to relevant calculators. No guide is a calculator-page copy.
+- Reference audit: 5 reference pages retained as formula/definition lookup material, distinct from the explanatory guides and interactive calculators.
+- Formula and boundary corrections: Failure Rate no longer reports an infinite reciprocal MTBF for a zero-failure sample; OEE rejects zero ideal cycle time; Weibull Hazard Rate rejects the age-zero / shape-below-one singularity; K-out-of-N limits N to 100 to prevent impractical computation. Existing sample-output formula checks remain unchanged and pass.
+- Duplicate/near-duplicate audit: all calculator URLs retained. Each has a distinct input structure, result purpose, or intended user decision; no consolidation, deletion, canonical merge, or noindex action is recommended. Guides and references remain complementary rather than duplicate.
+- Internal-link and navigation audit: automated local-link, orphan-page, breadcrumb, category hub, guide/reference hub, partial, and sitemap checks passed. All indexable pages are reachable through normal HTML links; no fragment-only or JavaScript-only dependency was introduced.
+- SEO and technical audit: unique title/meta, canonical domain/path, robots, Open Graph, JSON-LD syntax, GA4 `G-6Z73P5MMNS`, CNAME `reliabilitybench.com`, robots.txt, llms.txt, sitemap consistency, favicon path, duplicate IDs, malformed HTML, and partial loading checks passed.
+- Visual and mobile QA: all 53 pages were checked at 1280px, 1024px, and 390px for one H1, common shell presence, and horizontal overflow; no failures. The non-calculator pages also passed at 1440px. All 29 calculators rendered with fields, result, briefing content, and no console errors at desktop; representative reliability and MRO calculators were visually inspected at desktop and mobile.
+- Calculator QA: all 29 normal samples, zero/extreme guards, unit labels, reset handler, calculated output, content headings, and new boundary assertions passed. Browser test confirmed the zero-failure rate result is `0 failures / hour` with the correct non-finite MTBF explanation.
+- Final HIGH risk: 0.
+- Final MEDIUM risk: GA4 loads immediately. Add and validate consent management before targeting visitor jurisdictions that require opt-in analytics consent.
+- Final LOW risk: system display-font fallback and legacy SVG favicon rendering can vary slightly; continued Search Console and actual-use monitoring should guide only evidence-based future updates.
+- ReliabilityBench Phase 1 completion judgment: confirmed complete and suitable for ongoing public operation. No immediate content or structural expansion is required.
+- Immediate additional work required: No.
+- Next recommended work and timing: after sufficient search and calculator-use data exists, prioritize only demonstrably distinct topics or standards-backed references; separately schedule consent management if the target audience requires it.
+- Final audit commit: `PENDING`.
