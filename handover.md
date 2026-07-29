@@ -472,3 +472,7 @@ GA 스크립트는 공통 구조에서 누락 없이 전체 공개 페이지에 
 - Immediate additional work required: No.
 - Next recommended work and timing: after sufficient search and calculator-use data exists, prioritize only demonstrably distinct topics or standards-backed references; separately schedule consent management if the target audience requires it.
 - Final audit commit: `abd487b` (`Complete final content audit`).
+
+
+## 2026-07-29
+- 메인 페이지 푸터 아래의 디렉토리 뱃지 영역은 사용자가 직접 관리하는 영역이므로 수정·삭제·리팩터링하지 않는다.- https://kittylaunch.com에 등록 (내가 직접함)
