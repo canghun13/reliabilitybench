@@ -546,4 +546,5 @@ GA 스크립트는 공통 구조에서 누락 없이 전체 공개 페이지에 
 - Remaining MEDIUM risk: GA4 loads immediately; add and validate consent management before targeting jurisdictions requiring opt-in analytics consent.
 - Remaining LOW risk: display-font fallback and legacy SVG favicon rendering can vary slightly by browser.
 - Immediate additional work required: no.
-- Implementation commit: pending final commit in this closure.
+- Implementation commit: `d7a2fee` (`Add maintenance planning tools and close QA gates`).
+- Final handover commit: pending.
