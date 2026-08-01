@@ -473,6 +473,56 @@ GA 스크립트는 공통 구조에서 누락 없이 전체 공개 페이지에 
 - Next recommended work and timing: after sufficient search and calculator-use data exists, prioritize only demonstrably distinct topics or standards-backed references; separately schedule consent management if the target audience requires it.
 - Final audit commit: `abd487b` (`Complete final content audit`).
 
+---
+
+## 2026-08-01 — Maintenance Planning & Scheduling validation and expansion
+
+- Start local HEAD: `fd91f4532e0504d1b939bcb112270b81dfd59a0e` (`Update index.html`).
+- Start origin/main: `fd91f4532e0504d1b939bcb112270b81dfd59a0e`.
+- Pull performed: no. The freshly cloned local `main` equaled `origin/main`; `git fetch origin` confirmed there was no divergence or behind state.
+- Repository inventory from files, sitemap, and HTML links before expansion: 53 public HTML pages (52 indexable URLs), 29 calculator pages, 9 guide pages, and 5 reference pages. The prior handover’s suggested maintenance KPI list was not treated as evidence: current files contained OEE and Maintenance Backlog but none of Schedule Compliance, PM Compliance, Planned Maintenance Percentage, Wrench Time, or Planning Accuracy.
+
+### Candidate validation
+
+- **Maintenance Planning & Scheduling — GO.** Existing overlap: none for the five selected calculators; Maintenance Backlog is adjacent capacity context rather than a duplicate. Independent intent: strong—weekly schedule execution, PM due-date integrity, work mix, execution friction, and labor-estimate quality answer different work-management decisions. Formula verification: Schedule Compliance, PM Compliance, PMP, and Wrench Time use transparent numerator/denominator definitions corroborated by the SMRP metric hierarchy and cross-checked against public maintenance KPI definitions. Planning Accuracy has no single universal formula, so ReliabilityBench declares its local absolute-variance convention and excludes zero planned hours. Practical value: strong and repeatedly usable by planners, schedulers, supervisors, and reliability teams. Implementation difficulty: low in static HTML/vanilla JS. Competition/duplication risk: controlled by preserving scope boundaries and avoiding a separate Reactive vs Planned Ratio page.
+- **Advanced Life & Failure Analysis — NO-GO.** Existing Weibull Reliability, B10 Life, Hazard Rate, Expected Failures, Reliability Probability, and related Guide/Reference already cover the proposed base decision intents. No additional candidate with equally clear independent search intent and a verified primary formula was identified in this audit.
+- **Critical Spares Decision Support — NO-GO.** Existing Safety Stock, Reorder Point, Lead-Time Demand, EOQ, Inventory Turnover, and MRO Guide/Reference cover the quantitative replenishment decisions. “Critical spare” decisions additionally require local safety, consequence, substitute, repair-loop, and policy inputs; no universal formula was found that would justify a generic calculator without inventing site-specific scores.
+
+### Selected cluster and pages added
+
+- Final selected cluster: Maintenance Planning & Scheduling.
+- New calculator pages: `tools/schedule-compliance-calculator.html`, `tools/preventive-maintenance-compliance-calculator.html`, `tools/planned-maintenance-percentage-calculator.html`, `tools/wrench-time-calculator.html`, and `tools/maintenance-planning-accuracy-calculator.html`.
+- New guide: `guides/maintenance-planning-and-scheduling.html`.
+- New reference: `reference/maintenance-planning-metrics.html`.
+- Integration: Maintenance hub, Guides hub, Reference hub, calculator engine, calculator QA expectations, sitemap, and llms.txt were updated. Existing URLs, CNAME, GA4 `G-6Z73P5MMNS`, favicon, visual system, and the user-managed directory-badge area were preserved.
+- Final inventory after expansion: 60 public HTML pages, 59 indexable canonical URLs, 34 calculators, 10 guides, and 6 references.
+
+### Formula and definition verification
+
+- Schedule Compliance: completed scheduled work orders within the original schedule window / work orders scheduled in that window. Overdue and carryover work are treated as misses for the original period.
+- PM Compliance: PM work orders completed in the locally defined due window / PM work orders due. It is PM-only and is not a substitute for all-work Schedule Compliance.
+- Planned Maintenance Percentage: planned maintenance labor hours / total maintenance labor hours. Emergency, corrective, predictive, contractor, and overtime coding must remain consistent.
+- Wrench Time: direct hands-on maintenance time / paid maintenance labor time. Travel, waits, materials search, permits, preparation, and administration are excluded; this is not an individual productivity score.
+- Planning Accuracy: `max(0, 1 - |actual hours - planned hours| / planned hours) × 100`. This explicitly declared site convention is not presented as a universal standard; zero planned hours are not applicable, and signed variance should be reviewed separately.
+- Primary/authoritative corroboration used in the audit: SMRP metric hierarchy material identifies Schedule Compliance Hours and Wrench Time; ISO 23323:2021 confirms planned-maintenance systems must support planning, scheduling, recording, reporting, analysis, and optimisation. Government inventory guidance confirms that reorder points and safety stock are already established quantitative controls, reinforcing the Critical Spares NO-GO decision.
+
+### QA results
+
+- Automated site QA: `node tools/final-site-qa.mjs` passed: 60 public HTML pages, 59 indexable pages, 59 sitemap URLs; structure, links, SEO, canonical, robots, Open Graph, JSON-LD, partials, sitemap, robots.txt, llms.txt, CNAME, GA4, and favicon paths passed.
+- Calculator QA: `node tools/calculator-qa.mjs` passed for 34 calculators: independent normal results, zero, blank-required, negative, NaN, Infinity, extreme values, labels/units, reset, formula outputs, content sections, and validation guards.
+- JavaScript QA: `node --check assets/js/calculators/engine.js` and `node --check assets/js/site-shell.js` passed. `git diff --check` passed.
+- Browser QA: all five new calculators rendered at 1440px and 390px with one H1, visible form/results, no calculator-page horizontal overflow, and no console errors. Default outputs were 90%, 90%, 80%, 43.75%, and 87.5% respectively.
+- Existing-page visual QA at 1440px, 1280px, 1024px, 768px, and 390px found two unresolved pre-existing homepage deployment-gate failures: (1) the source has an extra closing `</div>` after the user-managed directory-badge block, which makes `qa-check.mjs` report malformed/mis-nested HTML; (2) the homepage tool ledger has 47px horizontal overflow at 768px. The user-managed badge area was not edited, and no unrelated responsive refactor was made in this task.
+
+### Risks and release state
+
+- Remaining HIGH risk: 2 deployment-gate failures above (homepage malformed source and 768px horizontal overflow). No new cluster-page HIGH risk was found.
+- Remaining MEDIUM risk: GA4 loads immediately; implement and validate consent management before targeting jurisdictions requiring opt-in analytics consent.
+- Remaining LOW risk: system display-font fallback and legacy SVG favicon rendering may vary slightly by browser.
+- Is immediate additional work required: yes, but only to resolve the two pre-existing homepage gate failures with explicit permission to touch the user-managed badge-adjacent markup and the existing ledger CSS.
+- Next recommended work and timing: repair and re-run full-site QA before any deployment commit; after that, wait for search/use evidence before considering the excluded life-analysis or critical-spares topics.
+- Implementation commit: not created. Final commit: not created. Main push: not attempted, because the required all-site zero-error / zero-overflow deployment gate is not met.
+
 
 ## 2026-07-29
 - 메인 페이지 푸터 아래의 디렉토리 뱃지 영역은 사용자가 직접 관리하는 영역이므로 수정·삭제·리팩터링하지 않는다.- https://kittylaunch.com, https://sellwithboost.com 에 등록 (내가 직접함)
@@ -480,3 +530,20 @@ GA 스크립트는 공통 구조에서 누락 없이 전체 공개 페이지에 
 
 ## 2026-07-30
 - 메인 페이지 푸터 아래의 디렉토리 뱃지 영역은 사용자가 직접 관리하는 영역이므로 수정·삭제·리팩터링하지 않는다.- https://twelve.tools, https://findly.tools 에 등록 (내가 직접함)
+
+---
+
+## 2026-08-01 — Maintenance Planning & Scheduling closure
+
+- Scope: completed the existing uncommitted Maintenance Planning & Scheduling cluster without pull, clone, reset, stash, deletion, or overwrite of the prior implementation.
+- Homepage HTML repair: preserved the user-managed directory-badge block exactly (badge links, images, order, position, and inline styles). Removed only the unmatched extra closing `</div>` immediately after that block. Header, main, footer, and badge DOM nesting now pass the HTML structure checker.
+- 768px repair: added one bounded `701px–900px` ledger-grid rule. It permits the existing title and description columns to shrink/wrap with `min-width: 0`; desktop widths and mobile layout retain their existing rules.
+- Final inventory: 60 public HTML pages; 59 indexable canonical URLs and sitemap entries; 34 calculators; 10 guides; 6 references.
+- Automated QA: `node tools/final-site-qa.mjs`, `node tools/calculator-qa.mjs`, `node tools/qa-check.mjs`, JavaScript syntax checks, and `git diff --check` all passed. Checks cover HTML nesting, links, orphans, IDs, title/meta/canonical/robots/OG/JSON-LD, sitemap, llms.txt, CNAME, GA4, calculator boundary and regression cases.
+- Browser QA: Homepage, Tools hub, Maintenance hub, all five new calculators, new Guide, new Reference, About, Contact, Privacy, and 404 were rendered at 1440px, 1280px, 1024px, 768px, and 390px. Every sample had one H1, loaded header/main/footer, no overlap, no console errors, and no page-level horizontal overflow.
+- Badge preservation check: the five existing directory-badge anchors, image URLs, ordering, and inline presentation remain unchanged.
+- Remaining HIGH risk: 0.
+- Remaining MEDIUM risk: GA4 loads immediately; add and validate consent management before targeting jurisdictions requiring opt-in analytics consent.
+- Remaining LOW risk: display-font fallback and legacy SVG favicon rendering can vary slightly by browser.
+- Immediate additional work required: no.
+- Implementation commit: pending final commit in this closure.

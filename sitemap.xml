@@ -21,6 +21,11 @@
   <url><loc>https://reliabilitybench.com/tools/system-availability-calculator.html</loc></url>
   <url><loc>https://reliabilitybench.com/tools/oee-calculator.html</loc></url>
   <url><loc>https://reliabilitybench.com/tools/maintenance-backlog-calculator.html</loc></url>
+  <url><loc>https://reliabilitybench.com/tools/schedule-compliance-calculator.html</loc></url>
+  <url><loc>https://reliabilitybench.com/tools/preventive-maintenance-compliance-calculator.html</loc></url>
+  <url><loc>https://reliabilitybench.com/tools/planned-maintenance-percentage-calculator.html</loc></url>
+  <url><loc>https://reliabilitybench.com/tools/wrench-time-calculator.html</loc></url>
+  <url><loc>https://reliabilitybench.com/tools/maintenance-planning-accuracy-calculator.html</loc></url>
   <url><loc>https://reliabilitybench.com/tools/downtime-cost-calculator.html</loc></url>
   <url><loc>https://reliabilitybench.com/tools/repair-vs-replace-calculator.html</loc></url>
   <url><loc>https://reliabilitybench.com/tools/maintenance-roi-calculator.html</loc></url>
@@ -48,8 +53,10 @@
   <url><loc>https://reliabilitybench.com/guides/downtime-cost-framework.html</loc></url>
   <url><loc>https://reliabilitybench.com/guides/repair-vs-replace-framework.html</loc></url>
   <url><loc>https://reliabilitybench.com/guides/mro-safety-stock-planning.html</loc></url>
+  <url><loc>https://reliabilitybench.com/guides/maintenance-planning-and-scheduling.html</loc></url>
   <url><loc>https://reliabilitybench.com/reference/maintenance-kpi-formulas.html</loc></url>
   <url><loc>https://reliabilitybench.com/reference/availability-definitions.html</loc></url>
   <url><loc>https://reliabilitybench.com/reference/weibull-parameter-reference.html</loc></url>
   <url><loc>https://reliabilitybench.com/reference/mro-inventory-formulas.html</loc></url>
+  <url><loc>https://reliabilitybench.com/reference/maintenance-planning-metrics.html</loc></url>
 </urlset>
