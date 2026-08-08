@@ -674,3 +674,17 @@ GA 스크립트는 공통 구조에서 누락 없이 전체 공개 페이지에 
 - Remaining LOW risk: demand was validated qualitatively rather than with a paid keyword-volume dataset; acceleration factors can be highly sensitive to fitted activation energy/exponents and mechanism transitions, which is disclosed throughout the cluster.
 - Immediate additional work required: no. Observe Search Console query/impression evidence and calculator engagement before considering another cluster.
 - Implementation/final commit: pending until this entry is committed.
+
+---
+
+## 2026-08-08 — ALT formula-block readability follow-up
+
+- Scope: corrected only the visual separation between the final Formula/Method block and the following H2 on the four Accelerated Life Testing calculators: Arrhenius, Inverse Power Law, Temperature-Humidity, and Coffin-Manson.
+- Selector audit: `.formula` is a shared site-wide calculator selector, so it was not changed. The added rule targets only `body[data-calc]` values for the four ALT calculators and only `.formula + h2`.
+- Change: added a 28px `margin-top` to the H2 immediately after the final Formula/Method block. Consecutive Formula blocks remain visually grouped; formula content, borders, typography, color, and equations are unchanged.
+- Browser QA: all four calculators rendered at 1440px, 768px, and 390px. Every measured Formula-to-next-H2 gap was 28px; formula internal overflow and page-level horizontal overflow were 0; H1, input form, result panel, and sample calculation results remained normal.
+- Console errors: 0 across the browser QA session.
+- Static QA: JavaScript syntax, `tools/calculator-qa.mjs` (42 calculators), `tools/final-site-qa.mjs` (74 public HTML / 73 indexable / 73 sitemap), `tools/qa-check.mjs`, and `git diff --check` passed.
+- Existing calculator Formula layouts were not changed because the rule cannot match any non-ALT calculator body. No separate broad Formula-style regression was required.
+- Remaining HIGH risk: 0. Remaining MEDIUM and LOW risks unchanged from the ALT-cluster entry.
+- Implementation/final commit: pending until this entry is committed.
