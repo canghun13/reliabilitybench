@@ -614,3 +614,63 @@ GA 스크립트는 공통 구조에서 누락 없이 전체 공개 페이지에 
 - Immediate additional work required: no. Wait for Search Console and usage evidence before adding another cluster.
 - Next observation point: review impressions, query mix, CTR, calculator interaction, invalid-input frequency, and exits after 60–90 days; do not add a second cluster merely from elapsed time.
 - Implementation/final commit: pending until this entry is committed.
+
+---
+
+## 2026-08-08 — Accelerated Life Testing / Acceleration Models cluster
+
+### Repository sync and starting state
+
+- Target repository: `https://github.com/canghun13/reliabilitybench.git`; branch `main`.
+- Before any edit, the working tree was clean and local HEAD, `origin/main`, and the fetched remote-tracking state were all `4cbc7f12ff794ae4f09ab7e1896e61fd0e35b2f0` with ahead/behind `0/0`. No pull, clone, reset, stash, or destructive operation was used.
+- Starting verified inventory: 67 public HTML pages, 66 indexable URLs and sitemap entries, 38 calculator configurations, 11 guide HTML pages including the hub, and 7 reference HTML pages including the hub.
+- All existing hubs, calculators, purposes, inputs, outputs, formulas, guides, references, sitemap entries, llms.txt entries, and internal links were inventoried. Basic reliability, Maintenance Planning & Scheduling, MRO, economics, and Reliability Growth were treated as protected non-duplication boundaries.
+
+### Candidate research and decisions
+
+- **Accelerated Life Testing / acceleration models — GO.** Recurrent intent exists around Arrhenius acceleration factor, accelerated test time, inverse power law, Peck temperature-humidity, and Coffin-Manson thermal-cycle calculations. Exact modern competition is strongest for Arrhenius and temperature-humidity, but a free no-login mechanism-first workbench joining four distinct physical model decisions, equivalent exposure, a selection guide, and a compact reference remains differentiated. The cluster is separate from Weibull life distributions and Duane reliability-growth learning.
+- **Maintainability prediction — NO-GO.** Maintainability probability and repair-time percentile are inverse views of the same lognormal SLA decision, while weighted system MTTR adds only one distinct calculation and overlaps the existing MTTR scope. Relyence, MetricGate, and Reliability Analytics already cover the useful workflow; a separate cluster would be thin.
+- **Reliability allocation — NO-GO.** Equal, ARINC, and weighted allocation methods are legitimate but mostly variants of one subsystem-target decision. Demand is specialized, assumptions are architecture/program-specific, and splitting variants into separate calculator pages would create filler despite limited free competition.
+- **PM/CBM age replacement and inspection intervals — NO-GO.** Demand is real, but age-replacement and failure-finding tools already have exact modern competitors. P-F and hidden-failure intervals depend materially on detection capability, uncertainty, consequence, and safety governance; generic outputs risk false authority and overlap maintenance planning.
+- Previously rejected reliability demonstration testing, FMEA/criticality, and critical-spares topics were not reintroduced because no decisive new evidence overcame their earlier competition, overlap, or governance concerns.
+
+### Demand, competition, community, and technical sources
+
+- ALT competition and workflow examples reviewed: [FIRGELLI Arrhenius calculator](https://www.firgelliauto.com/blogs/calculators/accelerated-life-test-arrhenius-calculator), [PackCalc accelerated aging calculator](https://packcalc.com/tools/accelerated-aging-calculator), [MetricGate Peck model](https://metricgate.com/docs/peck-temperature-humidity-bias/), calculatorshub combined ALT tooling, the Python `reliability` package acceleration-factor documentation, and community discussions of spreadsheet/freemium Arrhenius, Coffin-Manson, Peck, and inverse-power workflows.
+- Maintainability sources reviewed: MIL-HDBK-472 references, the [NASA system MTTR paper](https://ntrs.nasa.gov/api/citations/20160003131/downloads/20160003131.pdf?attachment=true), Relyence maintainability prediction, MetricGate MTTR/lognormal-percentile tooling, and Reliability Analytics maintainability analysis.
+- Reliability-allocation sources reviewed: the [FAA Guide to Reliability Analysis](https://www.faa.gov/sites/faa.gov/files/space/legislation_regulation_guidance/FAA_AST_Guide_to_Reliability_Analysis_v1.pdf), MIL-HDBK allocation references, and [PTC ARINC allocation documentation](https://support.ptc.com/help/wrr/r12.0.1.0/en/wrr/ReferenceGuide/prediction/arinc_alloc_method_calc.html).
+- PM/CBM competition and guidance reviewed: MetricGate optimal age replacement, ToolGrit PM Interval Optimizer, Reliability Management failure-finding interval tools, and [ABS Equipment Condition Monitoring guidance](https://ww2.eagle.org/content/dam/eagle/rules-and-guides/current/design_and_analysis/224-GN-EquipCndMonitoring/Equipment_Condition_Monitoring_GN_e.pdf).
+- Primary ALT formula and model-selection basis: NIST Engineering Statistics Handbook sections on [choosing an acceleration model](https://www.itl.nist.gov/div898/handbook/apr/section2/apr24.htm), [Arrhenius acceleration](https://www.itl.nist.gov/div898/handbook/apr/section1/apr151.htm), and [other acceleration models](https://www.itl.nist.gov/div898/handbook/apr/section1/apr153.htm). NIST's mechanism-selection warning and model forms are reflected in every cluster page.
+
+### Implemented cluster
+
+- Hub: `tools/accelerated-life-testing/index.html`.
+- Calculators: `tools/arrhenius-acceleration-factor-calculator.html`, `tools/inverse-power-law-acceleration-calculator.html`, `tools/temperature-humidity-acceleration-calculator.html`, and `tools/coffin-manson-acceleration-factor-calculator.html`.
+- Guide: `guides/accelerated-life-testing-model-selection.html`.
+- Reference: `reference/accelerated-life-testing-formulas.html`.
+- Integration: Reliability hub, Guides hub, Reference hub, calculator engine, calculator QA expectations, sitemap.xml, and llms.txt.
+- The existing visual system and CSS were reused without new styling. Homepage, user-managed six-badge block, header/footer partials, branding, logo, favicon, CNAME, GA4 ID, and every existing URL remain outside the implementation diff.
+
+### Formula definitions and boundaries
+
+- Arrhenius: `AF = exp[(Ea/k) × (1/Tuse − 1/Ttest)]`, using kelvin, eV, and `k = 8.617333262 × 10^-5 eV/K`; test temperature must exceed use temperature.
+- Inverse power: `AF = (Stest/Suse)^n`, with one consistent positive stress unit, higher test stress, and a positive mechanism-supported exponent.
+- Temperature-humidity: Arrhenius temperature factor multiplied by `(RHtest/RHuse)^gamma`, with both accelerated conditions above their use conditions and RH limited to 100%.
+- Reduced Coffin-Manson: `AF = (delta-T-test/delta-T-use)^m`; this implementation deliberately omits frequency and maximum-temperature terms and states that boundary on the calculator, guide, and reference.
+- Equivalent accelerated exposure is target use exposure divided by AF. All four are deterministic point-model calculations: no distribution fit, parameter estimation, confidence bound, sample-size decision, qualification proof, or certification is implied.
+
+### Final QA and inventory
+
+- Final inventory: 74 public HTML pages; 73 indexable canonical URLs; 73 sitemap URLs; 42 calculators; 12 guide HTML pages including the hub; 8 reference HTML pages including the hub.
+- Automated site QA: `tools/final-site-qa.mjs` passed HTML structure/nesting, links, orphan checks, duplicate IDs, unique title/meta, canonical, robots, OG, JSON-LD syntax, header/footer partials, sitemap, robots.txt, llms.txt, CNAME, GA4, and favicon paths across all 74 public pages. `tools/qa-check.mjs`, JavaScript syntax checks, and `git diff --check` also passed.
+- Calculator QA: all 42 configurations passed independent expected-value checks, normal samples, zero/extreme/non-finite guards, required units, reset handling, content coverage, existing calculator regression, and four targeted ALT boundary assertions.
+- New browser sample results: Arrhenius AF `95.998`, inverse-power AF `8`, temperature-humidity AF `734.735`, and reduced Coffin-Manson AF `9`. Invalid equal/lower stress, exponent overflow, RH above 100%, and lower accelerated temperature range were blocked; Reset restored sample values.
+- Browser QA: 20 required/representative pages × 5 viewports = 100 render combinations at 1440, 1280, 1024, 768, and 390px. Coverage included Home, Tools, Reliability, ALT hub, all four new calculators, new Guide and Reference, Guides and Reference hubs, Reliability Growth hub and calculator, Weibull and B10 regressions, About, Contact, Privacy, and 404.
+- Every browser sample had one H1, loaded header/main/footer, no header-main or main-footer overlap, and zero page-level horizontal overflow. The homepage retained the same six user-managed badge images at every viewport.
+- Horizontal overflow: 1440 = 0; 1280 = 0; 1024 = 0; 768 = 0; 390 = 0.
+- Browser console errors: 0.
+- Remaining HIGH risk: 0.
+- Remaining MEDIUM risk: pre-existing immediate GA4 loading may require consent management before use in opt-in jurisdictions.
+- Remaining LOW risk: demand was validated qualitatively rather than with a paid keyword-volume dataset; acceleration factors can be highly sensitive to fitted activation energy/exponents and mechanism transitions, which is disclosed throughout the cluster.
+- Immediate additional work required: no. Observe Search Console query/impression evidence and calculator engagement before considering another cluster.
+- Implementation/final commit: pending until this entry is committed.

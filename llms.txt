@@ -28,6 +28,16 @@ The site provides practical calculators, guides, and technical references for re
 - https://reliabilitybench.com/guides/reliability-growth-and-duane-model.html
 - https://reliabilitybench.com/reference/duane-reliability-growth-formulas.html
 
+## Accelerated life testing and acceleration models
+
+- https://reliabilitybench.com/tools/accelerated-life-testing/
+- https://reliabilitybench.com/tools/arrhenius-acceleration-factor-calculator.html
+- https://reliabilitybench.com/tools/inverse-power-law-acceleration-calculator.html
+- https://reliabilitybench.com/tools/temperature-humidity-acceleration-calculator.html
+- https://reliabilitybench.com/tools/coffin-manson-acceleration-factor-calculator.html
+- https://reliabilitybench.com/guides/accelerated-life-testing-model-selection.html
+- https://reliabilitybench.com/reference/accelerated-life-testing-formulas.html
+
 ## Maintenance planning and scheduling
 
 - https://reliabilitybench.com/tools/schedule-compliance-calculator.html
