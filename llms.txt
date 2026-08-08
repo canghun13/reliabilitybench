@@ -18,6 +18,16 @@ The site provides practical calculators, guides, and technical references for re
 
 ## Use and attribution
 
+## Reliability growth and Duane model
+
+- https://reliabilitybench.com/tools/reliability-growth/
+- https://reliabilitybench.com/tools/reliability-growth-test-time-calculator.html
+- https://reliabilitybench.com/tools/duane-mtbf-projection-calculator.html
+- https://reliabilitybench.com/tools/reliability-growth-slope-calculator.html
+- https://reliabilitybench.com/tools/achieved-reliability-growth-mtbf-calculator.html
+- https://reliabilitybench.com/guides/reliability-growth-and-duane-model.html
+- https://reliabilitybench.com/reference/duane-reliability-growth-formulas.html
+
 ## Maintenance planning and scheduling
 
 - https://reliabilitybench.com/tools/schedule-compliance-calculator.html

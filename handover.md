@@ -552,3 +552,65 @@ GA 스크립트는 공통 구조에서 누락 없이 전체 공개 페이지에 
 
 ## 2026-08-06
 - 메인 페이지 푸터 아래의 디렉토리 뱃지 영역은 사용자가 직접 관리하는 영역이므로 수정·삭제·리팩터링하지 않는다.- https://boostdomainrating.com/ 에 등록 (내가 직접함)
+
+---
+
+## 2026-08-08 — Reliability Growth / Duane Model cluster
+
+### Repository sync and starting state
+
+- Target repository: `https://github.com/canghun13/reliabilitybench.git`; branch `main`.
+- The initial working tree was clean. Local HEAD was `a94467a` and was two commits behind `origin/main`.
+- Ran `git fetch origin` followed by `git pull --ff-only origin main`; starting local HEAD and `origin/main` were both `c9edc62907b594189809515072c25e12924b02f3` before any file edit.
+- Starting verified inventory: 60 public HTML pages, 59 indexable URLs, 34 calculators, 10 guide HTML pages including the hub, and 6 reference HTML pages including the hub.
+- Existing hubs, calculator configurations, guides, references, sitemap, llms.txt, internal links, and the full prior `handover.md` were inventoried before candidate selection. The recently completed Maintenance Planning & Scheduling scope was excluded from re-expansion.
+
+### Candidate research and decisions
+
+- **Reliability demonstration test planning — NO-GO.** Demand signals were strong across zero-failure sample size, reliability demonstration, confidence, and MTBF test-plan queries, but direct free tools already cover the core workflow: MetricGate, Texas Instruments, Reliability Analytics Toolkit, and Minitab methods. A four-tool cluster would enter strong exact-intent competition rather than fill a clear gap.
+- **Asset criticality / FMEA scoring — NO-GO.** Search intent is recurrent, but severity/occurrence/detection scales, RPN, criticality matrices, and action-priority rules vary materially by method and organization. Existing FMEA tools and PTC documentation cover the calculation patterns, while a generic score risks false precision and definition conflict.
+- **Critical and repairable spares planning — NO-GO.** Fleet quantity, failure rate, lead-time, stockout, and rotable-pool queries are useful, but SpareMind already offers a direct free workflow. Several proposed pages would reuse the same Poisson-demand core with different labels, creating thin mathematical duplication.
+- **Maintenance staffing and workload — NO-GO.** Spreadsheet and paid-tool competition is weaker, but the natural inputs (backlog, capacity, wrench time, schedule workload) overlap the just-completed maintenance planning cluster. Extending it now would violate the non-duplication objective.
+- **Reliability Growth / Duane Model — GO.** Search demand is narrower but recurrent around “Duane reliability growth calculator,” “reliability growth slope,” “target MTBF test time,” and “achieved MTBF.” Competition is mostly legacy calculators, technical PDFs, or software-library functions; MetricGate is the clearest modern direct tool. ReliabilityBench can differentiate with a free, no-login four-step workflow that keeps cumulative and instantaneous MTBF, model limits, and decision use visible.
+
+### Demand, competition, and technical sources
+
+- Reliability growth demand/competition reviewed: [MetricGate Duane calculator](https://metricgate.com/docs/duane-reliability-growth/), [Reliability Analytics Toolkit growth planning](https://reliabilityanalyticstoolkit.appspot.com/reliability_growth_planning), [Quanterion model overview](https://www.quanterion.com/models-commonly-used-to-measure-reliability-growth/), and the Python `reliability` package documentation.
+- Rejected test-planning competition reviewed: [MetricGate reliability demonstration](https://metricgate.com/docs/reliability-demonstration-test/), [Texas Instruments acceptance sample size](https://www.ti.com/support-quality/reliability/acceptance-sample-size.html), [Reliability Analytics Toolkit sample size](https://reliabilityanalyticstoolkit.appspot.com/sample_size), and [Minitab substantiation test methods](https://support.minitab.com/en-us/minitab/help-and-how-to/statistical-modeling/reliability/how-to/demonstration-test-plan/methods-and-formulas/substantiation-testing/).
+- Rejected FMEA/criticality and spares examples: [PTC FMEA criticality assessment methods](https://support.ptc.com/help/wrr/r12.0.1.0/en/wrr/ReferenceGuide/fmea/criticality_assessment_methods.html) and [SpareMind](https://www.getsparemind.com/).
+- Primary formula basis: NIST Engineering Statistics Handbook sections on [NHPP power-law models](https://www.itl.nist.gov/div898/handbook/apr/section1/apr191.htm), [Duane plots](https://www.itl.nist.gov/div898/handbook/apr/section1/apr192.htm), [reliability growth planning](https://www.itl.nist.gov/div898/handbook/apr/section3/apr313.htm), and [power-law model relationships](https://www.itl.nist.gov/div898/handbook/apr/section4/apr452.htm).
+
+### Implemented cluster
+
+- Hub: `tools/reliability-growth/index.html`.
+- Calculators: `tools/reliability-growth-test-time-calculator.html`, `tools/duane-mtbf-projection-calculator.html`, `tools/reliability-growth-slope-calculator.html`, and `tools/achieved-reliability-growth-mtbf-calculator.html`.
+- Guide: `guides/reliability-growth-and-duane-model.html`.
+- Reference: `reference/duane-reliability-growth-formulas.html`.
+- Integration: Tools hub, Reliability hub, Guides hub, Reference hub, calculator engine, calculator QA expectations, sitemap.xml, and llms.txt.
+- No new CSS or visual system was introduced. Branding, logo, favicon, header/footer partials, existing URLs, CNAME, GA4 ID, and the homepage were not modified.
+- The user-managed homepage directory-badge block remains byte-for-byte outside the diff. Browser QA found the same six anchors and image order: KittyLaunch, Sell With Boost, Twelve Tools, Findly.tools, SaaSGrow, and Boost Domain Rating.
+
+### Formula definitions and boundaries
+
+- Growth test time: `T_target = T0 × (M_target / M0)^(1 / β)`, restricted to positive baseline time/MTBF, target at least baseline, and `0 < β < 1`.
+- Duane projection: `M_c(T) = M0 × (T / T0)^β`; instantaneous `M_i(T) = M_c(T) / (1 - β)`, with future time at least baseline and `0 ≤ β < 1`.
+- Two-point slope: `β = ln(M2 / M1) / ln(T2 / T1)`, with positive MTBF/time and `T2 > T1`. Negative values remain visible as a deterioration diagnostic; values at or above 1 are explicitly outside the standard improving range.
+- Achieved end-of-test MTBF: observed cumulative `T/r`; fitted instantaneous `T / [r × (1 - β)]`, with a positive integer failure count and `0 ≤ β < 1`.
+- All four are point-model tools. They do not fit a full failure-time dataset, produce confidence bounds, demonstrate a requirement, or certify corrective-action effectiveness.
+
+### Final QA and inventory
+
+- Final inventory: 67 public HTML pages; 66 indexable canonical URLs; 66 sitemap URLs; 38 calculators; 11 guide HTML pages including the hub; 7 reference HTML pages including the hub.
+- Automated site QA: `tools/final-site-qa.mjs` passed structure/nesting, links, orphans, duplicate IDs, unique title/meta, canonical, robots, OG, JSON-LD syntax, partials, sitemap, robots.txt, llms.txt, CNAME, GA4, and favicon-path checks across all 67 pages.
+- Calculator QA: all 38 configurations passed independent expected-value checks, initialization, labels/units, normal samples, zero and extreme inputs, NaN/Infinity/negative guards, reset handling, content coverage, and targeted new-domain assertions. JavaScript syntax and `git diff --check` passed.
+- New browser sample results: 400 hours required test time, 87.06 hours projected cumulative MTBF, β = 0.4, and 333.04 hours achieved instantaneous MTBF. Existing MTBF and maintenance-planning-accuracy regressions remained 100 hours and 87.5%.
+- Browser QA: 19 required/representative pages × 5 viewports = 95 render combinations at 1440, 1280, 1024, 768, and 390px. Every page had one H1, loaded header/footer, non-overlapping header/main/footer, and zero page-level horizontal overflow.
+- Browser boundary interactions passed: target below baseline rejected, β = 1 rejected, fractional failure count rejected, negative slope interpreted as deterioration, long projection result rendered without overflow, and Reset restored samples.
+- Horizontal overflow: 1440 = 0; 1280 = 0; 1024 = 0; 768 = 0; 390 = 0.
+- Browser console errors: 0.
+- Remaining HIGH risk: 0.
+- Remaining MEDIUM risk: pre-existing immediate GA4 loading may require consent management before use in opt-in jurisdictions.
+- Remaining LOW risk: search demand was validated qualitatively rather than with a paid keyword-volume dataset; the deterministic Duane projections remain sensitive to slope and phase changes, which is disclosed on every cluster page.
+- Immediate additional work required: no. Wait for Search Console and usage evidence before adding another cluster.
+- Next observation point: review impressions, query mix, CTR, calculator interaction, invalid-input frequency, and exits after 60–90 days; do not add a second cluster merely from elapsed time.
+- Implementation/final commit: pending until this entry is committed.
