@@ -688,3 +688,53 @@ GA 스크립트는 공통 구조에서 누락 없이 전체 공개 페이지에 
 - Existing calculator Formula layouts were not changed because the rule cannot match any non-ALT calculator body. No separate broad Formula-style regression was required.
 - Remaining HIGH risk: 0. Remaining MEDIUM and LOW risks unchanged from the ALT-cluster entry.
 - Implementation/final commit: pending until this entry is committed.
+
+---
+
+## 2026-08-10 — Full audit and homepage inventory-count correction
+
+### Repository sync and starting state
+
+- Target repository: `https://github.com/canghun13/reliabilitybench.git`; branch `main`.
+- The workspace began as an empty Git repository with no remote or commits. It was connected to the target repository, `origin` was fetched, and local `main` was created to track `origin/main` without reset, stash, overwrite, merge, or rebase.
+- Starting local HEAD and `origin/main`: `2c6b0f8ed0de15560cf75f962518b5c386f2723a`; ahead/behind `0/0`; working tree clean.
+- Starting verified inventory: 74 public HTML pages; 73 indexable canonical URLs; 73 sitemap URLs; 42 calculators; 12 guide HTML pages including the hub; 8 reference HTML pages including the hub.
+- The complete current `handover.md`, public pages, calculator engine/configurations, shared shell and styles, hubs, sitemap, llms.txt, QA scripts, recent Reliability Growth and ALT scopes, and protected homepage badge area were reviewed before modification.
+
+### Search and analytics evidence
+
+- Search Console: the handover identifies a domain property, but no current GSC query/page export or connector data was available in the repository or supplied files. No impressions, clicks, CTR, average-position, or trend claim was inferred.
+- GA4: measurement ID `G-6Z73P5MMNS` is present sitewide and passed static QA, but no GA4 landing-page, engagement, calculator-use, exit, referral, or traffic-quality export was available. Automated QA/direct traffic was not treated as demand evidence.
+- Because no current search or behavior evidence was available and the two newest clusters were added on 2026-08-08, no existing search-targeted page was rewritten and no new cluster was proposed as an evidence-backed priority.
+
+### Full audit result
+
+- Baseline automated QA passed before modification: `tools/final-site-qa.mjs` scanned 74 public / 73 indexable / 73 sitemap URLs; `tools/calculator-qa.mjs` passed all 42 calculators; `tools/qa-check.mjs`, JavaScript syntax checks, and `git diff --check` passed.
+- Baseline browser QA covered 18 representative pages across Home, hubs, all four workstations, recent and existing calculators, Guide, Reference, trust pages, and 404 at 1440, 1280, 1024, 768, and 390px: 90 render combinations, zero shell/H1 failures, zero overlap, zero page-level horizontal overflow, and zero console warnings/errors.
+- Calculator formulas, normal samples, zero/extreme/non-finite/negative guards, units, Reset, content sections, result interpretation, and targeted domain boundaries passed the independent regression suite for all 42 configurations.
+- Link, orphan, breadcrumb/hub, metadata, canonical, robots, Open Graph, JSON-LD, sitemap, llms.txt, CNAME, favicon, GA4, duplicate-ID, and HTML nesting checks passed. No evidence-backed consolidation, noindex, canonical merge, link addition, Guide/Reference rewrite, shared CSS/JS change, or calculator change was justified.
+- One user-visible factual mismatch remained on the homepage: the status strip said `15 focused tools online` and the primary ledger CTA said `View all 15 tools`, while the verified current inventory contains 42 calculators.
+
+### Candidate decisions
+
+- **Homepage inventory-count correction — SELECTED.** Evidence: two prominent homepage strings contradicted the verified 42-calculator inventory. User value: removes an immediate scope/credibility mismatch on the main entry page. Search value: keeps homepage copy factually aligned without adding keywords or filler. Technical value: two text-only replacements, no layout or routing change. Regression risk: very low and directly testable.
+- **Analytics consent management — DEFER.** It remains a conditional MEDIUM risk, but no target-jurisdiction requirement, approved consent policy, or CMP choice was supplied. Implementing legal/analytics behavior by assumption would be materially broader and riskier than the verified defect.
+- **New calculator/content cluster — NO-GO.** No current GSC/GA4 evidence was available, recent Reliability Growth and ALT expansions still need observation, and previously considered adjacent topics have documented competition, overlap, or governance concerns. Page-count growth alone is not value.
+- **Internal-link or content reinforcement — NO-GO.** All indexable pages are linked and sitemap-consistent, the hubs route correctly, and calculator content coverage passed. Adding links or prose without a user or search failure would create noise rather than a measurable improvement.
+
+### Implemented change and scope
+
+- Updated only `index.html`: `15 focused tools online` → `42 focused tools online`; `View all 15 tools` → `View all 42 tools`.
+- No title, description, canonical, URL, sitemap, shared CSS/JS, calculator, Guide, Reference, brand, logo, favicon, CNAME, GA4 ID, or navigation structure changed.
+- The user-managed six-badge directory block was not edited, deleted, moved, or refactored. Browser verification retained all six badge images at every tested viewport.
+
+### Final QA and release state
+
+- Final automated QA passed: `tools/final-site-qa.mjs` (74 public / 73 indexable / 73 sitemap), `tools/calculator-qa.mjs` (42 calculators), `tools/qa-check.mjs`, both shared JavaScript syntax checks, and `git diff --check`.
+- Final homepage browser QA passed at 1440, 1280, 1024, 768, and 390px: both corrected `42` strings rendered, one H1 remained, horizontal overflow was 0, all six protected badges remained, and console warnings/errors were 0.
+- Remaining HIGH risk: 0.
+- Remaining MEDIUM risk: pre-existing immediate GA4 loading may require consent management before targeting jurisdictions that require opt-in analytics consent.
+- Remaining LOW risk: no current GSC/GA4 export was available, so content/search prioritization remains observational; display-font fallback and legacy SVG favicon behavior remain unchanged.
+- Immediate additional work required: no. Do not add another cluster or rewrite stable pages without current query/use evidence.
+- Next observation point: review GSC query/page impressions, clicks, CTR, average position, and GA4 organic landing/calculator engagement after the recent clusters have had a meaningful observation window (the prior recommendation remains 60–90 days).
+- Implementation/final commit: pending until this entry is committed.
