@@ -48,4 +48,15 @@ The site provides practical calculators, guides, and technical references for re
 - https://reliabilitybench.com/guides/maintenance-planning-and-scheduling.html
 - https://reliabilitybench.com/reference/maintenance-planning-metrics.html
 
+## CMMS data readiness and record quality
+
+- https://reliabilitybench.com/tools/cmms-data-readiness/
+- https://reliabilitybench.com/tools/asset-register-completeness-checker.html
+- https://reliabilitybench.com/tools/asset-id-convention-builder.html
+- https://reliabilitybench.com/tools/work-order-closeout-quality-checker.html
+- https://reliabilitybench.com/tools/failure-code-taxonomy-builder.html
+- https://reliabilitybench.com/tools/cmms-migration-readiness-planner.html
+- https://reliabilitybench.com/guides/cmms-data-readiness.html
+- https://reliabilitybench.com/reference/cmms-data-quality-fields.html
+
 Link to the canonical URL when referencing a ReliabilityBench page. Preserve formula assumptions and limitations when summarizing a calculator. Do not imply that a generic calculator result is professional advice for a specific site or asset.
