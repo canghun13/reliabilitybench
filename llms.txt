@@ -59,4 +59,14 @@ The site provides practical calculators, guides, and technical references for re
 - https://reliabilitybench.com/guides/cmms-data-readiness.html
 - https://reliabilitybench.com/reference/cmms-data-quality-fields.html
 
+## Intermittent fault and no-fault-found investigation
+
+- https://reliabilitybench.com/tools/intermittent-fault-investigation/
+- https://reliabilitybench.com/tools/intermittent-fault-event-report-builder.html
+- https://reliabilitybench.com/tools/intermittent-fault-pattern-analyzer.html
+- https://reliabilitybench.com/tools/no-fault-found-history-screener.html
+- https://reliabilitybench.com/tools/intermittent-fault-reproduction-plan-builder.html
+- https://reliabilitybench.com/guides/intermittent-fault-investigation.html
+- https://reliabilitybench.com/reference/intermittent-fault-data-fields.html
+
 Link to the canonical URL when referencing a ReliabilityBench page. Preserve formula assumptions and limitations when summarizing a calculator. Do not imply that a generic calculator result is professional advice for a specific site or asset.

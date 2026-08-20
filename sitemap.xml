@@ -81,4 +81,11 @@
   <url><loc>https://reliabilitybench.com/tools/cmms-migration-readiness-planner.html</loc></url>
   <url><loc>https://reliabilitybench.com/guides/cmms-data-readiness.html</loc></url>
   <url><loc>https://reliabilitybench.com/reference/cmms-data-quality-fields.html</loc></url>
+  <url><loc>https://reliabilitybench.com/tools/intermittent-fault-investigation/</loc></url>
+  <url><loc>https://reliabilitybench.com/tools/intermittent-fault-event-report-builder.html</loc></url>
+  <url><loc>https://reliabilitybench.com/tools/intermittent-fault-pattern-analyzer.html</loc></url>
+  <url><loc>https://reliabilitybench.com/tools/no-fault-found-history-screener.html</loc></url>
+  <url><loc>https://reliabilitybench.com/tools/intermittent-fault-reproduction-plan-builder.html</loc></url>
+  <url><loc>https://reliabilitybench.com/guides/intermittent-fault-investigation.html</loc></url>
+  <url><loc>https://reliabilitybench.com/reference/intermittent-fault-data-fields.html</loc></url>
 </urlset>
