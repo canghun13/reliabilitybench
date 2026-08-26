@@ -69,4 +69,15 @@ The site provides practical calculators, guides, and technical references for re
 - https://reliabilitybench.com/guides/intermittent-fault-investigation.html
 - https://reliabilitybench.com/reference/intermittent-fault-data-fields.html
 
+## Intermittent spare-parts forecast governance
+
+- https://reliabilitybench.com/tools/intermittent-spare-parts-forecasting/
+- https://reliabilitybench.com/tools/stockout-censored-demand-auditor.html
+- https://reliabilitybench.com/tools/intermittent-demand-pattern-classifier.html
+- https://reliabilitybench.com/tools/croston-sba-tsb-forecast-calculator.html
+- https://reliabilitybench.com/tools/intermittent-demand-backtest-comparator.html
+- https://reliabilitybench.com/tools/forecast-value-added-auditor.html
+- https://reliabilitybench.com/guides/intermittent-spare-parts-forecasting.html
+- https://reliabilitybench.com/reference/intermittent-demand-methods.html
+
 Link to the canonical URL when referencing a ReliabilityBench page. Preserve formula assumptions and limitations when summarizing a calculator. Do not imply that a generic calculator result is professional advice for a specific site or asset.
