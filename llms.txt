@@ -80,4 +80,14 @@ The site provides practical calculators, guides, and technical references for re
 - https://reliabilitybench.com/guides/intermittent-spare-parts-forecasting.html
 - https://reliabilitybench.com/reference/intermittent-demand-methods.html
 
+## Equipment operating profile analysis
+
+- https://reliabilitybench.com/tools/equipment-operating-profile-analysis/
+- https://reliabilitybench.com/tools/machine-state-log-analyzer.html
+- https://reliabilitybench.com/tools/equipment-load-profile-analyzer.html
+- https://reliabilitybench.com/tools/threshold-excursion-duration-analyzer.html
+- https://reliabilitybench.com/tools/process-variable-rate-of-change-screener.html
+- https://reliabilitybench.com/guides/equipment-operating-profile-analysis.html
+- https://reliabilitybench.com/reference/operating-profile-analysis-methods.html
+
 Link to the canonical URL when referencing a ReliabilityBench page. Preserve formula assumptions and limitations when summarizing a calculator. Do not imply that a generic calculator result is professional advice for a specific site or asset.
