@@ -1785,3 +1785,224 @@ Each screen records user/workflow and problem; core intent/long tails; possible 
 - Remaining HIGH risk: 0 introduced. Remaining MEDIUM risk: pre-existing GA4 consent handling remains jurisdiction-dependent. Remaining LOW risk: demand ratings are qualitative without paid volume; SERPs change; specialist standards, OEM limits, and vendor tools evolve.
 - Future reconsideration: revisit NDE POD only if first-party queries demonstrate sufficient specialist demand and an independently verified browser implementation can be maintained; revisit calibration result analysis only if current combined free tools disappear or users request a specific missing dataset workflow; revisit derating only with a stable public policy basis and narrower component scope. Do not revisit insulation, leak, chamber-profile, relay, or power-quality families without a materially new workflow gap.
 - Implementation commit: **not applicable (NO-GO; no production implementation)**. The final handover-only commit containing this research is reported in the task result after push and remote verification.
+
+---
+
+## 2026-09-18 — Equipment Operating Profile indexability diagnosis and new-workflow expansion (NO-GO)
+
+### Safe start, synchronization, and verified inventory
+
+- Target repository and branch were verified as `https://github.com/canghun13/reliabilitybench.git` on `main`; the worktree was clean.
+- Starting local HEAD was `b5bf3d3f101a2d39254c0069c9434995e1c526be`; fetched `origin/main` and actual remote `main` were `d3d261281b3a614be9bf5210e6d96db84da115d7`. Local was one commit behind and not ahead or diverged.
+- `git pull --ff-only origin main` completed before diagnosis or editing. A new fetch and `git ls-remote` confirmed local HEAD = `origin/main` = actual remote main = `d3d261281b3a614be9bf5210e6d96db84da115d7`, ahead/behind `0/0`, clean.
+- No reset, stash, clean, overwrite checkout, merge, rebase, force push, dependency installation, or modification of user work was used.
+- Starting inventory verified from the repository and QA: 104 public HTML pages; 103 indexable/canonical/sitemap URLs; 42 calculator-engine pages; 18 non-calculator workflow tools; 16 Guide HTML pages including the hub; 12 Reference HTML pages including the hub.
+- Baseline integration QA passed: `tools/final-site-qa.mjs` reported 104 public / 103 indexable / 103 sitemap pages, and `tools/qa-check.mjs` passed all 103 indexable pages.
+
+### Targeted indexability diagnosis — exact seven URLs
+
+1. `https://reliabilitybench.com/tools/equipment-operating-profile-analysis/`
+2. `https://reliabilitybench.com/tools/machine-state-log-analyzer.html`
+3. `https://reliabilitybench.com/tools/equipment-load-profile-analyzer.html`
+4. `https://reliabilitybench.com/tools/threshold-excursion-duration-analyzer.html`
+5. `https://reliabilitybench.com/tools/process-variable-rate-of-change-screener.html`
+6. `https://reliabilitybench.com/guides/equipment-operating-profile-analysis.html`
+7. `https://reliabilitybench.com/reference/operating-profile-analysis-methods.html`
+
+#### HTTP, robots, canonical, and sitemap
+
+- All seven production URLs returned HTTPS `200` with both a normal browser user agent and a Googlebot user agent. Manual redirect handling found no redirect chain. Every response contained normal HTML, the expected H1, and no soft-404 title/H1 signal.
+- Production response sizes were normal rather than empty/thin shells: hub 3,838 bytes; tools 4,731, 4,772, 5,098, and 5,333 bytes; Guide 7,634 bytes; Reference 5,018 bytes.
+- None returned an `X-Robots-Tag`. Every page declares `meta name="robots" content="index,follow"`. Production `robots.txt` returned `200`, allows all crawlers, and declares `https://reliabilitybench.com/sitemap.xml`.
+- Every page has the exact HTTPS/apex self-canonical. No canonical points to another page.
+- Every exact URL occurs once in `sitemap.xml`; no slash/non-slash duplicate or conflicting variant was found.
+
+#### Static discovery, crawl depth, and page identity
+
+- All counted discovery paths are literal static `<a href>` links, not JavaScript-only controls. The Tools directory links to the cluster hub; the hub links to all four tools, Guide, and Reference; the Guide and Reference cross-link to the hub and tools; and the tool pages link within the cluster.
+- Exact crawl depth is comparable to healthy clusters: home → Tools → cluster hub is 2 clicks; home → Tools → hub → each tool is 3; home → Guides → Guide and home → Reference → Reference are 2; Tools → hub → Guide/Reference is 2.
+- Static inbound counts were hub 7, State 5, Load 4, Threshold 5, Rate 3, Guide 7, and Reference 7. No target is orphaned.
+- H1, lead copy, method/content, and core internal links exist before JavaScript. The four tools contain their initial forms and explanatory method content in static HTML rather than an empty application shell.
+- Titles, H1s, and meta descriptions are unique and identify separate intents. Pairwise body-token Jaccard similarity across the four tools topped out at 0.27; the other pairs were 0.17–0.25, which provides no near-duplicate signal.
+
+#### Rendering and structured data
+
+- A real browser loaded all seven production pages. Each H1 and main content block was visible, the header/footer rendered, core links existed, body horizontal overflow was zero, and browser console warnings/errors were `0/0`.
+- The four tools, Guide, and Reference contain valid parseable JSON-LD with matching page identity and canonical URL. The hub has no JSON-LD, matching both healthy comparison hubs rather than representing a cluster-specific defect.
+
+#### Healthy comparison clusters
+
+- **Intermittent Fault / NFF:** hub 3,732 bytes / 188 words / 8 static links / 6 inbound links; tools 4,733–7,315 bytes and 239–300 words with 3–6 inbound links; Guide/Reference 6,870/6,776 bytes and 533/513 words.
+- **Intermittent Spare-Parts Forecast Governance:** hub 4,127 bytes / 238 words / 10 static links / 8 inbound links; tools 4,458–5,207 bytes and 234–269 words with 3–6 inbound links; Guide 7,530 bytes / 644 words; Reference 5,291 bytes / 406 words.
+- **Target cluster:** hub 3,838 bytes / 221 words / 9 static links / 7 inbound links; tools 4,731–5,333 bytes and 250–274 words with 3–5 inbound links; Guide 7,634 bytes / 605 words; Reference 5,018 bytes / 399 words. Sitemap, canonical, robots, metadata, structured data, static discovery, and crawl depth follow the same patterns as the healthy clusters.
+
+#### Page-by-page classification and action
+
+- Hub: **Type 4 — No defect found**.
+- Machine State Log Analyzer: **Type 4 — No defect found**.
+- Equipment Load Profile Analyzer: **Type 4 — No defect found**.
+- Threshold Excursion Duration Analyzer: **Type 4 — No defect found**.
+- Process Variable Rate-of-Change Screener: **Type 4 — No defect found**.
+- Guide: **Type 4 — No defect found**.
+- Reference: **Type 4 — No defect found**.
+- Site-side defect: **NO**. The reported Search Console state is most defensibly classified as Google crawl scheduling/index selection after the technical, structural, content-identity, comparison, and render checks found no site-side cause. Search Console itself was not connected in this session, so the user-reported status is not embellished with invented crawl data.
+- Production change for this cluster: **none**. No speculative links, copy, metadata, schema, or sitemap edits were made.
+
+### Expansion boundary and method
+
+- The existing complete exclusion boundary remains 134 normalized named candidate families plus the handover's broader 87-family protected/foundational group boundary; these sets overlap and are therefore not falsely summed. Every implemented, shortlisted, deep-validated, HOLD, and NO-GO workflow in the full handover was excluded.
+- Asset-name substitutions, protocol-name substitutions, unit changes, forward/reverse variants, one score split across pages, and reuse of operating-profile/time-series algorithms were not counted as new merely because the nouns changed.
+- The new pass examined 48 additional families, advanced 12 to a live-search shortlist, and deep-validated seven. Demand labels are qualitative; no paid keyword-volume numbers are claimed.
+
+### Broad discovery — 48 genuinely new workflow/search families
+
+Each numbered screen records the user/workflow and problem; intent and long-tail; plausible independent-tool count; repeat use; overlap; demand/competition; static feasibility; and initial verdict.
+
+1. **Industrial measurement-acquisition planning.** Test/controls engineers select sample rate, anti-alias margin, FFT record length, ADC resolution, and logger storage before campaigns; five distinct calculator intents recur per setup. Low direct overlap, Strong demand, strong integrated free competition, excellent static fit: **shortlist**.
+2. **Industrial historian retention planning.** Controls/IT engineers translate tag classes, update/change rates, bytes, compression, replicas, growth, and retention into capacity and archive tiers; four planning decisions repeat during expansion. Low overlap, Moderate-Strong demand, several current exact estimators, excellent static fit: **shortlist**.
+3. **Industrial protocol capacity planning.** Controls engineers estimate Modbus RTU scan cycles, CAN/CAN-FD utilization, EtherNet/IP RPI packet load, and OPC UA subscription queues; four protocol-specific decisions repeat at design/change time. Low site overlap, Strong intent but fragmented protocol competition and implementation-specific limits, good-to-moderate static fit: **shortlist**.
+4. **OT packet-loss and latency health analysis.** OT engineers summarize loss bursts, latency percentiles, jitter, reorder, and availability from ping/capture exports; four analyses recur during incident and baseline reviews. Partial generic time-series overlap, Moderate demand, mature network tools, good static parsing: **reject**.
+5. **Industrial-network redundancy failover test analysis.** Network/controls engineers compare path interruption, lost frames, reconvergence, asymmetry, and repeated fault injections for RSTP/MRP/PRP/HSR tests. Moderate specialist demand, hardware/protocol dependence, commercial analyzers, four views but one capture dataset: **shortlist**.
+6. **Precision-time synchronization quality analysis.** Controls/test engineers analyze offset, jitter, wander, asymmetry, and holdover from PTP/NTP logs. Moderate specialist demand, existing `ptp4l`/vendor analyzers, public definitions but hardware/profile dependence, four views of one timing stream: **shortlist**.
+7. **PLC task-load and watchdog planning.** Automation engineers compare periodic task execution, utilization, overlap, priority, and watchdog margin when programs change. Strong practitioner demand, current exact calculator plus vendor task monitors, controller-specific scheduling, four apparent checks but weak universality: **shortlist**.
+8. **PLC pulse-capture and debounce planning.** Controls engineers determine whether scan/task/input-filter timing can capture pulse width and suppress bounce; capture margin, missed-pulse envelope, debounce delay, and counter need are possible. Moderate demand, strong controller/hardware dependence, three genuinely independent decisions, static arithmetic easy: **reject**.
+9. **MQTT industrial-delivery planning.** IIoT engineers choose QoS, keepalive, session expiry, inflight window, and reconnect behavior for telemetry. Strong developer intent but decisions depend on broker/client implementation and security architecture; fewer than four safe calculators, many docs/tools: **reject**.
+10. **Store-and-forward edge-buffer planning.** IIoT engineers size outage buffer, drain rate, reconnect backlog, and storage endurance for disconnected telemetry. Moderate-Strong recurring intent, low site overlap, static math feasible, but buffer/drain calculations share one model and current articles/vendor features are strong: **shortlist**.
+11. **Control-loop step-response characterization.** Controls engineers derive gain, dead time, time constant, settling, and fit quality from bump-test data. Strong demand and repeat use, low direct site overlap, current FOPDT/PID tools and safety/test authorization burden, static CSV fit feasible: **shortlist**.
+12. **PID performance comparison.** Controls engineers compare overshoot, rise/settling time, IAE/ISE/ITAE, oscillation, and before/after tunings. Strong intent but generic controls software and current simulators dominate; outputs are views of the same response and live-process context governs action: **shortlist**.
+13. **PID saturation and windup review.** Controls engineers quantify output-at-limit duration, integral recovery, error burden, and repeated saturation episodes. Moderate specialist demand, four metrics from one log, strong operating-profile algorithm reuse, controller-specific anti-windup: **reject**.
+14. **Cascade-loop coordination review.** Controls engineers compare inner/outer response-speed ratio, saturation propagation, interaction, and disturbance recovery. Moderate demand, commissioning/safety dependence, difficult universal thresholds, fewer than four independent tools: **reject**.
+15. **Feedforward disturbance-response comparison.** Process-control engineers compare predicted and observed disturbance effect, timing mismatch, residual error, and before/after performance. Moderate niche demand, generic modeling competition, data alignment and causal interpretation dominate, static analysis possible but not a four-tool family: **reject**.
+16. **Solar-PV field performance analytics.** PV O&M engineers calculate performance ratio, string mismatch, inverter clipping, and degradation from operating exports. Strong demand/repeat use, low basic site overlap, but integrated free/vendor/NREL tools and weather/equipment data dependencies close the gap: **shortlist**.
+17. **Wind-turbine power-curve performance review.** Wind O&M teams bin wind speed/power, normalize density, compare reference curves, and estimate underperformance. Moderate-Strong industry demand, SCADA and IEC-method dependence, mature commercial/open analytics, static local files possible but accuracy burden high: **reject**.
+18. **Hydropower unit-efficiency review.** Plant engineers reconcile head, flow, electrical output, part-load bands, and before/after efficiency. Moderate specialist demand, instrument uncertainty and plant-specific curves dominate, three strong decisions, static feasibility moderate: **reject**.
+19. **Water-utility loss audit.** Utility teams build a water balance, normalize non-revenue water, calculate ILI, and interpret minimum-night-flow leakage. Strong recurring institutional demand and four intents, but AWWA's free integrated audit and current combined calculators own the workflow: **shortlist**.
+20. **Pump-station energy-intensity benchmarking.** Water/facility engineers compare kWh/volume, head-normalized wire-to-water performance, duty split, and tariff-period burden. Moderate demand, partial pump-performance/economics adjacency, historian/curve dependencies, mature energy tools: **reject**.
+21. **Steam-distribution and condensate-return performance.** Utility engineers estimate condensate return rate, flash loss, makeup/heat burden, and route imbalance. Strong calculator intent, but abundant steam calculators and site steam-state assumptions; four equations do not form a distinctive workflow: **reject**.
+22. **Industrial nitrogen-system capacity review.** Facility engineers reconcile demand peaks, generator output/purity, receiver reserve, and backup duration. Moderate demand, equipment/adsorbent/purity dependencies, vendor sizing tools, static planning feasible but fewer than four independent decisions: **reject**.
+23. **Industrial refrigeration performance review.** Refrigeration engineers compare COP, compressor specific power, suction/discharge conditions, defrost burden, and seasonal baselines. Strong industry relevance, but refrigerant properties/live data/safety and vendor software raise dependency and maintenance burden: **reject**.
+24. **Heat-pump defrost and seasonal-performance review.** Facility engineers separate heating COP, defrost energy/time, auxiliary heat, and weather-bin performance. Strong current interest, equipment/climate data dependence, many energy calculators, weaker ReliabilityBench fit: **reject**.
+25. **Furnace/kiln specific-energy performance.** Process engineers normalize fuel/electric energy by throughput, heat-up, soak, idle, and campaign loss. Moderate recurring demand, process/recipe-specific baselines, four views reuse one energy balance, static feasibility good: **reject**.
+26. **Industrial-dryer moisture/energy performance.** Process engineers calculate water removed, specific energy, drying rate, exhaust loss proxy, and batch comparison. Moderate demand and static formulas, but product equilibrium/moisture methods and equipment context dominate; competition is process-specific: **reject**.
+27. **Local-exhaust/fume-capture balance verification.** Industrial ventilation teams compare branch airflow, hood capture target, duct velocity, and fan margin. Strong practical demand but safety/code/measurement context and established ventilation calculators prevent a generic reliability suite: **reject**.
+28. **Manufacturing test-station performance analytics.** Test engineers separate first-pass yield, retest recovery, false-fail evidence, station-to-station agreement, and failure concentration from unit-level exports. Strong recurring demand, five plausible tools, partial measurement-agreement/fixture adjacency, mature integrated analytics platforms: **shortlist**.
+29. **Machine-vision inspection performance analytics.** Quality/automation teams compare false accept/reject, threshold trade-off, class/site concentration, and drift across verified image results. Strong operational problem, four apparent analyzers, but generic classification statistics and commercial vision analytics dominate; ground-truth and validation are essential: **shortlist**.
+30. **Barcode/RFID read-reliability analysis.** Manufacturing/logistics teams compare no-read rate, retries, location/device concentration, and tag/label cohorts. Moderate recurring demand, low formula novelty, mature device/warehouse dashboards, four views of the same event table: **reject**.
+31. **Remote-sensor battery and reporting-duty planning.** IIoT engineers estimate average current, report/event airtime, battery life, cold/aging derating, and replacement wave. Strong intent but abundant battery-life/LoRa tools; component/vendor behavior and wireless assumptions dominate: **reject**.
+32. **Industrial-wireless link-reliability planning.** OT/RF engineers check link budget, Fresnel clearance, fade margin, airtime/duty cycle, and retry capacity. Strong demand, five independent calculations, low overlap, but current free no-login suites from specialist and manufacturer sites are saturated: **shortlist**.
+33. **AGV/AMR mission and charging performance.** Intralogistics engineers compare mission cycle, queue/wait, state of charge, charger contention, and fleet availability. Strong commercial use but local maps/fleet orchestration/simulation dominate; one static worksheet cannot compete, and availability overlap is material: **reject**.
+34. **Automated-warehouse buffer accumulation review.** Operations engineers size accumulation, detect starvation/blocking, estimate recovery, and compare SKU/order profiles. Moderate demand, strong overlap with prior line-state/operating-profile work and simulation products: **reject**.
+35. **Crane/hoist duty-utilization review.** Maintenance engineers classify lift cycles, load spectrum, starts, duty class, and inspection exposure. Strong practical demand but paid standards/OEM/safety dependence make universal browser guidance unsuitable: **reject**.
+36. **Elevator/escalator service-event analytics.** Facility teams compare callouts, entrapments, door faults, downtime, and repeat visits by unit. Moderate recurring demand, but this is a vendor/CMMS dashboard using generic event aggregation and overlaps bad-actor/first-time-fix work: **reject**.
+37. **Forklift fleet charging/utilization review.** Fleet teams compare run/idle/charge states, opportunity-charge behavior, battery rotation, and peak charger demand. Moderate demand, strong fleet-platform competition, overlaps operating profiles and capacity planning: **reject**.
+38. **Robotic-cell repeatability and cycle-capability review.** Automation teams compare cycle-time distribution, position/test residuals, fault recovery, and product variants. Strong operational value but generic SPC/cycle-time/robot-vendor analytics dominate; strong overlap with prior scenario/cycle stability families: **reject**.
+39. **Manufacturing test-coverage and redundancy optimization.** Test/DFT engineers map tests to faults/features, measure incremental coverage, identify redundant tests, and explore removal risk. Moderate specialist demand, genuine four decisions, but reliable results require proprietary product fault models and commercial ATPG/test platforms: **reject**.
+40. **Serialization/label verification performance.** Packaging/traceability teams compare code-grade/read result, mismatch, rework, and line/location concentration. Moderate demand, hardware inspection systems and regulated identity controls dominate; local static views are not independently valuable: **reject**.
+41. **Checkweigher/metal-detector false-reject analysis.** Quality teams analyze challenge-test results, false rejects, weight-zone drift, and product/line effects. Moderate demand, equipment/vendor and food/pharma procedure dependence, generic confusion/SPC methods, safety/compliance implications: **reject**.
+42. **Batch-recipe execution conformance analysis.** Process engineers compare step order, commanded versus actual duration, holds, deviations, and repeated batches. Strong enterprise value, but strong operating-profile/sequence overlap, historian/MES integrations, and validated-system requirements: **reject**.
+43. **Bulk-solids hopper-flow reliability planning.** Process engineers evaluate residence time, discharge rate, refill margin, bridging risk inputs, and feeder capacity. Moderate demand, material-test/design knowledge and safety dominate; calculators are not four independent reliability decisions: **reject**.
+44. **Silo/tank inventory reconciliation.** Operations teams compare level-derived inventory, receipts/issues, unexplained gain/loss, measurement bias, and period close. Moderate recurring demand, geometry/product-density dependencies, existing tank calculators/ERP tools, generic reconciliation: **reject**.
+45. **Pipeline pigging-run performance review.** Pipeline teams compare run time/speed, pressure differential, stalls, debris, and successive runs. Moderate specialist demand, safety/proprietary telemetry dependence, four views of one run, weak static-site fit: **reject**.
+46. **Cathodic-protection survey analytics.** Integrity teams process close-interval potential, polarization, rectifier, and interruption survey data. Strong specialist workflow but directly adjacent to excluded corrosion, governed by standards/procedure, and commercial GIS/integrity tools dominate: **reject**.
+47. **VOC/odor-abatement unit performance.** Environmental/reliability teams compare inlet/outlet concentration, destruction efficiency, pressure drop, media life, and loading. Moderate regulated demand, sampling/method/permit dependence, strong environmental-compliance risk, equipment-specific decisions: **reject**.
+48. **Process deadband/compression impact analysis.** Controls/data engineers compare retained point count, max reconstruction error, trend distortion, and storage saving across exception/deadband settings. Moderate historian demand, four measures from one dataset, partial sensor-QC/time-series overlap, vendor algorithm differences; useful feature, not an independent cluster: **reject**.
+
+### Live-search shortlist — 12 families
+
+| Rank | Family | Current intent and alternatives | Tool independence / overlap / static fit | Result |
+|---:|---|---|---|---|
+| 1 | Industrial protocol capacity planning | Strong Modbus scan, CAN load, EtherNet/IP RPI/PPS, and OPC UA queue intent; exact Modbus/CAN tools exist, while Ethernet/OPC guidance is more fragmented | Four protocol decisions, but protocol substitution does not create one coherent tool family; vendor capacity matters | **deep / NO-GO** |
+| 2 | Industrial measurement-acquisition planning | Strong sample-rate, alias, FFT resolution, ADC, and logging intents; Apex Waves and Fault Ledger already integrate most of the suite | Five independent design questions; low overlap; excellent static fit | **deep / NO-GO** |
+| 3 | Manufacturing test-station analytics | Strong FPY/retest/false-fail/station-analysis intent; TofuPilot, Keysight, IntraStage, and other manufacturing analytics span the workflow | Five views can be useful, but several share one serial-level dataset and touch protected measurement agreement | **deep / NO-GO** |
+| 4 | Industrial historian retention planning | Strong tags/rate/compression/retention intent; TIMEBASE and AutomationView provide current exact estimators | Four planning outputs collapse to one capacity model; low overlap; excellent static fit | **deep / NO-GO** |
+| 5 | PLC task-load/watchdog planning | Current exact PLC scan calculator plus vendor task monitors/docs; recurring watchdog questions exist | Controller scheduler and measured max scan dominate; only two to three universal decisions | **deep / NO-GO** |
+| 6 | Control-loop step-response characterization | Strong FOPDT/PID tuning intent; ZeroAndSpan, PID Simulator, pidsnap, and current spreadsheets already serve it | CSV analysis feasible, but online testing and model validity are safety/context dependent | **deep / NO-GO** |
+| 7 | Machine-vision inspection performance | False-accept/reject and production validation need is strong; generic confusion/ROC tools plus commercial vision analytics compete | Ground truth, thresholding, drift, and class/site views exist, but not four independent workflows | **deep / NO-GO** |
+| 8 | Water-utility loss audit | Strong NRW/water-balance/ILI/night-flow institutional intent; AWWA Free Water Audit and combined calculators are authoritative alternatives | Four decisions, recurring; low overlap; static feasible | **deep / NO-GO** |
+| 9 | Solar-PV field performance analytics | Strong PR, clipping, string mismatch, and degradation intent; Solar Stack, NEUTRON, NREL RdTools, and exact calculators are mature | Four decisions but weather/equipment datasets and integrated tools close the gap | **NO-GO** |
+| 10 | Industrial-wireless link planning | Strong link-budget/Fresnel/fade/airtime intent; FresnelPath, Moxa, Qorvo, and LoRa-specific tools provide broad free coverage | Five independent calculations, static feasible, but suite-level competition is saturated | **NO-GO** |
+| 11 | Store-and-forward buffer planning | Recurring outage-buffer/drain/reconnect intent; vendor/blog guidance and broker/edge features exist | Mostly one balance equation under different labels; platform/endurance context dominates | **NO-GO** |
+| 12 | Precision-time synchronization quality | Real PTP offset/jitter/wander/holdover intent and community failure reports; `ptp4l` and vendor tools produce source data | Four statistical views, but profile/hardware topology controls interpretation | **NO-GO** |
+
+### Deep candidate 1 — Industrial protocol capacity planning
+
+- **Workflow / demand / repeat use:** controls engineers repeatedly assess network loading while adding devices, tags, scan groups, connections, or subscriptions. Demand is **Strong** across `Modbus RTU polling time calculator`, `CAN bus load calculator`, `EtherNet/IP RPI bandwidth`, and `OPC UA publishing interval queue`.
+- **Current SERP and free alternatives:** IndustrialProfi and several engineering sites provide exact Modbus tools; CANbus Academy and current CAN/CAN-FD calculators provide no-login utilization tools; ODVA/Rockwell material explains connection/RPI/PPS capacity; OPC Foundation specifies sampling, publishing, retransmission, and queue behavior.
+- **Four proposed tools:** Modbus RTU poll-cycle planner; CAN/CAN-FD utilization calculator; EtherNet/IP connection/RPI load planner; OPC UA sampling/publishing/queue planner. Inputs, protocol mechanics, outputs, and decisions are distinct, but they are asset/protocol substitutions rather than a single repeated workflow that naturally produces one Hub and shared Guide.
+- **Sources / dependency / feasibility:** Modbus Organization, ODVA, and OPC Foundation are strong public sources. Accurate capacity still depends on device processing, supported connections, frame mix, server-revised intervals, switch topology, and implementation limits. Static arithmetic is feasible only as a first-pass estimate.
+- **Overlap / gap / risk:** low overlap with current pages and fragmented competition, but no credible universal verdict or cross-protocol workflow advantage. A visitor normally needs one protocol tool, not the suite.
+- **Score:** **84/100** — demand 24, SERP gap 15, tools 17, repeat 9, non-overlap 10, source/static 6, fit 3.
+- **Hard gates / decision:** fails 1–2 at family level (protocol substitution), 6, 10, 11, and 14. **NO-GO**.
+
+### Deep candidate 2 — Industrial measurement-acquisition planning
+
+- **Workflow / demand / repeat use:** test and controls engineers choose acquisition settings per sensor/test. Demand is **Strong** for sample rate/Nyquist, alias frequency, FFT bin resolution/record length, ADC resolution, and data-logger storage.
+- **Current SERP and free alternatives:** Apex Waves exposes an integrated Signal & DAQ directory with sampling-rate, aliasing, FFT-bin, ADC-resolution, averaging, and SNR tools; Fault Ledger combines FFT rate/record length/window/ADC/file size; current Nyquist visualizers and DATAQ storage tools cover remaining intent.
+- **Five proposed tools:** sample-rate/anti-alias planner; alias-frequency explorer; FFT record-length/resolution planner; ADC resolution/quantization screen; logger throughput/storage planner. They answer separate setup questions and are static-safe when framed as planning estimates.
+- **Gap / overlap / sources:** low overlap with ReliabilityBench; NI and standard signal-processing formulas provide strong public grounding. However, current free no-login integrated coverage already provides the exact visit reason, and real acquisition choices also depend on sensor bandwidth, anti-alias hardware, multiplexing, settling, and device throughput.
+- **Score:** **82/100** — demand 24, SERP gap 8, tools 19, repeat 9, non-overlap 10, source/static 9, fit 3.
+- **Hard gates / decision:** fails 9, 10, and 14 for a reliability/maintenance site. **NO-GO**.
+
+### Deep candidate 3 — Manufacturing test-station performance analytics
+
+- **Workflow / demand / repeat use:** manufacturing test engineers repeatedly review unit/serial-level results to separate first-pass failures, retest recovery, station disagreement, suspected false fails, and concentrated failure codes. Demand is **Strong** and operationally recurring.
+- **Current SERP and alternatives:** exact FPY/RTY calculators are abundant; Symestic combines FPY, scrap, final yield, and multi-stage RTY; TofuPilot tracks station and retest patterns; Keysight PathWave Manufacturing Analytics, IntraStage, and NS-HPDCA cover retest, false-fail, station, failure Pareto, and MSA/SPC workflows.
+- **Five proposed tools:** serial-aware first-pass/retest funnel; station-to-station agreement comparator; reference/golden-unit stability reviewer; suspected false-fail evidence matrix; failure-code/site concentration analyzer.
+- **Gap / overlap / feasibility:** a free local CSV workbench is a presentation/privacy gap and static parsing is feasible. Yet tools 2–4 depend on ground truth and test-program context; several are views of the same dataset; station agreement overlaps the protected measurement-agreement and fixture-repeatability families. Commercial platforms provide the genuinely useful joined-history workflow.
+- **Score:** **81/100** — demand 23, SERP gap 14, tools 16, repeat 10, non-overlap 6, source/static 8, fit 4.
+- **Hard gates / decision:** fails 2, 6, 8, 10, and 14. **NO-GO**.
+
+### Deep candidate 4 — Industrial historian retention planning
+
+- **Workflow / demand / repeat use:** controls/IT engineers size storage and retention when tag counts, update policy, replication, or archive rules change. Demand is **Moderate-Strong** for historian storage sizing, tag-rate capacity, compression, and retention calculators.
+- **Current SERP and free alternatives:** current TIMEBASE Historian Storage Estimator models tag type and change rate; AutomationView provides an exact historical data-logging estimator; current engineering articles publish the same tag × rate × bytes × time ÷ compression model; vendor documentation supplies product-specific overhead.
+- **Four proposed tools:** raw cyclic-ingest estimator; exception/change-rate estimator; retention/growth/replica capacity planner; measured-versus-modeled capacity reconciler. Only the reconciler is materially independent; the first three are parameterizations of the same balance.
+- **Sources / dependency / feasibility:** static implementation is easy and public arithmetic is adequate for estimates. Production accuracy depends on historian-specific timestamp/quality/index overhead, compression behavior, replication, and measured change rates; vendor sizing remains authoritative.
+- **Score:** **79/100** — demand 21, SERP gap 10, tools 13, repeat 9, non-overlap 10, source/static 11, fit 5.
+- **Hard gates / decision:** fails 5, 6, 9, and 10. **NO-GO**.
+
+### Deep candidate 5 — PLC task-load and watchdog planning
+
+- **Workflow / demand / repeat use:** automation engineers review periodic/continuous task execution, priority, overlap, CPU margin, and watchdog settings after logic or I/O changes. Demand is **Moderate-Strong**, supported by recurring practitioner questions and current exact calculator intent.
+- **Current SERP and alternatives:** DesignCalculators publishes a current PLC Scan Time/IEC 61131-3 Task Analysis calculator; controller engineering environments expose task monitoring; Rockwell documentation gives controller-specific watchdog behavior and timing guidance.
+- **Four proposed tools:** task utilization calculator; release/deadline overlap screen; priority/interference response estimator; watchdog margin recorder. The latter three require a scheduler model, preemption rules, communications/I/O overhead, and measured worst-case execution specific to the controller.
+- **Gap / overlap / feasibility:** low page overlap and browser math is possible for a declared abstract model. A generic result would create false precision and be weaker than measured vendor task-monitor data.
+- **Score:** **77/100** — demand 20, SERP gap 13, tools 13, repeat 9, non-overlap 10, source/static 7, fit 5.
+- **Hard gates / decision:** fails 5, 6, 10, and 11. **NO-GO**.
+
+### Deep candidate 6 — Control-loop step-response characterization
+
+- **Workflow / demand / repeat use:** controls engineers use authorized bump/step tests to estimate FOPDT behavior, compare response, and prepare tuning. Demand is **Strong** across FOPDT, Ziegler–Nichols/Cohen–Coon, settling/overshoot, and PID simulation intents.
+- **Current SERP and free alternatives:** ZeroAndSpan combines Ziegler–Nichols, open-loop FOPDT, and Cohen–Coon; Engineers Excel and current PID simulators cover response; pidsnap and other tools identify models; commercial control-performance products add online history.
+- **Four proposed tools:** step-data conditioner/segmenter; FOPDT parameter fitter; response-metric comparator; candidate-tuning simulator. The first three can be local CSV tools, but model fit, test design, valve behavior, saturation, safety constraints, and process interaction govern whether outputs are meaningful.
+- **Overlap / sources / feasibility:** low formula overlap with current pages, strong control-theory sources, moderate static feasibility. The suite would still compete directly with current integrated free tools and might encourage unauthorized process tests or tuning changes.
+- **Score:** **78/100** — demand 23, SERP gap 10, tools 16, repeat 9, non-overlap 10, source/static 7, fit 3.
+- **Hard gates / decision:** fails 9, 10, 11, and 14. **NO-GO**.
+
+### Deep candidate 7 — Water-utility loss audit
+
+- **Workflow / demand / repeat use:** utility teams repeatedly reconcile system input, billed/authorized consumption, apparent loss, real loss, service-connection normalization, ILI, and night-flow evidence. Demand is **Strong** and institutionally established.
+- **Current SERP and free alternatives:** AWWA provides Free Water Audit Software with balance, data grading, KPIs, and dashboard; World Bank/PPIAF materials and IWA/WHO methods support the workflow; current combined web calculators include NRW, minimum night flow, and ILI.
+- **Four proposed tools:** top-down water balance; normalized NRW/KPI calculator; ILI/context screen; minimum-night-flow leakage estimator. They are independent enough and static implementation is possible with transparent assumptions.
+- **Gap / overlap / risk:** low current-site overlap but poor suite gap: an authoritative free integrated spreadsheet already owns the complete workflow. Correct interpretation depends on network length, connections, pressure, meter error, data confidence, and utility practice; site fit is peripheral.
+- **Score:** **76/100** — demand 23, SERP gap 6, tools 18, repeat 9, non-overlap 10, source/static 7, fit 3.
+- **Hard gates / decision:** fails 9, 10, and 14. **NO-GO**.
+
+### Current external evidence used in the gate decision
+
+- Protocol sources and tools: [Modbus Serial Line specification](https://www.modbus.org/file/secure/modbusoverserial.pdf), [ODVA EtherNet/IP performance terminology](https://www.odva.org/wp-content/uploads/2020/05/PUB00080R1.1_Performance_Terminology.pdf), [OPC UA subscription model](https://reference.opcfoundation.org/specs/OPC-10000-4/5.14.1), [OPC UA queue behavior](https://reference.opcfoundation.org/specs/OPC-10000-4/5.13.1.5), [IndustrialProfi Modbus calculator](https://industrialprofi.com/en/calculators/modbus-rtu), and [CANbus Academy bus-load calculator](https://canbusacademy.com/resources/can-bus-load-calculator/).
+- Acquisition and storage competition: [Apex Waves FFT/DAQ tools](https://www.apexwaves.com/free-tools/calculators/fft-bin-resolution/), [Fault Ledger FFT calculator](https://faultledger.com/fft-calculator/), [DATAQ storage calculator](https://www.dataq.com/data-logger/features/calculator.html), [TIMEBASE Historian Storage Estimator](https://timebase.flow-software.com/historian-storage-estimator), and [AutomationView storage estimator](https://store.automationview.app/calculator/historical-data-logging-storage-estimator/).
+- Wireless evidence: [FresnelPath free RF-planning suite](https://fresnelpath.com/tools), [Moxa WLAN calculator](https://iwcalculator.moxa.com/), and [Qorvo range/link-budget tool](https://www.qorvo.com/design-hub/design-tools/interactive/link-budget-and-range-calculator).
+- Control/test/water alternatives: [ZeroAndSpan PID tuning calculator](https://zeroandspan.com/process/pid-tuning-calculator/), [AWWA Free Water Audit Software](https://www.awwa.org/toolbox/free-water-audit-software/), and current manufacturing platforms including Keysight PathWave Manufacturing Analytics and IntraStage.
+- Solar alternatives checked included NREL RdTools, current performance-ratio and clipping tools, NEUTRON string compatibility, and the Solar Stack free integrated toolkit.
+
+### Final expansion decision, QA, and risk
+
+- No candidate passed all 14 GO gates after 48 broad screens, 12 live-search shortlist comparisons, seven deep validations, tool-level intent and free-alternative checks, source/dependency review, overlap review, and static-feasibility review.
+- Final decision: **NO-GO**. Selected cluster: **none**. New production pages: **0**. No production HTML, CSS, JavaScript, hub, Tool, Guide, Reference, sitemap, `llms.txt`, homepage, footer/badge, brand asset, URL, CNAME, GA4 ID, or existing formula was modified.
+- Functional QA for new tools and GO browser matrices are not applicable because nothing was implemented. The targeted seven-page production browser diagnosis recorded zero horizontal overflow and zero console warnings/errors.
+- Final integration/regression QA remains 104 public / 103 indexable / 103 sitemap pages, 42 calculators, 18 workflow tools, 16 Guide HTML pages, and 12 Reference HTML pages.
+- Production QA is limited to the unchanged target URLs, `robots.txt`, and sitemap response/structure checks because the only repository change is this research record.
+- Remaining HIGH risk: 0 introduced. Remaining MEDIUM risk: pre-existing GA4 consent handling remains jurisdiction-dependent. Remaining LOW risk: the seven target pages can remain unindexed despite correct site structure because crawl scheduling/index selection is external; demand labels lack paid volume; SERPs, vendor tools, and protocol/device limits can change.
+- Future reconsideration: revisit industrial protocol planning only if one protocol-specific workflow shows independent first-party demand and a missing browser decision surface; revisit manufacturing test analytics only if a privacy-preserving local CSV workflow is requested that does not reuse protected measurement-agreement/fixture analysis; revisit historian storage only if measured-versus-modeled reconciliation shows separate search demand; revisit DAQ or water-loss only if the current integrated free suites disappear or expose a demonstrable missing workflow.
+- Implementation commit: **not applicable (NO-GO; no production implementation)**. The handover-only commit, push, final remote SHA, and clean synchronization are reported in the task result after verification.
