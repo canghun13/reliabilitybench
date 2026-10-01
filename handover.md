@@ -2183,3 +2183,78 @@ Each screen records primary user and recurring workflow; user problem and search
 - Remaining HIGH risk: **0 introduced**. Remaining MEDIUM risk: pre-existing GA4 consent handling remains jurisdiction-dependent. Remaining LOW risk: demand labels are qualitative without paid volume; SERPs can change quickly; manufacturer calculators, product data, standards, and safety requirements evolve.
 - Future reconsideration: revisit cabinet thermal management only if first-party demand identifies a missing local reconciliation workflow beyond current integrated tools; revisit shaft alignment only if a specific sign-validation or report workflow is requested that current free tools do not cover; revisit HVAC TAB only if a privacy-preserving local CSV workflow has distinct demand; revisit heat tracing only with a stable manufacturer-neutral product dataset and public decision basis; revisit tank settlement only with licensed criteria and qualified structural review.
 - Implementation commit: **not applicable (NO-GO; no production implementation)**. The final handover-only commit, push, actual remote SHA, and clean synchronization are reported in the task result after verification.
+
+## 2026-10-01 — Weekly growth review / existing Parallel calculator upgrade
+
+- Decision: **EXISTING-UPGRADE GO — Parallel System Reliability Calculator**.
+  One established URL, not a new cluster or a technical-indexability repair.
+- Full current-session metrics, candidate scoring, model sources, scope and QA:
+  `research/weekly-growth-review-2026-10-01.md`.
+- Start local HEAD / cached origin/main:
+  `fc2a97c43a2a1848b0c42e2f9f940698b262d652`; actual remote main:
+  `16711d85558e5814b232f8ff9d1368ea4338f623`. Clean, behind 1; safe fast-forward to
+  the remote baseline before edits. No user changes were overwritten.
+- Current-session reports used: October 1 Performance and Coverage ZIPs; October 1
+  Bing PageTrafficReport and KeywordReport CSVs; GA4 `보고서_개요 (1).csv`.
+  No directory search or substitute historical report. The extraction survived the
+  continuation checkpoint; later exact-reference rereads of the three CSVs were
+  unavailable. Previously extracted figures are retained; raw exports not committed.
+- GSC Performance through **2026-09-28**, starting July 21: **26 clicks / 3,175
+  impressions / 0.8189% CTR / approximate weighted position 57.57**. 372 query rows;
+  89 impression-receiving page rows (88 canonical-merged). Query-row clicks are not
+  chart totals because of anonymization/export scope.
+- Equal-window WoW: Sep 22–28 **3 clicks / 233 impressions / position 30.37** versus
+  Sep 15–21 **1 / 144 / 25.49**. Impressions +61.81%; clicks +2; position worse 4.88.
+  No page-specific/query-expansion or causality conclusion from aggregate exports.
+- Coverage through **2026-09-21**: discovered-currently-not-indexed **12**, down from
+  13 on Sep 15–18; this is only a reason drilldown. Indexed/crawled-not-indexed totals
+  unavailable. `1970-01-01` last-crawl entries are missing-value sentinels. Preserve
+  Equipment Operating Profile's seven-page Type 4 / no-site-defect diagnosis.
+- Bing export dates **2026-10-01**, internal report periods unavailable: page table
+  **627 impressions / 18 clicks / weighted position 5.30 / 55 rows**; keyword table
+  **565 impressions / 18 clicks / 286 rows**. Do not sum the dimensional tables.
+  First-page page count and keyword weighted position were not retained/calculated.
+- GA4 **2026-09-03–2026-09-30**: **195 active / 194 new users**, 859 events, 11.13s
+  average engagement. First-user Google organic **5**, Bing organic **11**; session
+  counts are **8** and **14**, respectively. Direct 172 users, including a 113-new-user
+  daily spike; possible QA/direct contamination, not proof that all direct is bot.
+  ChatGPT 2 AI-assistant users plus small directory/referral sources. No organic
+  landing/engagement attribution available in this overview.
+- Existing candidates (evidence/gap/value/fit/risk, 100-point judgment): Parallel
+  **84**, K-out-of-N **61**, ALT hub **55**. Selected Parallel has **109 GSC impressions,
+  4 clicks, position 19**, plus narrow two-path intent; fixed three inputs are an
+  exact gap. K-out-of-N already supports n/k; broad ALT hub has position 53.11 and
+  no comparably specific defect. Do not make ranking forecasts from this sample.
+- Expansion considered **Yes**; Priority B has higher expected value this week.
+  Current exclusion set reviewed; no new discovery funnel run. Latest implemented
+  cluster stays **Equipment Operating Profile Analysis (2026-09-01)**. Latest
+  expansion HOLD/NO-GO stays **2026-09-25**. Boundary now **230 named families**
+  (182 prior + 48 September 25), plus non-double-counted foundational labels.
+- Production changes: existing Parallel page, dedicated `assets/js/calculators/parallel.js`,
+  scoped `assets/css/parallel.css`. 2–100 unequal paths, reliability/failure/best/gain,
+  complete input table, Copy report, Reset, print CSS, precise near-certain output.
+  Added `tools/parallel-qa.mjs`, included by calculator regression. No shared
+  engine/CSS, generator, sitemap, homepage, public URL, title/H1, CNAME, GA4 ID,
+  global header/footer/badge, or Equipment Operating Profile changes.
+- Technical baseline: sampled Googlebot HTTPS pages, robots/sitemap 200, normal
+  self-canonical/index-follow; HTTP apex and HTTPS www terminate at HTTPS apex.
+  No new technical action required. Inventory unchanged: **104 public / 103
+  indexable / 42 calculators / 18 workflow tools / 16 Guides / 12 References**.
+- Local QA PASS: 42 calculator/config checks plus actual Parallel module fixtures;
+  final-site 104/103/103, qa-check 103, 4 operating-profile and 5 intermittent-demand
+  fixtures, diff check. Browser 2/3/100 paths, copy, blank/out-of-range guards,
+  stale-output clearing, reset/rerun; warnings/errors 0. Eight requested viewports
+  1440/1280/1024/900/768/600/480/390; observed overflow/overlap/clipping 0 using
+  bounding boxes, interactions and screenshots, not blanket overflow hiding.
+- Print invocation stalled the app browser's CDP control. Print CSS/source reviewed,
+  but actual preview is **unverified**, not PASS. New tab reran calculations normally.
+- Deployment/production verification is appended after implementation push. The
+  final documentation commit and final local/origin/actual remote equality are
+  reported after the closing commit; do not embed a self-referential commit SHA.
+- Risks: introduced HIGH 0; MEDIUM print-preview verification limitation and small
+  search samples, plus pre-existing GA4 consent; LOW SERP/model assumption changes.
+- Exact next state (at most three): (1) Compare the next equal GSC seven-day window
+  and Parallel evidence without causal overclaim. (2) Obtain comparable Bing, full
+  Coverage, and GA4 organic landing/engagement exports; re-audit indexing only on
+  reproduced site-side defects. (3) Check native browser print preview; expansion
+  still requires genuinely new workflows passing all gates beyond 230 families.

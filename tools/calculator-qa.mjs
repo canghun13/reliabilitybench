@@ -1,6 +1,8 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import vm from 'node:vm';
+// The parallel page now uses its dedicated module; test that live implementation too.
+import './parallel-qa.mjs';
 const root=process.cwd(), engine=readFileSync(join(root,'assets/js/calculators/engine.js'),'utf8');
 const injected=engine.replace('const id = document.body.dataset.calc;', 'globalThis.__configs=configs; const id = document.body.dataset.calc;');
 const sandbox={Math,Number,Intl,setTimeout:()=>{},window:{},document:{body:{dataset:{calc:'__none__'}},querySelector:()=>null}}; vm.runInNewContext(injected,sandbox); const configs=sandbox.__configs, errors=[];

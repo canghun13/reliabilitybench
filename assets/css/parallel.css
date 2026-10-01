@@ -1,0 +1,36 @@
+/* Scoped to the parallel calculator. */
+body[data-calc="parallel"] .parallel-count{display:flex;align-items:end;flex-wrap:wrap;gap:14px;padding:0 24px 20px}
+body[data-calc="parallel"] .parallel-count .field{width:190px;border:0;padding:0}
+body[data-calc="parallel"] .parallel-paths{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+body[data-calc="parallel"] .parallel-paths .field{width:auto;min-width:0}
+body[data-calc="parallel"] .parallel-details{padding:24px;border-bottom:2px solid var(--ink);background:var(--surface)}
+body[data-calc="parallel"] .parallel-details[hidden]{display:none}
+body[data-calc="parallel"] .parallel-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin:0 0 24px}
+body[data-calc="parallel"] .parallel-summary dt{font:800 10px/1.4 var(--mono);text-transform:uppercase;color:var(--muted)}
+body[data-calc="parallel"] .parallel-summary dd{margin:8px 0 0;font-weight:800;overflow-wrap:anywhere}
+body[data-calc="parallel"] .parallel-details table{table-layout:fixed}
+body[data-calc="parallel"] .parallel-details th,body[data-calc="parallel"] .parallel-details td{overflow-wrap:anywhere}
+body[data-calc="parallel"] caption{text-align:left;font-weight:800;margin-bottom:10px}
+body[data-calc="parallel"] .parallel-status{padding:0 24px;min-height:1.5em}
+body[data-calc="parallel"] .result-panel{grid-template-columns:150px minmax(160px,1fr) minmax(0,1.6fr)}
+body[data-calc="parallel"] .result-actions{display:flex;flex-wrap:wrap;gap:8px;grid-column:1/-1}
+body[data-calc="parallel"] button:disabled{opacity:.5;cursor:default}
+body[data-calc="parallel"] .parallel-print-url{display:none}
+@media(max-width:980px){body[data-calc="parallel"] .parallel-paths,body[data-calc="parallel"] .parallel-summary{grid-template-columns:repeat(2,minmax(0,1fr))}body[data-calc="parallel"] .result-panel{grid-template-columns:150px minmax(0,1fr)}}
+@media(max-width:700px){body[data-calc="parallel"] .parallel-count,body[data-calc="parallel"] .parallel-details{padding:16px}body[data-calc="parallel"] .parallel-status{padding:0 16px}body[data-calc="parallel"] .result-panel{grid-template-columns:1fr}body[data-calc="parallel"] .parallel-summary{gap:16px}}
+@media print{
+  body[data-calc="parallel"]{background:#fff;color:#000}
+  body[data-calc="parallel"] .site-header,body[data-calc="parallel"] .site-footer,body[data-calc="parallel"] .breadcrumb,body[data-calc="parallel"] form,body[data-calc="parallel"] button,body[data-calc="parallel"] .parallel-status,body[data-calc="parallel"] .prose{display:none!important}
+  body[data-calc="parallel"] .page{padding:0;max-width:none}
+  body[data-calc="parallel"] .page-head{margin-bottom:16px;padding-bottom:12px}
+  body[data-calc="parallel"] .page-head h1{font-size:26px;line-height:1.15}
+  body[data-calc="parallel"] .lead{font-size:12px}
+  body[data-calc="parallel"] .result-panel{display:block;background:#fff;color:#000;padding:12px 0}
+  body[data-calc="parallel"] .result-panel .label,body[data-calc="parallel"] .result-value,body[data-calc="parallel"] .result-message{color:#000;margin:8px 0}
+  body[data-calc="parallel"] .result-value{font-size:28px}
+  body[data-calc="parallel"] .parallel-details{padding:12px 0;background:#fff}
+  body[data-calc="parallel"] .parallel-details tr{break-inside:avoid}
+  body[data-calc="parallel"] .data-table th{color:#000;background:#eee}
+  body[data-calc="parallel"] .parallel-print-url{display:block;overflow-wrap:anywhere;font-size:11px}
+  body[data-calc="parallel"]:not([data-parallel-ready]) .calc-layout,body[data-calc="parallel"]:not([data-parallel-ready]) .parallel-details,body[data-calc="parallel"]:not([data-parallel-ready]) .parallel-print-url{display:none!important}
+}
