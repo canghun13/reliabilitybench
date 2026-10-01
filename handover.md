@@ -2258,3 +2258,20 @@ Each screen records primary user and recurring workflow; user problem and search
   Coverage, and GA4 organic landing/engagement exports; re-audit indexing only on
   reproduced site-side defects. (3) Check native browser print preview; expansion
   still requires genuinely new workflows passing all gates beyond 230 families.
+
+### October 1 deployment verification
+
+- Implementation commit: `dbaf944683cbe1fb3e30e6e528a903dc34c4e6ba`; normal main push.
+- Pages run `36821838036` completed successfully for this SHA. Live apex HTTPS page
+  200 with new count/module; new JS/CSS 200 and byte-content-equivalent to local
+  committed assets after line-ending normalization; self-canonical unchanged.
+- Actual production browser: 99.4% three-path sample, 98% two-path sample; clipboard
+  includes inputs/units, 2% failure, 8 percentage-point gain, assumptions and URL;
+  Reset clears stale results/disables Copy/restores three paths, rerun 99.4%.
+  Console warnings/errors 0; production 390px overflow/clipped tested controls 0.
+- Production Print invocation also stalled in-app browser control. Preview remains
+  **unverified**; source/CSS review only, not Print PASS. Task screenshot artifacts
+  capture actual mobile production results outside the repository.
+- Closing commit only updates research/handover. Exact final commit and final
+  local HEAD = origin/main = actual remote main, ahead/behind 0/0 and clean tree are
+  reported in the final task result after push/fetch/ls-remote verification.

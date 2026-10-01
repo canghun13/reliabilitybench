@@ -206,6 +206,29 @@ excluded workflow, or artificial four-tool cluster was created.
 Production verification and implementation SHA are appended after push. Final
 documentation commit SHA is reported in the task result (not self-referenced here).
 
+### Deployment verification (October 1)
+
+- Implementation commit: `dbaf944683cbe1fb3e30e6e528a903dc34c4e6ba`, pushed to main.
+- [Pages build/deployment](https://github.com/canghun13/reliabilitybench/actions/runs/36821838036)
+  completed successfully for that exact SHA. Initial old HTML during deployment
+  was not mislabeled a site defect; subsequent live HTML has the new module/count.
+- Final HTTPS apex page: HTTP 200; actual DOM and browser interactions verified,
+  not merely CI success. New JS and CSS both return 200 and match local committed
+  content after line-ending normalization. Self-canonical remains unchanged.
+- Production run: three-path sample 99.4% with three table rows; two-path sample
+  98%; Copy clipboard contains both inputs, units, 2% failure, 8 percentage-point
+  gain, assumptions and canonical URL. Reset clears results/disables Copy/restores
+  three paths; rerun 99.4%. Console warnings/errors 0.
+- Actual production 390px viewport: no horizontal overflow or tested clipped /
+  off-screen controls, result text or table cells. Mobile result and full-page
+  screenshot evidence saved as task artifacts outside the repository.
+- Production Print invocation reproduced the local in-app browser control timeout.
+  Actual print preview remains **unverified**; do not label the whole browser/Print
+  contract an unconditional PASS. Source/CSS review does not replace preview QA.
+- Final documentation-only commit records these checks; exact final SHA and
+  local/origin/actual-remote synchronization are verified and reported in the task
+  result. No production code changes follow the implementation SHA.
+
 1. Compare the next equal seven-day GSC window and Parallel page/query evidence;
    allow crawling time and do not attribute every change to this upgrade.
 2. Obtain a comparable prior/current Bing export, full Coverage summary and GA4
