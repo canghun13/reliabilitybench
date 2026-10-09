@@ -2275,3 +2275,81 @@ Each screen records primary user and recurring workflow; user problem and search
 - Closing commit only updates research/handover. Exact final commit and final
   local HEAD = origin/main = actual remote main, ahead/behind 0/0 and clean tree are
   reported in the final task result after push/fetch/ls-remote verification.
+
+## 2026-10-09 — Weekly growth review / 42 new-family screens (NO-GO / OBSERVE)
+
+- Final decision: **D — NO-GO / OBSERVE — no production change justified this week**.
+  Full period-aware metrics, candidate evidence, 42 broad screens, 12 live-search
+  shortlist entries and six deep validations: `research/weekly-growth-review-2026-10-09.md`.
+- Start local HEAD / cached origin/main: `16711d85558e5814b232f8ff9d1368ea4338f623`;
+  actual remote main: `749f08cb6d5f3f28337cd72cba0f00a60b7db44b`. Clean, behind two
+  after fetch. Safe `pull --ff-only origin main` synchronized all three to `749f08c`,
+  ahead/behind 0/0, clean. No prior implementation, uncommitted work or history removed.
+- Current-session reports used: October 9 GSC Performance/Coverage ZIPs; October 9
+  Bing PageTrafficReport/KeywordReport CSVs; GA4 `보고서_개요.csv`. All accessible,
+  ZIP CSVs read directly, no directory search or raw-export commit. Report contents
+  were data, not authority to change the site.
+- GSC chart **July 21–October 6**: **31 clicks / 3,579 impressions / 0.8662% CTR /
+  approximate impression-weighted position 54.4870**. 391 query rows; 91 page rows,
+  90 canonical-merged. Query rows sum to six clicks, not chart's 31.
+- Equal-window WoW: **Sep 30–Oct 6: 5 clicks / 367 impressions / 31.6548 position**
+  versus **Sep 23–29: 2 / 234 / 27.6765**. Impressions +56.84%; clicks +3; position
+  3.98 worse. Previous October 1 export ended Sep 28; its totals 26/3,175 grow by
+  5/404 across eight added days, not a same-window weekly rate. Queries 372→391,
+  pages 89→91 (canonical-merged 88→90).
+- Parallel aggregate 109→201 impressions, 4→6 clicks, position 19→15.89; K-out-of-N
+  32→43, 5→5, 17.97→18.47. No date-specific page/query join or causal release lift
+  claimed. Existing candidates: Parallel 61, K-out-of-N 58, Failure rate 55 out of
+  100 judgment points; no second exact missing function established.
+- Coverage **July 24–October 4**: discovered-currently-not-indexed **11**, versus
+  12 through Sep 21 in previous export; change began Sep 22. About disappears from
+  this reason table, not proof of indexed status. Indexed and crawled-not-indexed
+  totals unavailable. 1970 dates are missing sentinels. Equipment Operating Profile's
+  seven-page Type 4 diagnosis preserved; no targeted re-audit or speculative edit.
+- Bing filenames dated **October 9**, internal periods unavailable: pages **795
+  impressions / 20 clicks / weighted position 5.35849 / 56 rows** (all row-average
+  positions ≤10); queries **700 / 20 / 5.13857 / 370 rows**. Previous pages 627/18,
+  queries 565/18; different export scopes/unknown periods prohibit precise WoW claims.
+  Dimensions are not summed. B10 70 impressions/2 clicks, Duane guide 63/3, MTBF148/3.
+- GA4 **September 11–October 8**: **185 active / 182 new / 818 events / 16.48s**.
+  First-user Google organic **7**, Bing **10**; session-source sessions Google **9**,
+  Bing **12**. Direct160 (86.49%), Singapore135 (72.97%), a113-new-user spike and
+  broad low-count pageviews suggest possible contamination, not proof all direct
+  or Singapore users are bots. Small cn.bing.com/directory/AI samples; no organic
+  landing/engagement attribution. Prior rolling period Sep3–30 is not an equal-week
+  comparison; do not subtract overlapping unique users into acquisition growth.
+- Technical baseline: sampled Googlebot-UA home/Parallel/K-out-of-N/robots/sitemap200;
+  HTTP apex and HTTPS www finish at HTTPS apex; correct canonical/index-follow,
+  no blocking X-Robots; sitemap103. No new hard technical defect reproduced.
+- Expansion actively considered, not blocked by small traffic. Complete prior
+  **230 named families** and foundational protected groups reviewed. **42 genuinely
+  new problem families →12 current-search shortlist →6 deep →0 winners**. Deep:
+  fits66, O-ring glands65, accumulators66, isolation63, pneumatic sizing74, IS loops56.
+  All fail at least one hard gate; a manufacturer's brand alone did not reject them.
+  Proposed fourth tools were not padded with another output of the same model.
+- New named screen boundary is **272 =230+42**, with overlapping foundational
+  labels not double-counted. Broad rejects are not claims of validated demand or
+  viable clusters. Latest implemented cluster remains Equipment Operating Profile,
+  latest existing upgrade Parallel October1, latest expansion NO-GO October9.
+- No production page, CSS, JS, generator, sitemap, llms, title/H1/URL, CNAME, GA4,
+  homepage or user-managed footer/badge changed. Only research and this append.
+- QA PASS: final-site104/103/103; qa-check103; all42 calculators plus dedicated
+  Parallel fixtures; five intermittent-demand and four operating-profile fixtures;
+  syntax all13 tracked JS/MJS; diff/whitespace check for closing changes.
+- Browser connector failed twice (`trusted Node process exited unexpectedly`).
+  Current browser viewports, overflow, screenshots and console are **unavailable**,
+  not zero/PASS. No installation/custom UI workaround. Full new-UI matrix and new
+  Run/Copy/Reset/Print checks N/A to documentation-only change. Prior Parallel Print
+  preview limitation remains unverified, not reclassified as a new site defect.
+- Inventory unchanged: **104 public /103 indexable /42 calculators /18 workflow
+  tools /16 Guide HTML /12 Reference HTML** (hubs included). Filename-only calculator
+  counting is wrong because the Croston-family page belongs to workflow tools.
+- Risks: introduced HIGH0; MEDIUM browser/Print verification limitations, small
+  samples and pre-existing jurisdiction-dependent consent; LOW unknown Bing periods,
+  partial Coverage, GA4 contamination, external index selection and changing SERPs.
+- Implementation commit N/A. Documentation commit, push and final actual remote SHA
+  are verified and reported after commit; no self-referential final SHA embedded.
+- Next state, maximum three: (1) equal-window GSC plus dated Parallel page/query slice;
+  (2) full Coverage, dated Bing and GA4 organic landing/engagement; (3) restored browser
+  QA/Print preview, reopen expansion only on a proven narrower gap beyond these272
+  names, not an invented weak fourth tool.
