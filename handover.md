@@ -2353,3 +2353,86 @@ Each screen records primary user and recurring workflow; user problem and search
   (2) full Coverage, dated Bing and GA4 organic landing/engagement; (3) restored browser
   QA/Print preview, reopen expansion only on a proven narrower gap beyond these272
   names, not an invented weak fourth tool.
+
+## 2026-10-15 — Weekly growth review / 40 new-family screens (NO-GO / OBSERVE)
+
+- Final decision: **NO-GO / OBSERVE — no change justified this week**. Production
+  unchanged. Evidence, source limits, 40 broad screens, 12 current-search shortlist
+  entries and six deep validations: `research/weekly-growth-review-2026-10-15.md`.
+- Start local HEAD / cached origin/main: `749f08cb6d5f3f28337cd72cba0f00a60b7db44b`;
+  actual remote main: `412688d930c035f90c0e61dde3c7f28798f4a38e`. Clean, ahead0/
+  behind1 after fetch; normal fast-forward synchronized all three to `412688d`,
+  0/0 clean, before edits. No user changes or prior work overwritten.
+- Current-session October15 Performance/Coverage ZIPs, Bing PageTrafficReport/
+  KeywordReport CSVs and GA4 `보고서_개요 (1).csv` initially accessible and parsed
+  directly. Later exact-reference Performance archive reread returned file-not-found;
+  earlier current-session extraction retained, no substitute historical report or
+  directory search. Raw exports/scratch analysis not committed.
+- GSC **July21–October12**: **33 clicks /3,858 impressions /0.855365% CTR /
+  approximate weighted position52.39552**. 401 query rows (six query clicks, not33);
+  91 page rows /90 canonical-merged. Page-table sums35/4,416 differ from property
+  chart; preserve aggregation levels, don't fabricate reconciliation. Devices31/
+  3,470 desktop,2/380 mobile,0/8 tablet. Google documentation supports distinguishing
+  page/property counting, not a definitive diagnosis of every difference.
+- Equal-window WoW: **October6–12:3 clicks/349 impressions/24.46963 position** versus
+  **September29–October5:4/334/32.38653**. Impressions+4.491%; clicks-1, position7.91690
+  better. Previous review's Sep30–Oct6 window is offset/overlapping, not previous week.
+  Cumulative31/3,579→33/3,858 adds six days, not seven; queries391→401; pages91→91.
+- Parallel aggregate201/6/15.89→281/7/14.11; Failure rate112/1/18.10→155/1/14.81;
+  Coffin–Manson32/4/7.94→36/4/7.89. Page/query joins and dated page deltas absent;
+  no causal October1 release lift or exact newly acquired query set claimed.
+- Coverage **July24–October9**: discovered-currently-not-indexed **11**, unchanged
+  from prior throughOct4. Same reason-list eleven URLs, including seven Operating
+  Profile pages; 1970 dates are missing sentinels. Indexed/crawled-not-indexed totals
+  unavailable. Preserve Type4/no-site-defect diagnosis, no speculative seven-page edit.
+- Bing export filenames **October15**, internal periods unavailable: pages **900
+  impressions/22 clicks/weighted position5.47333/58 rows**; queries **780/22/5.24231/
+  423 rows**. All58 page row-average positions≤10, not every impression. Prior795/20
+  and700/20 are descriptive export comparisons, not established equal-window growth.
+  Pages: MTBF 148/3, B10 80/2, Duane 67/3, availability 41/2; no dimension summation.
+- GA4 **September17–October14**: **200 active/196 new/883 events/15.77s engagement**.
+  First-user organic Google **10**, Bing **12**; session-source sessions **15/14**.
+  Prior rolling values7/10 users and9/12 sessions aren't subtractable weekly new
+  acquisitions. Direct170(85%), Singapore145(72.5%), day0000 new-user spike113 and
+  broad one-view pages suggest possible contamination, not proof of bots. Source
+  rows sum199 vs headline200; don't invent a category. ChatGPT2 users and tiny
+  directory/referral sources; organic landing/engagement attribution unavailable.
+- Existing candidates: Parallel **64**, Failure rate **59**, Coffin–Manson **60**
+  judgment points/100. Actual current outputs/limitations/links reviewed. No new
+  exact gap; no guessed exponent, confidence bound, title change or repeated upgrade.
+- Expansion actively considered. Read current named exclusions, prior handover and
+  both weekly research records. Prior boundary **272**; **40 new problem families →
+  12 live-search shortlist →6 deep →0 winners**. Sample conditioning73, thermowells58,
+  chromatography66, pneumatic conveying70, mixing65, particulate sampling62. Each
+  fails at least one A–K hard gate. Article-to-tool/local-layout opportunities were
+  considered; manufacturer existence or small first-party traffic alone didn't reject.
+- Current do-not-repeat named boundary **312 =272+40**, plus non-double-counted
+  foundational/protected labels. Broad rejects aren't validated demand or viable
+  clusters. No weak fourth tool or forward/reverse/output split was manufactured.
+- Latest implemented cluster remains **Equipment Operating Profile (September1)**;
+  latest existing upgrade **Parallel (October1)**; latest expansion NO-GO **October15**.
+- Technical: sampled Googlebot-UA home/Parallel/Failure-rate/K-out-of-N/robots/
+  sitemap200, canonical/index-follow/no blocking X-Robots normal, HTTP apex and
+  HTTPS www terminate at HTTPS apex. No reproduced new hard defect in measured scope.
+  Live Parallel module/shared engine 200 and content match repository after line-ending
+  normalization. HTTP/source matching is not substituted for render/browser QA.
+- QA PASS: final-site104/103/103, qa-check103, all42 calculators plus dedicated
+  Parallel fixtures, five intermittent-demand/four operating-profile suites, syntax
+  all13 tracked JS/MJS and final diff checks. This is not another production audit
+  of the protected seven-page cluster.
+- Computer-use helper/app inventory now works, but browser state capture was
+  policy-stopped because current URL wasn't confidently determinable. No browser
+  input/installation/workaround. Render/Run/Copy/Reset/Print, console/overflow and
+  viewport screenshots **unverified**, not zero/PASS. Prior Print-preview risk stays.
+- Production page/CSS/JS/generator/sitemap/llms/title/H1/URL/CNAME/GA4/homepage and
+  user-managed footer/badge unchanged. Only research and this append. Inventory
+  **104 public/103 indexable/42 calculators/18 workflow/16 Guides/12 References**.
+- Risks: introduced HIGH0; MEDIUM browser/Print limits, small samples and existing
+  GA4 consent; LOW unknown Bing periods, partial Coverage, source/aggregation limits
+  and changing SERPs. Documentation-only push doesn't prove new UI behavior.
+- Implementation commit **N/A**. Closing documentation commit and exact final
+  local/origin/actual-remote SHA equality,0/0,clean are verified/reported after push.
+- Exact next state, maximum3: (1) equal-window GSC plus dated Parallel/Failure-rate
+  page/query evidence; (2) full Coverage, dated Bing, organic landing/engagement GA4
+  and reattachment if deeper raw reconciliation is needed; (3) policy-verifiable
+  browser/Print preview, expansion only for a proven new gap beyond these312 names.
