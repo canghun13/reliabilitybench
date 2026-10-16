@@ -2436,3 +2436,102 @@ Each screen records primary user and recurring workflow; user problem and search
   page/query evidence; (2) full Coverage, dated Bing, organic landing/engagement GA4
   and reattachment if deeper raw reconciliation is needed; (3) policy-verifiable
   browser/Print preview, expansion only for a proven new gap beyond these312 names.
+
+## 2026-10-16 — External keyword-led expansion / J1939 Capture Diagnostics GO
+
+- Final action: **EXPANSION GO — J1939 Capture Diagnostics**, implemented and
+  deployed, not another first-party-only OBSERVE. User explicitly requested
+  broader external keyword discovery, competition checks and narrower long-tail
+  entry points; old holds could be revisited only with a genuinely different
+  problem boundary. No claim that keyword variants are new workflow families.
+- Start local HEAD / origin/main / actual remote main all
+  `1a6e5402b3c40aa80116770b19d200c95aef7c6c`; ls-remote before fetch, 0/0 clean.
+  Resume confirmed only this session's implementation files and unchanged remote
+  baseline. No user changes overwritten; no reset/stash/clean/force/installation.
+- Scope is targeted continuation, not a fabricated new 40-family weekly funnel.
+  **80 English query seeds**, 12 comparison areas, six editorial finalists;
+  Korean research variants also checked. Full list and sources:
+  `research/keyword-opportunities-2026-10-16.md`. Scores are judgment, not measured
+  SEO difficulty; J1939 84/100. No invented monthly volumes or document totals.
+- External surfaces: actual Google and Naver browser result pages, Reddit indexed
+  questions, Stack Exchange public API/pages, NI and Parker IQAN communities,
+  GitHub, standards/manufacturer documentation and current competitor pages.
+  Filter-mask question API snapshot 3,363 cumulative views; broader J1939/CAN
+  question 7,472; NI thread indexed snapshot 3,801 (later direct access failed).
+  These are historical views, not monthly demand or unique users; do not sum.
+- Competition checked honestly: CoderTools already offers free BAM/CMDT and DBC
+  features; BinaryCon already decodes DTC and NAME fields; CSS webCAN software is
+  free with its hardware workflow. Gap is the exact offline incident-window
+  audit, full-payload interpretation and identity history, not “no decoder”.
+  DBC, Modbus, IODD, COMTRADE and SCL have capable free alternatives; no generic
+  clone or unsupported scarcity claim. The original Modbus competitor URL was
+  corrected to its actual linked page during closeout.
+- Independence: (1) PDU-aware PGN filter/match test; (2) whole DM1 lamp and multi-
+  DTC payload interpretation; (3) BAM declaration/sequence integrity with payload
+  withholding; (4) NAME/address claim-event history. Not inverse encoders, unit
+  variants or views of the existing operating-profile dataset. Earlier screened
+  protocol-capacity planning estimated traffic/scan capacity, a different task.
+- Seven new URLs: `/tools/j1939-capture-diagnostics/`, four `j1939-*.html` tools,
+  `/guides/j1939-capture-diagnostics.html`, `/reference/j1939-capture-fields.html`.
+  Dedicated `j1939-core.mjs`, `j1939-tools.mjs`, scoped `j1939.css`; Tools /
+  Maintenance / Guides / Reference discovery links, sitemap +7, llms section.
+  No generator, database, live API, login, hardware access or proprietary catalog.
+- Passive boundary: no bus transmission, requests, fault clearing or repair/
+  safety recommendation. CM=1 SPN withheld; OC127 unavailable; missing/duplicate/
+  reordered BAM never gap-filled; channel/source sessions separated; NAME uses
+  BigInt; address reuse/contention is potential evidence, not proof of a live
+  collision or successful ownership. Malformed rows fail closed.
+- QA: **105 independent J1939 fixtures**, all **42 existing calculators** with
+  dedicated Parallel cases, four operating-profile/five intermittent-demand
+  suites, both static site audits, all16 JS/MJS syntax and staged diff checks
+  PASS. Final static inventory111/110/110. Complete evidence:
+  `research/j1939-browser-qa-2026-10-16.md`.
+- Browser recovered without asking the user to configure Chrome: approved
+  loopback preview + in-app browser. Windows native automation was not resumed
+  after its URL-confidence stop. All seven pages at1440/1280/1024/900/768/600/480/
+  390: **56 local and56 production combinations**, zero page-level horizontal
+  overflow, H1 clipping/overlap or off-screen form controls. Local horizontal
+  table/nav scroll remains deliberate. Screenshots inspected; console errors0
+  in inspected runs. Copy, Reset, invalid/stale-result gating and report disclosure
+  verified on all four tools in production.
+- Maximum browser input: 240 filter IDs,445 DTCs,5,000 BAM frames and5,000 claim
+  events. Stress QA found an always-open huge-report rendering delay; fixed before
+  deployment using collapsed full report, multiline raw inputs and explicit
+  preview bounds. Full5,000-event report2,617,458 characters and BAM report709,592
+  characters copied exactly and Reset verified at390. Non-global FE claim handling
+  also corrected and covered by a fixture. All data synthetic, not user telemetry.
+- Print: current result contains title/URL/inputs/units/results/limits; invalid
+  state disabled; beforeprint opens disclosure, afterprint restores it. Native
+  preview was not exposed by the in-app browser, so **no visual Print/PDF PASS**.
+  No printer job, PDF save, installation, settings change or policy workaround.
+- Production: implementation **58bc56f471908654ea28aae1e04e0deb9cc358cb**, normal
+  push to main. Initial propagation404 became200. **16 resources200/source-match**,
+  new `.mjs` MIME text/javascript, all seven Googlebot-UA200/no blocking header.
+  Pages latest-build API404 was unavailable, not falsely marked successful.
+  Actual deployed source and browser checks establish the release instead.
+- Preserved homepage, shared CSS/calculator/workflow JS, shell, footer/badges,
+  old URL/title/canonical, CNAME/GA4 and contact. Footer object hash unchanged
+  `51ba08263d2ceca4b3b88c3be2cc409765afe58a`. No broad redesign or SEO churn.
+- Final inventory: **111 public HTML /110 indexable /110 sitemap /42 calculators /
+  22 workflow tools /17 Guides /13 References** (hubs included). Latest cluster
+  now J1939 Capture Diagnostics October16; latest existing upgrade still Parallel
+  October1. October15 NO-GO remains historical, not the current implementation state.
+- Latest supplied reporting periods/metrics remain those of October15 above; no
+  new export analyzed for this targeted request. Do not use this release's QA
+  views or a one-day signal as proof of organic popularity or indexing success.
+- Historical312-name screen is not incremented by80 keyword variants; record the
+  implemented J1939 problem boundary and keep prior genuine-overlap checks. Do
+  not prohibit every new fieldbus task simply because capacity planning was held.
+- Remaining risks: no introduced HIGH issue identified; native Print preview
+  unverified, historical rather than measured monthly demand, changing SERPs,
+  exact browser/driver/device context, and inability to infer physical bus health
+  from partial captures. Full logs/reports may contain confidential identifiers;
+  copy/share only after review. No speculative standards-compliance claim.
+- Closing documentation commit adds no runtime change. Final actual remote SHA,
+  fetch/origin equality, ahead/behind0/0 and clean tree verified after its push and
+  reported in the session final, not self-referenced inside this commit.
+- Next state (maximum3): (1) watch canonical J1939 long-tail impressions/entry pages
+  over a meaningful interval, excluding QA traffic; (2) use real user evidence
+  before extending parser formats/diagnostic semantics; (3) independently verify
+  native print preview when an appropriate browser surface is available, without
+  changing protected footer/badges or installing anything.

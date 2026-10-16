@@ -208,6 +208,10 @@ screen-preview bounds. Native print preview remains unverified in the in-app
 browser; no printer job or PDF save claimed. Full evidence and limits:
 [implementation QA](j1939-browser-qa-2026-10-16.md).
 
-Final local inventory: **111 public HTML /110 indexable/sitemap /42 calculators /
-22 workflow tools /17 Guide HTML /13 Reference HTML**. Production verification
-and Git closeout pending; the GO decision is not a deployment confirmation.
+Final inventory: **111 public HTML /110 indexable/sitemap /42 calculators /
+22 workflow tools /17 Guide HTML /13 Reference HTML**. Implementation commit
+**58bc56f471908654ea28aae1e04e0deb9cc358cb** deployed. Sixteen public resources
+return 200 and match repository source; all seven new pages return Googlebot-UA
+200. Actual production Run/Copy/Reset/error/disclosure checks and another 56
+responsive combinations pass. No claim of immediate indexing, SEO lift or
+visually verified native print preview. Final documentation/Git closeout follows.
