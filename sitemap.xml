@@ -103,4 +103,11 @@
   <url><loc>https://reliabilitybench.com/tools/process-variable-rate-of-change-screener.html</loc></url>
   <url><loc>https://reliabilitybench.com/guides/equipment-operating-profile-analysis.html</loc></url>
   <url><loc>https://reliabilitybench.com/reference/operating-profile-analysis-methods.html</loc></url>
+  <url><loc>https://reliabilitybench.com/tools/j1939-pgn-filter-mask-checker.html</loc></url>
+  <url><loc>https://reliabilitybench.com/tools/j1939-dm1-payload-decoder.html</loc></url>
+  <url><loc>https://reliabilitybench.com/tools/j1939-bam-capture-checker.html</loc></url>
+  <url><loc>https://reliabilitybench.com/tools/j1939-address-claim-analyzer.html</loc></url>
+  <url><loc>https://reliabilitybench.com/tools/j1939-capture-diagnostics/</loc></url>
+  <url><loc>https://reliabilitybench.com/guides/j1939-capture-diagnostics.html</loc></url>
+  <url><loc>https://reliabilitybench.com/reference/j1939-capture-fields.html</loc></url>
 </urlset>

@@ -1,0 +1,29 @@
+/* Cluster-scoped: shared shell and user-managed footer/badges are unchanged. */
+.j1939-console{grid-template-columns:minmax(0,1fr)}
+.j1939-console .workflow-form{border-right:0;border-bottom:1px solid var(--line)}
+.j1939-console textarea{font:500 13px/1.6 var(--mono);resize:vertical;max-width:100%;min-width:0}
+.j1939-console input[type="text"]{font-family:var(--mono);max-width:100%}
+.j1939-console .j1939-checks{display:flex;gap:18px;flex-wrap:wrap;margin:16px 0;padding:14px;border:1px solid var(--line)}
+.j1939-checks label{display:flex;gap:8px;align-items:center;font-size:.9rem}
+.j1939-checks input{width:18px;height:18px;flex:0 0 auto}
+.j1939-console button:disabled{opacity:.55;cursor:not-allowed}
+.j1939-console .workflow-score{font-size:clamp(1.7rem,4vw,3rem);line-height:1.08;overflow-wrap:anywhere}
+.j1939-console pre,.j1939-report pre{white-space:pre-wrap;overflow-wrap:anywhere;font:500 12px/1.6 var(--mono);max-width:100%}
+.j1939-table-wrap{max-width:100%;overflow-x:auto;margin:14px 0;outline-offset:3px}
+.j1939-table-wrap table{min-width:540px}
+.j1939-table-wrap td{max-width:330px;overflow-wrap:anywhere}
+.j1939-error{color:#fff!important}
+.j1939-report{margin:24px 0;max-width:100%;border:1px solid var(--line);padding:16px}
+.j1939-report summary{cursor:pointer;font-weight:800}
+.j1939-report pre{max-height:480px;overflow:auto}
+.j1939-print-empty{display:none}
+@media print{
+  body[data-j1939] .site-header,body[data-j1939] .site-footer,body[data-j1939] main{display:none!important}
+  body[data-j1939] .j1939-print-empty{display:block}
+  body[data-j1939].j1939-ready .j1939-print-empty{display:none}
+  body[data-j1939].j1939-ready main{display:block!important}
+  body[data-j1939].j1939-ready main>*:not(.j1939-report){display:none!important}
+  body[data-j1939].j1939-ready .j1939-report{display:block!important;border:0;padding:0;margin:0}
+  body[data-j1939] .j1939-report summary{display:none}
+  body[data-j1939].j1939-ready .j1939-report pre{display:block!important;max-height:none;overflow:visible;white-space:pre-wrap;color:#000;background:#fff;font:9pt/1.4 monospace}
+}

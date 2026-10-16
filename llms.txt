@@ -91,3 +91,14 @@ The site provides practical calculators, guides, and technical references for re
 - https://reliabilitybench.com/reference/operating-profile-analysis-methods.html
 
 Link to the canonical URL when referencing a ReliabilityBench page. Preserve formula assumptions and limitations when summarizing a calculator. Do not imply that a generic calculator result is professional advice for a specific site or asset.
+## J1939 capture diagnostics
+
+Passive local interpretation of recorded J1939 frames; no device access, proprietary fault database, or protocol certification.
+
+- https://reliabilitybench.com/tools/j1939-pgn-filter-mask-checker.html
+- https://reliabilitybench.com/tools/j1939-dm1-payload-decoder.html
+- https://reliabilitybench.com/tools/j1939-bam-capture-checker.html
+- https://reliabilitybench.com/tools/j1939-address-claim-analyzer.html
+- https://reliabilitybench.com/tools/j1939-capture-diagnostics/
+- https://reliabilitybench.com/guides/j1939-capture-diagnostics.html
+- https://reliabilitybench.com/reference/j1939-capture-fields.html
