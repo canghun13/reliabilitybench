@@ -262,8 +262,15 @@ new market or a new confidence/prediction suite.
   buttons hidden, no report when invalid/uncomputed, mobile margins reset.
   Native print preview is not exposed by the available IAB surface; **no visual
   Print/PDF PASS** is claimed. Button gating verified; no printer job/PDF save.
-- Production verification: pending implementation push; closeout below must be
-  updated with actual deployed source, browser tests and remote verification.
+- Production: actual HTTPS apex page render, Run, result, Copy contents/status,
+  Reset, disabled stale/uncomputed reports and rerun verified. All eight widths
+  × three bases (24 combinations) repeated in production; zero page overflow,
+  clipped H1 width, header overlap or horizontally off-screen main controls.
+  Three rate units agreed; blank input and zero-event interpretation rechecked.
+  Inspected production console errors: 0. Mobile screenshot inspected; desktop
+  screenshot saved outside the repository. Viewport override reset afterwards.
+- This October 23 production QA will itself create potential Failure-rate GA4
+  contamination in future reporting windows; the current export ends October22.
 
 ## Risks
 
@@ -276,9 +283,17 @@ new market or a new confidence/prediction suite.
 
 ## Deployment
 
-Implementation/final commits and production closeout will be recorded after
-normal pushes. Final actual remote SHA is verified after the documentation
-commit, not self-referenced inside its own content.
+- Implementation commit: `e295c2b55de48386733e7ba713250ddd0a2166de`, normal push
+  to `main` succeeded from `27b6f09`.
+- Initial propagation retained old HTML and returned404 for the new JS/CSS.
+  After propagation, all three are **200 and exact local-source matches**
+  (line endings normalized); JS MIME `application/javascript`, CSS `text/css`.
+  Googlebot-UA also used for these requests. Protected footer and unchanged
+  sitemap are200 and source-matched. No claim based solely on CI status.
+- Final closing commit updates only this review and handover, no runtime change.
+  Final local HEAD / fetched origin/main / actual `ls-remote` equality,
+  ahead/behind0/0 and clean tree are verified after that normal push and reported
+  in the final response, not self-referenced inside this commit.
 
 ## Next state (maximum three)
 

@@ -2576,13 +2576,22 @@ Each screen records primary user and recurring workflow; user problem and search
   regression, both static audits PASS. Local browser all8widths×3bases; zero
   page overflow/offscreen controls, Copy/Reset/stale/error/zero/precision checks.
   Native print preview unavailable: no visual Print/PDF PASS. Full evidence in
-  review; production closeout remains required after implementation push.
+  review. Production also passed all8widths×3bases, Run/Copy/Reset/rerun,
+  blank/zero/stale gating and allrateunits; inspected console errors0. Viewport
+  override reset. October23 Failure-rate production QA can contaminate future
+  GA4 reports; current report endsOctober22, so it is not in these metrics.
 - HTTP→HTTPS apex and Googlebot sampled200/canonical/robots/sitemap good. Sitemap
   remains110URLs, no newURL so unchanged. **IndexNow still unconfigured and no
   submission sent**; no dashboard resubmission claimed or missing-IndexNow defect.
 - Inventory remains111public/110indexable/110sitemap/42calculators/22workflow/
   17Guides/13References. Footer hash unchanged
   `51ba08263d2ceca4b3b88c3be2cc409765afe58a`.
+- Implementation `e295c2b55de48386733e7ba713250ddd0a2166de` normally pushed to
+  main. Old HTML/newasset404 during propagation became200/exact source-match
+  for HTML/JS/CSS; JS MIMEapplication/javascript. Footer and sitemap200/source-
+  match. Actual production browser, not onlyCI, establishes release. Closing
+  documentation commit makes no runtime change; final actualremote/fetch/HEAD
+  equality,0/0andcleantree verified after push and reported in session final.
 - Nextmax3: watch Failure-rate exact intent over equal intervals; watch J1939
   early GSCentry excluding QA; native Print preview and optional IndexNow remain
   explicit follow-ups, not completed actions.
