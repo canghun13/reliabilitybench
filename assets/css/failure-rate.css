@@ -1,0 +1,39 @@
+/* Only this calculator; the shared shell and protected footer are unchanged. */
+body[data-calc="failureRate"] .fr-mode.field{display:grid;width:auto;margin:0 24px 20px;border:0;padding:0;max-width:520px}
+body[data-calc="failureRate"] .fr-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+body[data-calc="failureRate"] .fr-fields[hidden],body[data-calc="failureRate"] .fr-details[hidden]{display:none}
+body[data-calc="failureRate"] .fr-fields .field{width:auto;min-width:0}
+body[data-calc="failureRate"] .field select{font-size:15px}
+body[data-calc="failureRate"] .result-panel{grid-template-columns:150px minmax(140px,1fr) minmax(0,1.6fr)}
+body[data-calc="failureRate"] .result-actions{display:flex;flex-wrap:wrap;gap:8px;grid-column:1/-1}
+body[data-calc="failureRate"] button:disabled{opacity:.5;cursor:default}
+body[data-calc="failureRate"] .fr-status{min-height:1.5em}
+body[data-calc="failureRate"] .fr-details{padding:24px;background:var(--surface);border-bottom:2px solid var(--ink)}
+body[data-calc="failureRate"] .fr-details h2{margin-top:0}
+body[data-calc="failureRate"] .fr-summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+body[data-calc="failureRate"] .fr-summary dt{font:800 10px/1.4 var(--mono);text-transform:uppercase;color:var(--muted)}
+body[data-calc="failureRate"] .fr-summary dd{margin:8px 0 0;font-weight:800;overflow-wrap:anywhere}
+body[data-calc="failureRate"] .fr-print-url{display:none}
+@media(max-width:980px){body[data-calc="failureRate"] .result-panel{grid-template-columns:150px minmax(0,1fr)}}
+@media(max-width:700px){
+  body[data-calc="failureRate"] .fr-mode.field{margin-left:16px;margin-right:16px}
+  body[data-calc="failureRate"] .fr-fields,body[data-calc="failureRate"] .fr-summary{grid-template-columns:1fr}
+  body[data-calc="failureRate"] .result-panel{grid-template-columns:1fr}
+  body[data-calc="failureRate"] .fr-details{padding:16px}
+}
+@media print{
+  body[data-calc="failureRate"]{background:#fff;color:#000}
+  body[data-calc="failureRate"] .site-header,body[data-calc="failureRate"] .site-footer,body[data-calc="failureRate"] .breadcrumb,body[data-calc="failureRate"] form,body[data-calc="failureRate"] button,body[data-calc="failureRate"] .fr-status,body[data-calc="failureRate"] .prose{display:none!important}
+  body[data-calc="failureRate"] .page{padding:0;max-width:none}
+  body[data-calc="failureRate"] .calc-layout{margin:0}
+  body[data-calc="failureRate"] .page-head{margin-bottom:16px;padding-bottom:12px}
+  body[data-calc="failureRate"] .page-head h1{font-size:26px;line-height:1.15}
+  body[data-calc="failureRate"] .lead{font-size:12px}
+  body[data-calc="failureRate"] .result-panel{display:block;padding:12px 0;background:#fff;color:#000}
+  body[data-calc="failureRate"] .result-panel .label,body[data-calc="failureRate"] .result-value,body[data-calc="failureRate"] .result-message{color:#000;margin:8px 0}
+  body[data-calc="failureRate"] .result-value{font-size:28px}
+  body[data-calc="failureRate"] .fr-details{padding:12px 0;background:#fff}
+  body[data-calc="failureRate"] .fr-summary>div{break-inside:avoid}
+  body[data-calc="failureRate"] .fr-print-url{display:block;font-size:11px;overflow-wrap:anywhere}
+  body[data-calc="failureRate"]:not([data-fr-ready]) .calc-layout,body[data-calc="failureRate"]:not([data-fr-ready]) .fr-details,body[data-calc="failureRate"]:not([data-fr-ready]) .fr-print-url{display:none!important}
+}

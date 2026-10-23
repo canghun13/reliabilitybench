@@ -2535,3 +2535,54 @@ Each screen records primary user and recurring workflow; user problem and search
   before extending parser formats/diagnostic semantics; (3) independently verify
   native print preview when an appropriate browser surface is available, without
   changing protected footer/badges or installing anything.
+
+## 2026-10-23 — Weekly EXISTING-UPGRADE GO / Failure Rate units
+
+- Selected one action: existing Failure Rate Calculator upgrade, not another
+  cluster. Title/H1/URL/canonical/GA4/shell/footer preserved. Three input bases
+  (observed failures/exposure, known rate, known MTBF), hourly/per-million/FIT
+  normalization, reciprocal hours, zero-count interpretation and current reports.
+  No confidence/acceleration/prediction/safety model or new thin URLs.
+- Start local/origin/actual remote main all
+  `27b6f09b355cb9a55ab97215ee4aeb0b0bcdb00b`; ls-remote before fetch, clean, 0/0.
+  No unrelated edits, installation, environment change or destructive Git action.
+- All five supplied October23 report references accessible; exact ZIP CSVs and
+  multisection GA4 parsed without source edits/extraction/directory searching.
+  Full periods, denominators, SHA256, candidates, sources and limits:
+  `research/weekly-growth-review-2026-10-23.md`.
+- GSC July21–October20:44 clicks/4,381 impressions/1.00434% CTR/approx49.37354
+  weighted position. October14–20:9/431 vs October7–13:4/371 (+16.17% impressions);
+  position28.87053 vs23.86334 worsened. Query416 rows, page97/96canonical, not
+  interchangeable with chart totals. Current cumulative+11/+523 adds eight days.
+- Failure rate229 impressions/1 click/12.14 vs155/1/14.81; current five FIT↔MTBF
+  rows total11 impressions/zero clicks. Exact missing input units, not strong
+  measured market demand, justify bounded work. Parallel404/11/13.15 already
+  upgraded; J1939 first GSC five-page32-impression/zero-click entry is early.
+- Bing page64 rows/999 impressions/26 clicks/5.51952 weighted position; query
+  483/870/26/5.27816. Internal periods absent; no precise WoW rate or sum across
+  dimensions. GA4 September25–October22:92active/91new/43seconds/516events,
+  first-user Google/Bing organic16/11; session-source26/13. J1939 titles47views
+  include known October16 QA; not organic popularity or summable unique users.
+- Coverage latestOctober16 discovered-not-indexed10 vs11prior; privacy absent
+  does not prove indexing. All seven Operating Profile URLs still present;
+  retain Type4/no-site-defect, no indexing-number-driven rewrite. Other reasons
+  and indexed total unavailable; all1970crawl dates are missing sentinels.
+- Current TDK/AMD definitions and BQR/Netray free alternatives checked; generic
+  conversion is competitive, no empty-SERP/volume claim. One-page improvement
+  scored82/100 judgment vs Parallel65/J1939 60. Expansion considered, discovery
+  branch not entered; no fabricated new40family funnel or increase to312history.
+- Dedicated failure-rate JS/CSS and123assertion fixture suite imported by full
+  calculator QA. All42calculators,105J1939,OperatingProfile andIntermittentDemand
+  regression, both static audits PASS. Local browser all8widths×3bases; zero
+  page overflow/offscreen controls, Copy/Reset/stale/error/zero/precision checks.
+  Native print preview unavailable: no visual Print/PDF PASS. Full evidence in
+  review; production closeout remains required after implementation push.
+- HTTP→HTTPS apex and Googlebot sampled200/canonical/robots/sitemap good. Sitemap
+  remains110URLs, no newURL so unchanged. **IndexNow still unconfigured and no
+  submission sent**; no dashboard resubmission claimed or missing-IndexNow defect.
+- Inventory remains111public/110indexable/110sitemap/42calculators/22workflow/
+  17Guides/13References. Footer hash unchanged
+  `51ba08263d2ceca4b3b88c3be2cc409765afe58a`.
+- Nextmax3: watch Failure-rate exact intent over equal intervals; watch J1939
+  early GSCentry excluding QA; native Print preview and optional IndexNow remain
+  explicit follow-ups, not completed actions.
