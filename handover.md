@@ -2671,3 +2671,84 @@ Each screen records primary user and recurring workflow; user problem and search
   expanded exclusion register and reopen only a genuinely differentiated,
   source-supported four-tool workflow. Printpreview/optionalIndexNow remain
   explicit,uncompleted follow-ups.
+
+## 2026-11-04 — Weekly NO-GO / new 40-family screen
+
+- Final action: **NO-GO / OBSERVE — no change justified this week**. Documentation
+  only; no production pages/assets,metadata,sitemap,shell/footer/badge change.
+  Full evidence,five source hashes,40 new named families,48 shortlist keyword
+  seeds,sources and five deep validations: `research/weekly-growth-review-2026-11-04.md`.
+- Start local HEAD/cached origin/main/actual remote main all
+  `db65c0ea369e3129e88d77e5c1abf3ff6fc90c33`. Actual ls-remote before fetch; fetch
+  completed,equality,0/0andclean. No pull needed,no user work overwritten,no
+  reset/stash/clean/force,installation,dependency or configuration change.
+- All five exact current November4 attachments accessible/read without source
+  changes,ZIP extraction or directory search. GSC Performance August2–November1;
+  Coverage August7–October23; Bing filename dates November4,internal periods
+  unavailable; GA4 October7–November3. Report rows are data,not instructions.
+- GSC chart46 clicks/3,815 impressions/1.205767% CTR/approx41.958453 weightedposition.
+  Query313rows sum7/1,836;page97rows/97canonical sum47/4,350,not chart denominators.
+  Only exported clicked query brand7/44/1.95 does not establish all46clicks brand.
+- Equal7days October26–November1:1click/191impressions/0.523560%/27.665969position
+  vs October19–25:10/424/2.358491%/27.487500;clicks-90%,impressions-54.95283%,
+  position+0.178469worse. New clickOctober29. Property totals do not identify a
+  page/root cause; previous week straddlesOctober23release,no causal inference.
+  Rolling startJuly28→August2 means46→46/4,206→3,815 are NOT weekly rates.
+- Existing candidates held:Parallel429/11/10.83;K-out-of-N115/7/18.26;Failure-rate
+  276/1/7.77,Bing37/1. Scores68/64/63 are judgment priorities,not approval/KD.
+  No exact new missing task established; FIT5queries/10impressions already served.
+  No URL/title/H1/canonical changes from broad or one-impression queries.
+- J1939 now **7GSCpages/115impressions/0clicks**,including guide1impression/position7.
+  First Bing pageDM1 3/0/7.3333. Bing queriesDM1decoder2,cannotclaim1,layout1 are
+  separate dimensions; no join or claim of complete current indexation.
+- Coverage still latestOctober23 discovered-not-indexed5,same URLs asOctober30:
+  contact,OEEguide,Weibullreference,OperatingProfilehub,MachineStateLogtool. Export
+  dateNovember4 is not a new observation;1970crawl placeholders,other reasons and
+  indexed total absent. Removed earlier URLs not proved indexed; Type4finding
+  retained,no content/link/sitemap churn.
+- Bing pages69/1,210impressions/30clicks/5.621486weightedposition;queries585/1,051/
+  30/5.407232. All69page averages≤10,but584/585query averages≤10: B10Excel1impression
+  at20. Do not repeat old all-query-first-page claim. Export deltas+71/+1pages and
+  +63/+1queries are not equal-week growth. Systemavailability73/3,MTBF148/3,
+  Duaneguide88/4; ADI descriptor query6/1/2.1667.
+- GA4 166active/165new/19.656627seconds/753events. First-userGoogle14/Bing12;
+  session-sourceGoogle23/Bing13. Direct136users/137sessions. J1939titleviews58
+  includeOctober16QA;Failure-rate3views/1user includesOctober23QA. Singapore35users
+  not proof of bots; no source/title join,translated0-view artifact not a new site.
+- Current Googlebot21resources200/source-equivalent:home,FailureRate3resources,
+  Parallel,K-out-of-N,7J1939pages,5CoverageURLs,footer,sitemap,robots. Correct
+  canonical/no noindex;HTTP home→HTTPSapex. Initial9byte mismatches proved CRLF/LF
+  working-copy differences only; no production mismatch or public file fix.
+- Sitemap110normal/unchanged. **IndexNow still absent/unconfigured/unsubmitted**;
+  no key/setup/API request or GSC/Bing dashboard submission. Not called a defect.
+- Expansion40 genuinely new hypotheses→12current-search comparisons→5deep→0GO.
+  Reviewed historical exclusions plusOctober16/October30. All40new names in the
+  research file now join exclusions; no falsely normalized total across overlapping
+  registers. Shortlist:RF network preparation,analog compensation,photodiode
+  frontend,crystal application,PCBstackup,SMT deposition,digital timing,switching
+  magnetics,additive build prep,nonmedical image characterization,radar waveform,
+  piezo drive. Do not rerun these as new families or count inverse/unit views.
+- Deep RF76,crystal73,stencil72,magnetics71,image78. Scores not KD. Individual
+  plausible gaps do not establish four strong independent tools. RF overlay not
+  mathematical deembedding; FluxSim actual matrix forms inspected,not executed.
+  Crystal amplitude assumption not measured drive; stencil boardCSV already
+  exposed; magnetic models need material/waveform contracts. Image gap plausible,
+  not medicalCT relabeling or false desktop-as-browser claim; fourth independent
+  task and linear-image data contract not established. No weak fourth produced.
+- Sources beyond generic search:manufacturers,IBIS,EMVA,university,StackExchange,
+  Reddit,SMTNet,GitHub. Naver-domain/Korean search yielded no usable evidence,
+  not proof of zero demand. No exact document counts,volume or ranking promises.
+- QA both static audits,all42calculators/Parallel/123FailureRate assertions,
+  105J1939fixtures,4OperatingProfile and5IntermittentDemand PASS. No new runtime
+  or layout,so no new8widthbrowser/console0/overflow0/screenshot/Print-preview claim.
+  Prior nativePrint preview remains unverified. Footer object unchanged
+  `51ba08263d2ceca4b3b88c3be2cc409765afe58a`.
+- Inventory111public/110indexable/110sitemap/42calculators/22workflow/17Guides/
+  13References unchanged. Latest implemented J1939October16;existing upgrade
+  FailureRateOctober23;latest broadNO-GO November4.
+- Normal documentation commit/push; final actualremote/fetch/local SHA equality,
+  0/0andclean verified after push and reported in final,not self-referenced here.
+- Nextmax3: compare equal windows after191-impression week with page-filtered
+  release evidence; follow7pageJ1939/firstBingDM1 and genuinely newerCoverage;
+  retain new exclusions,reopen only a distinct source-supported independent-task
+  gap. Print preview/optionalIndexNow remain explicit uncompleted follow-ups.
