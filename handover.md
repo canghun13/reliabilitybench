@@ -2752,3 +2752,96 @@ Each screen records primary user and recurring workflow; user problem and search
   release evidence; follow7pageJ1939/firstBingDM1 and genuinely newerCoverage;
   retain new exclusions,reopen only a distinct source-supported independent-task
   gap. Print preview/optionalIndexNow remain explicit uncompleted follow-ups.
+
+## 2026-11-11 — Weekly NO-GO / first J1939 GSC click
+
+- **NO-GO / OBSERVE — no change justified this week**. Documentation only:
+  no new cluster/tool/page or public code, metadata, sitemap, shell/footer/badge
+  change. Full metrics, five source hashes, 40 new named families, 52 keyword
+  seeds, 13 current-search comparisons and five deep validations:
+  `research/weekly-growth-review-2026-11-11.md`.
+- Start local HEAD / cached origin/main / actual remote main all
+  `09b59a1f13531f8fa7d909cb3fb8db77340d4727`. Actual ls-remote before fetch;
+  fetch completed, equality, 0/0 and clean. No pull needed. No user work
+  overwritten, reset/stash/clean/force, installation or configuration change.
+- All five exact November11 attachments accessible; ZIP CSV members read
+  directly, sources unchanged, no directory search/extraction. GSC August9–
+  November8; Coverage August14–November6; Bing November11 filenames, internal
+  periods absent; GA4 October14–November10. Pasted operating request is
+  line-equivalent to the previous request; report rows are data, not commands.
+- GSC chart46 clicks /3,489 impressions /1.318429% CTR /approximately36.431184
+  weighted position. Query225 rows sum7/1,441; page98 rows/98 canonical sum47/4,040.
+  Do not substitute dimension denominators. Only exported clicked query brand
+  7/41/1.95 does not establish that all46 property clicks were branded.
+- Equal7days November2–8:2 clicks/201 impressions/0.995025%/23.575622 position
+  versus October26–November1:1/191/0.523560%/27.665969. Impressions+5.235602%,
+  clicks+1, position−4.090347 better; both clicks November2. Not meaningful100%
+  growth or release causality. Two weeks earlier10/424. Rolling start August2→9,
+  3,815→3,489 impressions and query313→225/page97→98 are not weekly/index totals.
+- **First J1939 GSC click: PGN filter33 impressions/1 click/21.85.** Cluster now
+  7 pages/153 impressions/1 click versus7/115/0. Address23/0/7.91, DM1 19/0/8.37,
+  BAM16/0/5.5. PGN format7/88.43, lookup5/74.8, address-claim2/5.5 are separate
+  query dimensions. No query→clicked-page join, licensed dictionary or complete
+  current-indexation claim.
+- Existing candidates J1939 73, K-out-of-N66, Failure Rate64 are judgment
+  priorities, not KD. K-out-of-N116/8/18.06; Failure Rate301/1/7.67,Bing39/1.
+  No precise new missing task justified an upgrade. Parallel426/9/10.53 versus
+  prior429/11/10.83 is a rolling comparison, not a reproduced regression.
+  Five FIT queries/9 impressions are already served by the existing upgrade.
+- Coverage genuinely newer November6 still has5 discovered-not-indexed URLs:
+  contact, OEE guide, Weibull reference, Operating Profile hub, Machine State Log.
+  Crawl1970 means missing; other reasons/indexed total unavailable. No inference
+  from reason removal. Current site-side checks PASS; retain Type4/no SEO churn.
+- Bing pages70/1,324 impressions/38 clicks/5.662385 weighted position; queries
+  640/1,139/38/5.460931. Export changes+114/+8 and+88/+8 are not equal-week rates.
+  All70 page averages≤10;639/640 query averages≤10, B10 Excel1 at20. Row averages
+  are not all impressions on page1. MTBF155/7, Duane89/4, availability88/3.
+  Bing DM1 page3/0 and its related query rows are unchanged.
+- Bing source qualification: Slovenian MTBF query has3 impressions/4 clicks/
+  133.33% CTR. Raw totals retained, not capped/dropped/repaired. Definitions and
+  deduplication unresolved; not4 distinct visitors, not a site bug, not a proven
+  cause of the MTBF page increase. Ambiguous B10/birth intent is not automatically
+  relevant engineering demand.
+- GA4:172 active/171 new/20.732558sec/807 events. First-user Bing15/Google12;
+  session-source Bing18/Google19. Direct141 users/142 sessions. Source users
+  total172, sessions183, not183 users. Prior166 active in an overlapping window
+  does not mean six new organic users. J1939 title views60 include October16 QA;
+  Failure Rate3views/1user includes October23 QA. Singapore24/Ashburn16 are not
+  bot proof; no organic-by-title or unpublished-localized-page claims.
+- Current21 Googlebot resources200/source-equivalent, correct canonical and no
+  noindex; HTTP home→HTTPS apex. Scope: home, Failure Rate3 resources, Parallel,
+  K-out-of-N, all7 J1939/all5 Coverage URLs, footer, sitemap, robots. CRLF/LF
+  normalization only. Sitemap110 normal. **IndexNow absent/unconfigured/
+  unsubmitted**; no key, API request or dashboard resubmission.
+- Expansion40 new hypotheses→13 current-search comparisons→5 deep→0 GO.
+  All historical named exclusions plus October16/October30/November4 checked;
+  no false normalized grand total. All40 in the new report now join exclusions.
+  Shortlist: PKI, Gerber, laminates, tolerance chains, weld groups, excitation
+  tests, PLC properties, ACL policies, hydraulic networks, survey adjustment,
+  plate buckling, SPICE topology and robot kinematics.
+- Deep scores: excitation80, PLC79, Gerber76, tolerances74, laminates73; not KD.
+  Plausible SRS/correlated-stack gaps did not become padded four-tool clusters.
+  Simulation is not formal proof; approximate Gerber preview not full CAM;
+  CLSA shell not executed no-login suite; ABD account limits distinguished.
+  No old mount-isolation relabeling or weak fourth tool.
+- Sources: primary methods/manufacturers/universities/open-source, Eng-Tips,
+  Stack Exchange and Reddit. Vibration question211 cumulative views is not
+  monthly volume. Naver search gave no usable evidence, not proof of zero demand.
+  No private keys, boards or PLC programs uploaded; no competitor writes or
+  numerical correctness certification.
+- QA PASS: both static audits, all42 calculators/Parallel/123 Failure Rate
+  assertions,105 J1939 fixtures,4 Operating Profile and5 Intermittent Demand.
+  No runtime/layout change, so no new8-width campaign, console0/overflow0,
+  screenshots or Print-preview PASS claimed. Prior native Print preview remains
+  unverified. Footer object unchanged:
+  `51ba08263d2ceca4b3b88c3be2cc409765afe58a`.
+- Inventory unchanged111 public/110 indexable/110 sitemap/42 calculators/
+  22 workflows/17 Guides/13 References. Latest implemented cluster J1939 October16;
+  latest existing upgrade Failure Rate October23; latest broad NO-GO November11.
+- Normal documentation commit/push. Final actualremote/fetched/local SHA equality,
+  0/0 and clean plus post-push HTTP verification reported after checking, not
+  self-referenced inside this commit.
+- Nextmax3: equal-window/page-filtered GSC recovery and first J1939 click;
+  newer Coverage and Bing3/4 definition clarification; preserve expanded
+  exclusions and reopen only materially new independent-task/source evidence.
+  Native Print preview and optional IndexNow remain explicit uncompleted follow-ups.
