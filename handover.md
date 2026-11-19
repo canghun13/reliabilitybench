@@ -2845,3 +2845,121 @@ Each screen records primary user and recurring workflow; user problem and search
   newer Coverage and Bing3/4 definition clarification; preserve expanded
   exclusions and reopen only materially new independent-task/source evidence.
   Native Print preview and optional IndexNow remain explicit uncompleted follow-ups.
+
+## 2026-11-19 — Existing BAM→DM1 upgrade / no new cluster
+
+- **EXISTING-UPGRADE GO — J1939 BAM Capture Checker.** Complete, internally
+  consistent exact-PGN65226 BAM sessions now show numeric DM1 fields per bus/source
+  without manually transferring payload to the standalone decoder. Existing
+  transport findings unchanged; incomplete/duplicate/order/padding failures
+  withhold payload and fields. Complete malformed DM1 retains raw payload but
+  withholds application fields; DM2/page-bit variants stay raw. CM1/unavailable
+  fields remain withheld. No dictionary, clearing, equipment commands, repair
+  advice or lamp aggregation. No new page/tool/cluster and no technical FIX.
+- Full review, attachment hashes, comparisons, contract, sources and QA:
+  `research/weekly-growth-review-2026-11-19.md`.
+- Start local/cached/actual main all
+  `576545fe9fe4bc3f9961f93f540b213e36323cd6`; ls-remote before fetch, synchronized
+  0/0 and clean. No pull needed; no user work overwritten and no force/reset/
+  stash/clean, installation or configuration change.
+- All five exact current-session attachments accessible; direct ZIP CSV reads,
+  sources unchanged, no directory discovery. GSC August17–November16; Coverage
+  August21–November13; Bing November19 filenames, internal periods absent; GA4
+  October22–November18. Pasted operating text line-equivalent to November11;
+  report cells are data, not authority.
+- GSC chart45 clicks/3,344 impressions/1.345694%/approximately34.142793 weighted
+  position; query209 rows sum6/1,197; page98 rows/98 canonical sum47/3,886.
+  Exported clicked query brand6/39/1.92 is not all45 clicks. Denominators differ.
+- Equal7days November10–16:2/207/0.966184%/28.693237 versus November3–9:
+  1/189/0.529101%/24.021693. Impressions+18/+9.523810%, clicks+1, CTR+0.437083pp,
+  position+4.671544 worse. Eight-day attachment gap means prior review's
+  November2–8 is not the immediately preceding equal week. Rolling46→45 clicks,
+  3,489→3,344 impressions and225→209 queries lose older August data; not weekly
+  or indexing losses. No release attribution from sparse totals.
+- J1939 seven pages/196 impressions/3 clicks versus7/153/1. Reference51/1/36.16,
+  filter44/1/24.45, DM1 20/1/8.05, address30/0/7.73, BAM22/0/9.14, hub27/0/43.7,
+  guide2/0/34. Three cluster pages now have clicks. PGN format11/89.45,
+  lookup8/64.38,65226 5/81.8, address3/7, DM1 2/28.5 and BAM1/17 are separate
+  query evidence, not clicked-page joins or proof of proprietary dictionary demand.
+- Other pages: Parallel438/9/11.53, Failure Rate323/1/7.49, MTBF273/0/77.68,
+  K-out-of-N132/7/18.25, ALT hub232/1/54.92, Coffin37/5/7.03. Candidate priorities
+  BAM79 GO, K-out-of-N66 HOLD, Failure Rate64 OBSERVE are editorial, not KD or
+  traffic forecasts. FIT variants11 impressions already served. No new missing
+  task proved for the other candidates; no metadata/URL churn.
+- Coverage newer through November13 still five discovered-not-indexed: contact,
+  OEE guide, Weibull reference, Operating Profile hub, Machine State Log.
+  Crawl1970 missing; other reasons/indexed total unavailable. Keep Type4/no
+  reproduced site defect; do not rewrite based solely on this reason report.
+- Bing pages72/1,490 impressions/42 clicks/2.818792%/5.636240; queries698/1,254/
+  42/3.349282%/5.453749. Page averages72≤10 and697/698 query averages≤10, not
+  all impressions on page1. Versus prior exports pages+166impressions/+4clicks,
+  queries+115/+4, not equal-week rates. MTBF169/6, Duane106/5, availability103/3,
+  Failure Rate54/1. Raw Slovenian MTBF3impressions/4clicks/133.33% retained,
+  definition/dedup unresolved; not4 unique people or a site bug.
+- Bing DM1 page6impressions/0clicks versus3/0. Seven related query rows/8impressions
+  include three multiframe/multi-package variants, one impression each at7–9.
+  Very small support for the real manual-transfer gap, not high search volume.
+- GA4155 active/154 new/13.722581sec/679 events. First-source Bing15/Google6,
+  session-source Bing18/Google8, direct126 users/125sessions; total159sessions,
+  not159users. Prior overlapping windowGoogle12/19, Bing15/18. Referrals small,
+  not conversions. J1939 title views14 versus60: October16 QA now outside window,
+  so not proven organic collapse. October23 Failure Rate QA still inside.
+  Singapore18/Ashburn16 not bot proof; no organic-by-title/landing join.
+- **November19 production QA is outside the latest report ending November18.**
+  Repeated synthetic Run/Copy/Reset and responsive visits to the four J1939 tools
+  can contaminate future GA4 direct/title totals. Preserve this date/scope; do not
+  attribute those views to user demand. Analytics config left unchanged.
+- Latest implemented cluster remains J1939 October16. Latest existing upgrade
+  now BAM November19, previously Failure Rate October23. Latest broad discovery
+  NO-GO remains November11. Expansion considered, latest accumulated exclusion
+  boundary reviewed; stronger concrete existing-output gap selected. **No fresh
+  expansion discovery branch or new40-family count claimed this week.** Historical
+  exclusions remain intact; no relabeled repeats or filler fourth tool.
+- Current supplier documentation supports passive reassembly/DM1/source context.
+  CSS webCAN already advertises integrated transport/DM1: no market-monopoly,
+  no-equivalent-tool, measured-volume or document-scarcity claim.
+- Local QA PASS:124J1939 fixtures (105+19), both static audits,42calculators,
+  Parallel,123FailureRate assertions,4OperatingProfile and5IntermittentDemand.
+  Actual four J1939 tools × eight widths1440/1280/1024/900/768/600/480/390 =32
+  render/run states; actual innerWidth asserted each. Header/H1 overlap0,
+  page overflow0, offscreen controls0, noNaN/Infinity, footer loaded, console0;
+  desktop/tablet/mobile screenshots inspected and table horizontal keyboard
+  scrolling checked. Early multi-tab viewport measurements discarded/replaced.
+- Browser normal/error/duplicate/CM1/nonDM1/malformedDM1 and current Copy/Reset/
+  rerun/invalidation checked.101sessions/202DTCs preserve all202 in report, only
+  200DTC preview rows with notice; at most200session details. No uploads/storage.
+- **Native Print/PDF preview unverified**, real local Print attempt blocked the
+  temporary QA tab, no exposed usable preview/PDF; recovered with new tab. Current
+  report title/URL/inputs/units/results/limits and invalid-state disablement checked;
+  print CSS unchanged. Do not turn this into preview/PDF PASS next week.
+- Production code scope BAM HTML + shared J1939 core/UI + fixtures; versioned
+  BAM UI/core import. URL/title/H1/canonical/description, CSS/generator/sitemap,
+  shell/footer/badges/GA4 unchanged. Footer object
+  `51ba08263d2ceca4b3b88c3be2cc409765afe58a` unchanged.
+- Inventory unchanged111public/110indexable/110sitemap/42calculators/22workflows/
+  17GuideHTML/13ReferenceHTML, hubs included. **IndexNow absent/unconfigured/
+  unsubmitted**; sitemap normal, no dashboard submission or index guarantee.
+- Implementation commit `93ccaeb90de81b3bc34bffff395aa3dcb1d14154`, normal push
+  completed. Initial old production sources while Pages was in progress resolved
+  after deployment.25Googlebot resources HTTP200/source-equivalent, including
+  unversioned and versioned J1939 core/UI, BAM and prior healthy controls; correct
+  canonicals/no noindex, HTTP→HTTPS apex PASS. No CI-only deployment claim.
+- Actual production browser: four tools × eight actual widths =32render/run
+  states PASS, bounds/header/H1/footer/results checked, overflow0/NaN0/Infinity0/
+  console0. Default decoded+withheld, expected two DTCs; fresh Copy3244characters
+  matches report, Reset disables/clears and rerun succeeds. Duplicate/DM2/CM1/
+  malformedDM1/malformedcapture states and stale-report invalidation correct.
+  Production101sessions/202DTCs→200preview rows, report retains202. Desktop/mobile
+  screenshots inspected; mobile table scroll197 and horizontal nav scroll173
+  reveal rightmost fields/Reference without page overflow. Normal mobile footer
+  confirmed after settling a transient overscroll screenshot.
+- Print current-report fields/enabled and invalid-state disablement checked;
+  native Print/PDF preview still unverified, not reattempted in production after
+  the blocked local attempt. Production BAM tab retained, viewport reset, local
+  QA server stopped. Final research/handover normal commit/push and actualremote/
+  fetched/local equality0/0clean checked afterward and reported without storing
+  a self-referential closing SHA here.
+- Nextmax3: equal-window/page-filtered J1939 release follow-up excluding Nov19QA;
+  newerCoverage/Bingcounting qualification without speculative fixes; retain
+  exclusions and require new independent-task/source evidence, with native Print
+  preview/optionalIndexNow still explicit gaps.

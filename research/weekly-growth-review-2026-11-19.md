@@ -260,13 +260,54 @@ eligible when the exact independent-task/source/competition gates are met.
 - Content: sufficient revised method/example/limitations; no thin new page,
   duplicate URL or incomplete added output identified in tested scope.
 - `git diff --check` PASS; footer object unchanged. Deployment verification below
-  is pending at the implementation commit, not silently inferred from local QA.
+  was pending at the implementation commit; observed production closure follows.
 
 ## Deployment and next state
 
-Implementation commit and production verification: pending at this record's first
-commit; append observed closure after normal push. Final SHA equality/0/0/clean
-must be checked after the closing documentation push; avoid self-referential SHA.
+Implementation commit **`93ccaeb90de81b3bc34bffff395aa3dcb1d14154`**, normal main
+push completed. The initial post-push HTTP check still served old BAM/JS while
+GitHub Pages deployment was in progress; not mislabeled as a new site defect.
+After propagation, **25 Googlebot resources HTTP200/source-equivalent**, including
+both unversioned and versioned J1939 core/UI assets, BAM HTML and all previous
+healthy controls. Correct apex canonicals/no noindex; HTTP home→HTTPS apex PASS.
+
+Actual production browser verification, not CI-only:
+
+- Fresh page exposes the new method and versioned module. Default result decoded/
+  withheld, exact DTCs110/5/3 and100/1/2. No invented fields for second session.
+- Current Copy status and a fresh clipboard read match the3244-character current
+  report. A prior cross-call clipboard read did not match; a fresh Run/Copy and
+  explicit status/read check passed. No persistent copy defect reproduced.
+- Reset clears report/disables Copy+Print, rerun restores1complete/2sessions.
+  Input edits invalidate stale results. Duplicate, DM2, CM1, malformed DM1 and
+  malformed capture produce expected state/withholding/report disablement.
+- Production101complete sessions/202DTCs retain202 in report and show200 preview
+  rows. All four J1939 tools × eight actual widths =32 run/render cases PASS with
+  target-width assertions, form bounds, H1/header, footer, generated results,
+  no page overflow/NaN/Infinity and no observed console errors.
+- Desktop result and mobile screenshots inspected. DTC region at390 scrolls
+  horizontally (197px) without page overflow. Mobile nav is an existing horizontal
+  strip, not a hamburger: keyboard focus exposes Reference at right374.625 within
+  client375, nav scroll173. Mobile source/method/related links/footer rendered.
+  An immediate overscroll screenshot after large-output reset was blank; stable
+  scroll-position and footer-bound checks plus a fresh screenshot showed the
+  normal footer. No persistent blank-page regression reproduced.
+- Screenshots retained as session artifacts, including
+  `j1939-bam-production-result-2026-11-19.jpg`,
+  `j1939-bam-production-390-2026-11-19.jpg` and
+  `j1939-bam-production-footer-2026-11-19.jpg`.
+- Native Print preview was **not** reattempted on production after the local
+  blocked-preview attempt. Report context/current-state enablement checked;
+  Print/PDF-preview PASS remains explicitly unclaimed.
+- November19 synthetic QA visited all four J1939 tools; future GA4 direct/title
+  counts can include this traffic. No analytics configuration changed.
+- Temporary viewport override reset, production BAM tab retained, local server
+  stopped. No source report, competitor or search-console dashboard writes.
+
+At implementation closure actual remote, fetched origin/main and local HEAD all
+equal the implementation SHA,0/0; only intended handover documentation pending.
+Closing research/handover normal commit/push follows. Final SHA equality/0/0/clean
+is verified after that push and reported externally, not self-referenced here.
 
 - HIGH: none reproduced within tested scope; passive numeric fields are not
   equipment diagnosis, certification or safety clearance.
