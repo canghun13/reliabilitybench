@@ -196,6 +196,29 @@ export function bamAudit(raw) {
   };
 }
 
+// Transport evidence stays separate from optional application interpretation.
+export function bamDM1Audit(raw) {
+  const result = bamAudit(raw);
+  return {
+    ...result,
+    sessions: result.sessions.map(session => {
+      let dm1;
+      if (session.payload === null) {
+        dm1 = { state: 'withheld', reason: 'Transport findings withhold the payload; no DM1 fields are inferred.', fields: null };
+      } else if (session.pgn !== 65226) {
+        dm1 = { state: 'not-dm1', reason: 'Target PGN is not 65226 (0xFECA); no DM1 interpretation applied.', fields: null };
+      } else {
+        try {
+          dm1 = { state: 'decoded', fields: diagnosticPayload(session.payload) };
+        } catch (error) {
+          dm1 = { state: 'invalid-dm1', reason: error.message, fields: null };
+        }
+      }
+      return { ...session, dm1 };
+    })
+  };
+}
+
 export function decodeName(bytes) {
   if (bytes.length !== 8) throw new Error('NAME requires 8 bytes.');
   const value = bytes.reduce((total, byte, index) => total | (BigInt(byte) << BigInt(index * 8)), 0n);

@@ -1,4 +1,4 @@
-import { filterCheck, diagnosticPayload, bamAudit, claimAudit, hex } from './j1939-core.mjs';
+import { filterCheck, diagnosticPayload, bamDM1Audit, claimAudit, hex } from './j1939-core.mjs?v=20261119-dm1';
 
 const form = document.querySelector('[data-j1939-form]');
 const output = document.querySelector('[data-j1939-output]');
@@ -20,7 +20,7 @@ function element(tag, text, parent) {
 }
 function paragraph(text) { element('p', text, output); }
 function section(title) { element('h3', title, output); }
-function table(headers, rows) {
+function table(headers, rows, maximum = 200) {
   if (!rows.length) { paragraph('None observed in the supplied input.'); return; }
   const region = element('div', undefined, output);
   region.className = 'j1939-table-wrap'; region.tabIndex = 0; region.setAttribute('role', 'region'); region.setAttribute('aria-label', headers.join(', '));
@@ -28,7 +28,7 @@ function table(headers, rows) {
   headers.forEach(text => { const th = element('th', text, headRow); th.scope = 'col'; });
   const body = element('tbody', undefined, tableNode);
   let shortened = false;
-  rows.slice(0, 200).forEach(cells => {
+  rows.slice(0, maximum).forEach(cells => {
     const row = element('tr', undefined, body);
     cells.forEach(text => {
       const value = text == null ? 'Unavailable / withheld' : String(text);
@@ -36,8 +36,16 @@ function table(headers, rows) {
       element('td', value.length > 480 ? `${value.slice(0, 480)}… [full value in report]` : value, row);
     });
   });
-  if (rows.length > 200) paragraph(`Showing 200 of ${rows.length} rows. Copy result includes the complete bounded result.`);
+  if (rows.length > maximum) paragraph(`Showing ${maximum} of ${rows.length} rows. Copy result includes the complete bounded result.`);
   if (shortened) paragraph('Long table cells are shortened on screen. The plain-text report and Copy retain the full values.');
+}
+function diagnosticTables(result, heading = 'h3', recordLimit = 200) {
+  element(heading, 'Raw lamp fields', output);
+  table(['Lamp', 'Status', 'Flash'], result.lamps.map(lamp => [lamp.name, `${lamp.status}: ${lamp.statusText}`, `${lamp.flash}: ${lamp.flashText}`]));
+  element(heading, 'Diagnostic records', output);
+  if (recordLimit === 0 && result.codes.length) paragraph('The 200-record capture preview limit has been reached. This session’s full DTC records remain in the plain-text report and Copy result.');
+  else table(['Record', 'Raw bytes', 'SPN', 'FMI', 'OC', 'CM', 'Interpretation'], result.codes.map(code => [code.record, code.bytes, code.spn, code.fmi, code.oc, code.cm, code.note]), recordLimit);
+  result.warnings.forEach(paragraph);
 }
 function invalidate(message = 'Inputs changed. Run the analysis to create a current result.') {
   generation += 1; currentReport = ''; report.textContent = ''; reportDetails.open = false; output.replaceChildren();
@@ -56,26 +64,36 @@ function render(result) {
   } else if (mode === 'dm1') {
     status.textContent = result.noDtcMarker ? 'No-DTC marker observed' : `${result.codes.length} DTC records`;
     paragraph(`${result.length} supplied bytes; ${result.padding} trailing single-frame padding bytes excluded. A no-DTC marker is not proof that the equipment is healthy.`);
-    section('Raw lamp fields'); table(['Lamp', 'Status', 'Flash'], result.lamps.map(lamp => [lamp.name, `${lamp.status}: ${lamp.statusText}`, `${lamp.flash}: ${lamp.flashText}`]));
-    section('Diagnostic records'); table(['Record', 'Raw bytes', 'SPN', 'FMI', 'OC', 'CM', 'Interpretation'], result.codes.map(code => [code.record, code.bytes, code.spn, code.fmi, code.oc, code.cm, code.note]));
-    result.warnings.forEach(paragraph);
+    diagnosticTables(result);
     paragraph('Numeric fields only: no proprietary SPN lookup, P-code conversion, repair recommendation, DTC clearing, or dashboard-lamp aggregation. Retain the original source address alongside this payload.');
   } else if (mode === 'bam') {
     const complete = result.sessions.filter(session => session.payload !== null).length;
     status.textContent = `${complete} complete / ${result.sessions.length} BAM sessions`;
     paragraph(`${result.frames} frames read; ${result.ignored} unrelated frames; ${result.unsupported} directed or unsupported TP frames not analyzed. No timestamp-based timeout or compliance verdict is applied.`);
     table(['Start–end row', 'Bus / SA', 'Target PGN', 'Bytes', 'Packets unique / announced', 'Result'], result.sessions.map(session => [`${session.startRow}–${session.endRow}`, `${session.bus} / ${session.source}`, session.pgn, session.length, `${session.receivedPackets} / ${session.announcedPackets}`, session.status]));
+    let remainingDtcRows = 200;
     result.sessions.slice(0, 200).forEach(session => {
       section(`Row ${session.startRow} · ${session.bus} / ${session.source} · PGN ${session.pgn}`);
-      if (session.payload !== null) element('pre', session.payload, output);
+      if (session.payload !== null) {
+        element('pre', session.payload, output);
+        if (session.dm1.state === 'decoded') {
+          paragraph(`DM1 interpretation for this bus/source only: ${session.dm1.fields.codes.length} DTC records. Transport completeness is not a diagnosis or proof of equipment health.`);
+          diagnosticTables(session.dm1.fields, 'h4', remainingDtcRows);
+          remainingDtcRows = Math.max(0, remainingDtcRows - session.dm1.fields.codes.length);
+        } else if (session.dm1.state === 'invalid-dm1') {
+          paragraph(`DM1 fields withheld despite complete transport: ${session.dm1.reason}`);
+        } else paragraph(session.dm1.reason);
+      }
       else {
         paragraph(session.issues.slice(0, 50).join('; '));
         if (session.issues.length > 50) paragraph(`${session.issues.length - 50} additional findings are included in the full report.`);
+        if (session.pgn === 65226) paragraph('DM1 fields withheld: resolve the capture evidence gap before interpreting the payload. No missing bytes are guessed.');
       }
     });
     if (result.sessions.length > 200) paragraph('Session details are limited to the first 200 on screen; Copy includes every result.');
     if (result.events.length || result.warnings.length) { section('Capture findings'); table(['Finding'], [...result.events, ...result.warnings].map(text => [text])); }
     paragraph('Only an internally consistent observed sequence gets a payload. Missing bytes are never invented. Capture loss, logger duplication and actual bus errors cannot be distinguished here; retain and review the original trace.');
+    paragraph('Only PGN 65226 (0xFECA) is interpreted as DM1. Lamp fields and numeric DTC records remain separated by bus and source; CM=1 SPNs and unavailable fields stay withheld. No proprietary SPN lookup, P-code conversion, DTC clearing, repair recommendation, or dashboard-lamp aggregation.');
   } else {
     const conflicts = result.groups.filter(group => group.potentialConflict).length;
     status.textContent = `${conflicts} address groups need review`;
@@ -105,7 +123,7 @@ form.addEventListener('submit', event => {
       result = filterCheck(data.get('target'), data.get('comparisons'), options);
     }
     else if (mode === 'dm1') result = diagnosticPayload(data.get('payload'));
-    else if (mode === 'bam') result = bamAudit(data.get('capture'));
+    else if (mode === 'bam') result = bamDM1Audit(data.get('capture'));
     else result = claimAudit(data.get('capture'));
     render(result);
     const inputReport = Object.entries(inputs).map(([name, value]) => `${name}:\n${typeof value === 'string' ? value : JSON.stringify(value, null, 2)}`).join('\n\n');

@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { canId, hexBytes, filterCheck, diagnosticPayload, capture, bamAudit, decodeName, claimAudit } from '../assets/js/j1939-core.mjs';
+import { canId, hexBytes, filterCheck, diagnosticPayload, capture, bamAudit, bamDM1Audit, decodeName, claimAudit } from '../assets/js/j1939-core.mjs';
 
 let checks = 0;
 function test(name, run) { try { run(); checks += 1; } catch (error) { throw new Error(name, { cause: error }); } }
@@ -95,6 +95,88 @@ test('maximum 1785-byte BAM', () => {
   const result = bamAudit([frame('18ECFF00', '20F906FFFFCAFE00'), ...packets].join('\n')).sessions[0];
   assert.equal(result.payload.split(' ').length, 1785);
 });
+// Independent transport fixtures for the optional DM1 application layer.
+function bamTrace(payloadHex, target = 'CAFE00', bus = 'can0', source = '00') {
+  const bytes = payloadHex.match(/../g), length = bytes.length, count = Math.ceil(length / 7);
+  const header = `20${(length & 255).toString(16).padStart(2, '0')}${(length >>> 8).toString(16).padStart(2, '0')}${count.toString(16).padStart(2, '0')}FF${target}`;
+  return [frame(`18ECFF${source}`, header, bus), ...Array.from({ length: count }, (_, index) => frame(`18EBFF${source}`, (index + 1).toString(16).padStart(2, '0') + bytes.slice(index * 7, index * 7 + 7).join('').padEnd(14, 'F'), bus, (index + 1) / 10))].join('\n');
+}
+test('BAM DM1 exact current-layout numeric records', () => {
+  const session = bamDM1Audit(complete).sessions[0];
+  assert.equal(session.dm1.state, 'decoded');
+  assert.deepEqual(session.dm1.fields.codes.map(code => [code.spn, code.fmi, code.oc, code.cm]), [[110, 5, 3, 0], [100, 1, 2, 0]]);
+  assert.deepEqual(session.dm1.fields, diagnosticPayload(payload));
+  assert.deepEqual([session.bus, session.source, session.startRow, session.endRow], ['can0', '00', 1, 3]);
+});
+test('BAM interpretation does not change transport findings', () => {
+  const result = bamDM1Audit(complete);
+  assert.deepEqual({ ...result, sessions: result.sessions.map(({ dm1, ...session }) => session) }, bamAudit(complete));
+});
+test('BAM DM1 missing packet keeps all fields withheld', () => {
+  const session = bamDM1Audit([cm, dt2].join('\n')).sessions[0];
+  assert.equal(session.payload, null); assert.equal(session.dm1.state, 'withheld'); assert.equal(session.dm1.fields, null);
+});
+test('BAM DM1 duplicate after completion cannot retain stale fields', () => {
+  assert.equal(bamDM1Audit(complete).sessions[0].dm1.state, 'decoded');
+  const session = bamDM1Audit([complete, dt2].join('\n')).sessions[0];
+  assert.equal(session.dm1.state, 'withheld'); assert.equal(session.dm1.fields, null);
+});
+test('BAM DM1 out-of-order fields withheld', () => assert.equal(bamDM1Audit([cm, dt2, dt1].join('\n')).sessions[0].dm1.fields, null));
+test('BAM DM1 non-FF transport padding fields withheld', () => assert.equal(bamDM1Audit(complete.replace('02000102FFFFFFFF', '0200010200FFFFFF')).sessions[0].dm1.state, 'withheld'));
+test('BAM DM1 inconsistent announcement fields withheld', () => assert.equal(bamDM1Audit(complete.replace('200A0002', '200A0003')).sessions[0].dm1.state, 'withheld'));
+test('BAM DM1 not applied to DM2 or another target PGN', () => {
+  const session = bamDM1Audit(bamTrace('44FF6E00050364000102', 'CBFE00')).sessions[0];
+  assert.equal(session.pgn, 65227); assert.equal(session.payload, payload);
+  assert.equal(session.dm1.state, 'not-dm1'); assert.equal(session.dm1.fields, null);
+});
+test('BAM DM1 exact page bits are preserved', () => {
+  const session = bamDM1Audit(bamTrace('44FF6E00050364000102', 'CAFE01')).sessions[0];
+  assert.equal(session.pgn, 130762); assert.equal(session.dm1.state, 'not-dm1'); assert.equal(session.dm1.fields, null);
+});
+test('BAM complete transport with malformed DM1 length stays visible', () => {
+  const session = bamDM1Audit(bamTrace('44FF6E000503640001')).sessions[0];
+  assert.equal(session.status, 'Complete in this capture'); assert.equal(session.length, 9);
+  assert.equal(session.payload, '44 FF 6E 00 05 03 64 00 01');
+  assert.equal(session.dm1.state, 'invalid-dm1'); assert.equal(session.dm1.fields, null);
+  assert.match(session.dm1.reason, /whole 4-byte DTC/);
+});
+test('BAM maximum transport payload is not a valid DM1 record length', () => {
+  const session = bamDM1Audit(bamTrace('00'.repeat(1785))).sessions[0];
+  assert.notEqual(session.payload, null); assert.equal(session.dm1.state, 'invalid-dm1'); assert.equal(session.dm1.fields, null);
+});
+test('BAM largest whole-record DM1 payload decodes within limits', () => {
+  const session = bamDM1Audit(bamTrace('00FF' + '6E000501'.repeat(445))).sessions[0];
+  assert.equal(session.length, 1782); assert.equal(session.dm1.fields.codes.length, 445);
+  assert.ok(session.dm1.fields.codes.every(code => code.spn === 110 && code.fmi === 5 && code.oc === 1));
+});
+test('BAM DM1 legacy CM SPN and unavailable OC remain withheld', () => {
+  const fields = bamDM1Audit(bamTrace('00FF6E0005836400017F')).sessions[0].dm1.fields;
+  assert.equal(fields.codes[0].cm, 1); assert.equal(fields.codes[0].spn, null); assert.equal(fields.codes[1].oc, null);
+  assert.ok(fields.warnings.some(warning => warning.includes('CM=1')));
+});
+test('BAM DM1 all-FF record not promoted to known SPN', () => {
+  const fields = bamDM1Audit(bamTrace('00FFFFFFFFFF64000102')).sessions[0].dm1.fields;
+  assert.equal(fields.codes[0].spn, null); assert.equal(fields.codes[0].oc, null);
+});
+test('BAM DM1 no-DTC bytes in multi-record payload not a health verdict', () => {
+  const fields = bamDM1Audit(bamTrace('00FF000000006E000501')).sessions[0].dm1.fields;
+  assert.equal(fields.noDtcMarker, false); assert.equal(fields.codes.length, 1); assert.ok(fields.warnings.length);
+});
+test('BAM DM1 per-source interpretation never aggregates ECUs', () => {
+  const result = bamDM1Audit(bamTrace('44FF6E00050364000102', 'CAFE00', 'can0', '00') + '\n' + bamTrace('00FF6F00060165000203', 'CAFE00', 'can0', '01'));
+  assert.deepEqual(result.sessions.map(session => [session.source, session.dm1.fields.codes[0].spn]), [['00', 110], ['01', 111]]);
+});
+test('BAM DM1 per-bus and mixed-state report stays separated', () => {
+  const raw = complete + '\n' + bamTrace('00FF6F00060165000203', 'CAFE00', 'can1') + '\n' + cm.replace('18ECFF00', '18ECFF02');
+  const result = bamDM1Audit(raw);
+  assert.deepEqual(result.sessions.map(session => session.dm1.state), ['decoded', 'decoded', 'withheld']);
+  assert.deepEqual(result.sessions.map(session => session.bus), ['can0', 'can1', 'can0']);
+  const report = JSON.parse(JSON.stringify(result));
+  assert.equal(report.sessions[1].dm1.fields.codes[0].spn, 111); assert.equal(report.sessions[2].dm1.fields, null);
+});
+test('BAM DM1 wrapper preserves strict capture parsing', () => reject(() => bamDM1Audit('id,data\n18ECFF00,not-hex')));
+test('BAM DM1 repeat execution deterministic', () => assert.deepEqual(bamDM1Audit(complete), bamDM1Audit(complete)));
+
 test('NAME endian and precision', () => { const result = decodeName(hexBytes('0100200000000080')); assert.equal(result.name, '8000000000200001'); assert.equal(result.identity, 1); assert.equal(result.manufacturer, 1); assert.equal(result.arbitraryAddressCapable, 1); });
 test('NAME fields all set', () => { const result = decodeName(Array(8).fill(255)); assert.equal(result.identity, 2097151); assert.equal(result.manufacturer, 2047); assert.equal(result.functionInstance, 31); assert.equal(result.vehicleSystem, 127); assert.equal(result.industryGroup, 7); });
 test('NAME size rejected', () => reject(() => decodeName([1, 2])));
