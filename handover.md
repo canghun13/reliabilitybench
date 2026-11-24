@@ -2963,3 +2963,70 @@ Each screen records primary user and recurring workflow; user problem and search
   newerCoverage/Bingcounting qualification without speculative fixes; retain
   exclusions and require new independent-task/source evidence, with native Print
   preview/optionalIndexNow still explicit gaps.
+
+## 2026-11-24 — Weekly NO-GO / 40 new workflow screens
+
+- **NO-GO / OBSERVE — no change justified this week.** Documentation only.
+  No hard defect, no new existing-page output gap, no new four-task cluster
+  through all gates. No runtime, URL, layout, sitemap, GA4, footer/badge change.
+  Full evidence: `research/weekly-growth-review-2026-11-24.md`.
+- Start local/cached/actual main all `51afe16c61217da1f58bfc932d9733a1bd091c40`;
+  actual ls-remote before fetch; clean, 0/0. All five exact current references
+  read, ZIP CSV members directly, hashes in review. Weekly operating text
+  SHA-identical to November19; report cells treated as data.
+- GSC August22–November21, chart40/3,354/1.192606%/~32.061240.
+  197 query rows sum5/1,111; 99 page rows/99 canonical sum42/3,871. Only
+  disclosed clicked query brand5/35 does not describe all property clicks.
+  Equal weeks November15–21 3/310/~21.63 versus November8–14 2/188/~28.44:
+  impressions+64.89%, clicks+1, average position improves6.81, CTR1.064→0.968%.
+  November19–21 is only three days including part of deployment day; no release
+  attribution or page-filtered trend data. Rolling row deltas not weekly rates.
+- J1939 seven pages219/4 versus196/3; additional click filter, not BAM. BAM24/0/8.46,
+  DM1 20/1/8.05, filter50/2/23.92. Recent BAM functionality already fills handoff
+  gap; do not add licensed PGN catalogs based on small long tails. Candidate
+  priorities J1939 72 observe, Failure Rate65 hold, K-out-of-N61 hold.
+- GSC LORA three explicit variants84 impressions, all approximately90–96th
+  position. Do not map query to page without a join. Repair echelon/resource
+  placement is not a new label for Repair vs Replace or spares math. Separate
+  lead held; scoped overlap and independence not cleared, outside count of40.
+- Coverage August28–November16: discovered-not-indexed5→4. Contact absent in
+  this reason table and has one impression, but URL Inspection not available.
+  Remaining OEE guide, Weibull reference, Operating Profile hub, Machine State
+  Log. 1970 means missing; crawled-not-indexed and total indexed unavailable.
+  Type4/no site-side defect repeated; no speculative internal-link or sitemap work.
+- Bing November24 filenames, periods absent. Pages74/1,544/47/~5.65, queries
+  729/1,291/47/~5.47. Export deltas+54/+5 and+37/+5, not matched weeks.
+  MTBF140/6, B10 127/3, Duane111/5, Availability111/3. DM1 page7/0 and filter2/0.
+  Same Slovenian MTBF3 impressions/4 clicks kept as reported, not a site bug.
+- GA4 October27–November23:155 active/154 new/16.4s/850 events,157 sessions.
+  First-source Google7/Bing16; sessions Google7/Bing19, prior8/18. First-source
+  directory/referrals small. **November19 QA now inside export**: four J1939
+  tool titles total147 views (42 BAM,36 filter,35 claim,34 DM1), 2–4 active per
+  title. Don't count as organic popularity or subtract a guessed QA count.
+- Exclusion set reviewed via full named/grouped boundary and current/prior
+  repo records. Don't recount web tension/winding, package WVTR/desiccant,
+  flexible-pack heat sealing or generic sensor QA with new labels.
+  **40 genuinely distinct hypotheses → 12 current-search comparisons /48
+  long-tail seeds → 5 deep → 0 GO.** All40 join the exclusion register.
+- Deep editorial scores: yarn75, anilox74, bond-test74, color72, shot peen71.
+  Troika already covers multiple exact public anilox tasks, PeenSolver provides
+  real browser competition; yarn/semiconductor methods need instrument exports
+  and independent-task breadth; reflectance/ΔE alternatives already exist.
+  Paired post-clean recovery and compatible yarn export are leads, not ready
+  suites. Don't infer search volume from a cleaning video's cumulative views.
+  Direct Google/Bing/Naver SERP bodies unavailable via web reader; no fabricated
+  counts. General web, indexed Reddit, YouTube, Korean vendor material and
+  standards/manufacturer docs provide separate qualitative observations.
+- Static and calculator tests PASS, 124 J1939 fixtures, Operating Profile4,
+  Intermittent Demand5. Production Googlebot-UA 25HTTP200/source-equivalent,
+  HTTP→HTTPS apex, robots/sitemap110 correct, all affected J1939 module versions
+  and four Coverage cases checked. No new browser/Print PASS claimed. Footer
+  `51ba08263d2ceca4b3b88c3be2cc409765afe58a`; IndexNow still unconfigured/unsubmitted.
+- Final inventory unchanged111public/110indexable/42calculators/22workflows/
+  17Guide/13Reference. Latest new cluster J1939 October16, latest existing
+  upgrade BAM November19, latest expansion NO-GO November24. No implementation
+  commit; normal documentation push and final actual/cached/local equality,
+  0/0 clean checked after push and reported externally.
+- Nextmax3: compare later equal GSC windows and page-filtered J1939, exclude QA
+  attribution; check new Coverage and Bing counting definitions; retain all new
+  exclusions and revisit only with materially better source/workflow evidence.
